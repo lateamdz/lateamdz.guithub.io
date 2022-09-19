@@ -1,2 +1,2 @@
-# lateamdz.guithub.io
+# lateamdz.github.io
 default page
