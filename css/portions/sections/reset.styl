@@ -1,0 +1,569 @@
+//Reset
+@import 'sections/colors.styl'
+
+@charset "UTF-8";
+// font declaration
+
+$ob = 'ooredoobold'
+$or = 'ooredooregular'
+$ol = 'ooredoolight'
+
+
+$base_font = 16
+$px = (1 / $base_font) rem
+$xlarge = 1399px;
+$large = 1199px
+$medium = 991px;
+$small = 767px;
+$xsmall = 479px;
+
+$radius = 10px;
+
+html,
+body,
+#page
+	box-sizing border-box
+	font-family $or
+	height 100%
+	margin 0
+	padding 0
+	width 100%
+
+body
+	font-family $or
+	background $white
+	font-size 14px
+
+::selection
+	background #ed1d24
+	color #191d3d
+	text-shadow none
+
+::-moz-selection
+	background #ed1d24
+	color #ffffff
+	text-shadow none
+
+img
+	max-width 100%
+	height auto
+	border 0
+
+a
+	color #6e6e6e
+	cursor pointer
+	text-decoration none
+	-webkit-transition all .25s ease-in-out
+	-o-transition all .25s ease-in-out
+	transition all .25s ease-in-out
+	&:hover
+		text-decoration none
+		color #ed1d24
+	&:focus
+		outline 0
+
+ol,
+ul
+	list-style outside none none
+	margin 0
+	padding 0
+
+.table
+	display table
+	width 100%
+	margin 0
+
+.table-row
+	display table-row
+
+.table-cell
+	display table-cell
+	vertical-align top
+
+.md-s
+	padding 0
+	position relative
+	
+.w100
+	display: block
+	max-width: 100%
+	height: auto
+	width: 100%
+	
+
+::-webkit-input-placeholder
+	color #fff
+
+.h-align
+	display: table
+	width: 100%
+	height: inherit
+.v-align
+	display: table-cell
+	text-align: center
+	vertical-align: middle 
+.box
+	display: inline-block
+	vertical-align: top
+
+
+.clear
+	clear both !important
+	margin 0 !important
+
+.floatright
+	float right !important
+
+.floatleft
+	float left !important
+
+.red
+	color #fb3939
+
+.btn-facebook
+	color #fff
+	background-color #3b5998
+	border-color rgba(0, 0, 0, 0.2)
+	border-radius 50%
+	width 25px
+	height 25px
+	.badge
+		color #3b5998
+		background-color #fff
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open>.dropdown-toggle.btn-facebook
+	color #fff
+	background-color #2d4373
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-facebook:active,
+.btn-facebook.active,
+.open>.dropdown-toggle.btn-facebook
+	background-image none
+
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active
+	background-color #3b5998
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-google
+	color #fff
+	background-color #dd4b39
+	border-color rgba(0, 0, 0, 0.2)
+	border-radius 50%
+	width 25px
+	height 25px
+	.badge
+		color #dd4b39
+		background-color #fff
+
+.btn-google:hover,
+.btn-google:focus,
+.btn-google:active,
+.btn-google.active,
+.open>.dropdown-toggle.btn-google
+	color #fff
+	background-color #c23321
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-google:active,
+.btn-google.active,
+.open>.dropdown-toggle.btn-google
+	background-image none
+
+.btn-google.disabled,
+.btn-google[disabled],
+fieldset[disabled] .btn-google,
+.btn-google.disabled:hover,
+.btn-google[disabled]:hover,
+fieldset[disabled] .btn-google:hover,
+.btn-google.disabled:focus,
+.btn-google[disabled]:focus,
+fieldset[disabled] .btn-google:focus,
+.btn-google.disabled:active,
+.btn-google[disabled]:active,
+fieldset[disabled] .btn-google:active,
+.btn-google.disabled.active,
+.btn-google[disabled].active,
+fieldset[disabled] .btn-google.active
+	background-color #dd4b39
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-linkedin
+	color #fff
+	background-color #007bb6
+	border-color rgba(0, 0, 0, 0.2)
+	border-radius 50%
+	width 25px
+	height 25px
+	.badge
+		color #007bb6
+		background-color #fff
+
+.btn-linkedin:hover,
+.btn-linkedin:focus,
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open>.dropdown-toggle.btn-linkedin
+	color #fff
+	background-color #005983
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open>.dropdown-toggle.btn-linkedin
+	background-image none
+
+.btn-linkedin.disabled,
+.btn-linkedin[disabled],
+fieldset[disabled] .btn-linkedin,
+.btn-linkedin.disabled:hover,
+.btn-linkedin[disabled]:hover,
+fieldset[disabled] .btn-linkedin:hover,
+.btn-linkedin.disabled:focus,
+.btn-linkedin[disabled]:focus,
+fieldset[disabled] .btn-linkedin:focus,
+.btn-linkedin.disabled:active,
+.btn-linkedin[disabled]:active,
+fieldset[disabled] .btn-linkedin:active,
+.btn-linkedin.disabled.active,
+.btn-linkedin[disabled].active,
+fieldset[disabled] .btn-linkedin.active
+	background-color #007bb6
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-twitter
+	color #fff
+	background-color #55acee
+	border-color rgba(0, 0, 0, 0.2)
+	border-radius 50%
+	width 25px
+	height 25px
+	.badge
+		color #55acee
+		background-color #fff
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open>.dropdown-toggle.btn-twitter
+	color #fff
+	background-color #2795e9
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-twitter:active,
+.btn-twitter.active,
+.open>.dropdown-toggle.btn-twitter
+	background-image none
+
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active
+	background-color #55acee
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-youtube
+	color #fff
+	background-color #d01c14
+	border-color rgba(0, 0, 0, 0.2)
+	.badge
+		color #d01c14
+		background-color #fff
+
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube
+	color #fff
+	background-color #b41811
+	border-color rgba(0, 0, 0, 0.2)
+
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube
+	background-image none
+
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active
+	background-color #b41811
+	border-color rgba(0, 0, 0, 0.2)
+	
+
+.btn-custom
+	background $red
+	color: $white
+	position relative
+	&:hover,
+	&:active,
+	&:focus
+		color: $red
+		background $white
+		border 1px solid $red
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 0
+		height: 0
+		background: #dd141b
+		opacity: 1
+		-moz-border-radius: 4px
+		-webkit-border-radius: 4px
+		border-radius: 4px
+		-webkit-transition: all 0s ease-in-out
+		-o-transition: all 0s ease-in-out
+		transition: all 0s ease-in-out
+
+	&:hover:before	
+		opacity: 0
+		height: 100%
+		width: 100%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		-webkit-transition: all 0.5s ease-out
+		-o-transition: all 0.5s ease-out
+		transition: all 0.5s ease-out
+.btn-download
+	a
+		background $white
+		color: $red
+		border 2px solid $white
+		position relative
+		&:hover,
+		&:active,
+		&:focus
+			background: none
+			color: $white
+			border 2px solid $white
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 0
+			height: 0
+			background: none
+			opacity: 1
+			-moz-border-radius: 4px
+			-webkit-border-radius: 4px
+			border-radius: 4px
+			-webkit-transition: all 0s ease-in-out
+			-o-transition: all 0s ease-in-out
+			transition: all 0s ease-in-out
+			border 1px solid $white
+
+		&:hover:before
+			opacity: 0
+			height: 100%
+			width: 100%
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			-webkit-transition: all 0.5s ease-out
+			-o-transition: all 0.5s ease-out
+			transition: all 0.5s ease-out
+
+
+.btn-bordered
+	background transparent
+	border 2px solid $red
+	color: $red
+	&:hover,
+	&:active,
+	&:focus
+		color: $red
+		text-decoration underline
+
+.back-top
+	bottom 125px
+	margin 0
+	padding 0
+	position fixed
+	right 20px
+	z-index 999999999
+	a
+		background $red
+		border-radius 50%
+		color #fff
+		display block
+		opacity 1
+		font-family "FontAwesome"
+		height 55px
+		line-height 50px
+		text-align center
+		transition background 300ms ease 0s
+		width 55px
+		&:after
+			content "\f106"
+			display inline
+			font-size 30px
+
+priceTag($pricef = 20px , $pricelh = 20px , $pricec = #000  , $currencyf = 18px , $currencylh = 18px, $currencyc = #000, $blh = 10px , $ff = 'ooredoobold' , $validityc = #eee, $validityf = 15px)
+	.price
+		line-height $blh
+		.price-hero
+			direction: ltr
+			.price-unit
+				font-family $ff
+				font-size $pricef
+				line-height $pricelh
+				color: $pricec
+			.currency
+				font-family $ff
+				font-size $currencyf
+				line-height $currencylh
+				color: $currencyc
+				vertical-align: top
+				.small
+					font-size $currencyf - 10px
+			.validity
+				color: $validityc
+				font-size $validityf
+				
+
+
+.expandTiggerContainer{
+	position relative
+	overflow: hidden
+	.expandTiggerIcon{
+		img{
+			color $red
+			position absolute
+			left: 10px
+			top: 7px
+		}
+	}
+	.expandTiggerText,{
+		a.expandTigger{
+			display none
+			box-shadow none
+			&.active{
+				width 100%
+				display block
+				font-size 16px
+				font-family $ob
+				text-decoration none
+				
+			}
+		}
+		a.collapseTrigger{
+			width 100%
+			margin-bottom 20px
+			font-size 16px
+			font-family $ob
+			text-decoration none
+			box-shadow none
+			&.active{
+				display block
+			}
+		}
+	}
+}
+
+@media (max-width: $medium){
+	.expandable{
+		height 0
+		opacity 0
+		transition .2s all ease
+		visibility hidden
+		display none
+		&.active{
+			height auto
+			opacity 1
+			transition .2s all ease
+			visibility visible
+			display block
+		}
+	}
+
+}	
+		
+
+
+.current{
+	font-size 30px
+	color: $red !important
+	display none
+	i{
+		color: $red
+	}
+}
+
+
+@media (max-width: $xsmall){
+	.hidden-xxs{
+		display none !important
+	}
+	
+	.current{
+		display block !important
+	}
+}
+
+
+@media (min-width: $xsmall){
+	.accessibilities.mobile{
+		display none !important
+	}
+}
+
+.accessibilities.mobile{
+	position: absolute
+	right: 0
+	text-align: right
+	top: 76px
+	width: 165px
+	z-index: 999
+	background $white
+	padding 10px
+	box-shadow: -1px 2px 3px rgba(0,0,0,0.35)
+}
+

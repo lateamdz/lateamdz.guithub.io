@@ -1,0 +1,356 @@
+//Header
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.sticky-wrapper{
+	position relative
+	z-index 10
+}
+
+.header{
+	min-height: 60px
+	padding: 16px 0
+	background-color $white
+	box-shadow 0 1px 3px rgba(0,0,0,0.35)
+	position relative
+	z-index 10
+	width: 100% !important;
+	.accessibilities{
+		text-align: right
+		.help{
+			display inline-block
+			margin 0 5px
+			width 60px
+			height 60px
+			background $red
+			border-radius 50%
+			line-height 60px
+			text-align center
+			float: left;
+			img{
+				display: inline-block
+			}
+			a{
+				line-height: 60px
+			}
+		}
+		.phone{
+			display inline-block
+			margin 0 5px
+			width 60px
+			height 60px
+			background $red
+			border-radius 50%
+			line-height 60px
+			text-align center
+			float: left;
+			img{
+				display inline-block
+			}
+			a{
+				line-height: 60px
+			}
+		}
+		.lang{
+			display inline-block
+			margin 0 5px
+			width 60px
+			height 60px
+			background $red
+			border-radius 50%
+			line-height 60px
+			text-align center
+			float: left;
+			a{
+				text-transform uppercase
+				color: $white
+				font-family $ob
+				line-height 60px
+				font-size 25px
+				text-decoration none
+			}
+		}
+	}
+
+	.logo-section{
+		overflow hidden
+		padding 10px 0
+		.logo{
+			float left
+		}
+		
+		.logo-directive{
+			float left
+			margin-left: 20px
+			padding: 7px 20px
+			border-left 1px solid #cbcbcb
+		}
+	}
+	
+}
+
+@media (max-width: $medium){
+	.header{
+		min-height: auto
+		
+
+		.logo-section{
+			overflow hidden
+			padding 10px 0
+			.logo{
+				float left
+				img{
+					max-width 200px
+				}
+			}
+			
+			.logo-directive{
+				float left
+				margin-left: 10px
+				padding: 7px 10px
+				border-left 1px solid #cbcbcb
+				img{
+					max-width 100px
+				}
+			}
+		}
+		
+		.accessibilities{
+			text-align: right
+			.help{
+				display inline-block
+				margin 0 2px
+				width 50px
+				height 50px
+				background $red
+				border-radius 50%
+				line-height 50px
+				text-align center
+				img{
+					display: inline-block
+				}
+				a{
+					line-height: 50px
+				}
+			}
+			.phone{
+				display inline-block
+				margin 0 2px
+				width 50px
+				height 50px
+				background $red
+				border-radius 50%
+				line-height 50px
+				text-align center
+				img{
+					display inline-block
+				}
+				a{
+					line-height: 50px
+				}
+			}
+			.lang{
+				display inline-block
+				margin 0 2px
+				width 50px
+				height 50px
+				background $red
+				border-radius 50%
+				line-height 50px
+				text-align center
+				a{
+					text-transform uppercase
+					color: $white
+					font-family $ob
+					line-height 50px
+					font-size 22px
+					text-decoration none
+				}
+			}
+		}
+	}			
+}
+			
+@media (max-width: $small){
+	.header{
+		min-height: auto
+		
+
+		.logo-section{
+			overflow hidden
+			padding 10px 0
+			.logo{
+				float left
+				img{
+					max-width 180px
+				}
+			}
+			
+			.logo-directive{
+				float left
+				margin-left: 10px
+				padding: 7px 10px
+				border-left 1px solid #cbcbcb
+				img{
+					max-width 80px
+				}
+			}
+		}
+		
+		.accessibilities{
+			text-align: right
+			.help{
+				display inline-block
+				margin 0 2px
+				width 40px
+				height 40px
+				background $red
+				border-radius 50%
+				line-height 40px
+				text-align center
+				img{
+					display: inline-block
+					max-width 15px
+				}
+				a{
+					line-height: 40px
+				}
+			}
+			.phone{
+				display inline-block
+				margin 0 2px
+				width 40px
+				height 40px
+				background $red
+				border-radius 50%
+				line-height 40px
+				text-align center
+				img{
+					display inline-block
+					max-width 15px
+					
+				}
+				a{
+					line-height: 40px
+				}
+			}
+			.lang{
+				display inline-block
+				margin 0 2px
+				width 40px
+				height 40px
+				background $red
+				border-radius 50%
+				line-height 40px
+				text-align center
+				a{
+					text-transform uppercase
+					color: $white
+					font-family $ob
+					line-height 40px
+					font-size 20px
+					text-decoration none
+				}
+			}
+		}
+	}			
+}
+
+
+@media (max-width: $xsmall){
+	.header{
+		.logo-section{
+			.logo{
+				img{
+					max-width 150px
+				}
+			}
+			.logo-directive{
+				img{
+					max-width 45px
+				}
+			}
+		}
+	}
+	.accessibilities.mobileMenu{
+		text-align: left;
+		background: #ed1c24;
+		position: fixed;
+		top: 0;
+		display: block !important;
+		width: 100%;
+        left: -999px;
+		height: 100%;
+		max-width: 310px;
+		box-shadow: 1px 3px 6px 1px rgba(0,0,0,0.4) inset;
+		.accessibilities-header{
+			background: #fff;
+			padding: 27px 0;
+            height 76px;
+			img{
+				margin auto;
+				float none;
+				max-width 205px
+			}
+		}
+			.accessibilities-menu{
+				ul{
+					li{
+						border-bottom 1px solid #fff;
+						a{
+							font-family $ob;
+							font-size 16px;
+							color:#fff;
+							padding 17px 14px;
+                          line-height: 20px;
+                          display: block;
+							.lang{
+								 float: left;
+								 margin: 0px 20px 0 0
+                                  line-height: 20px;
+							 }
+							.comment{
+								float: left;
+								margin:0 20px 0 0
+                                        line-height: 20px;
+							}
+							.aide{
+								float: left;
+								margin: 0 20px 0 0
+                              line-height: 20px;
+							}
+						}
+					}
+				}
+			}
+	}
+
+
+	#page {
+      left: 0;
+		-webkit-transition: all 0.1s ease;
+		-moz-transition: all 0.1s ease;
+		-o-transition: all 0.1s ease;
+		transition: all 0.1s ease;
+		position relative;
+	}
+  .toggled .accessibilities.mobileMenu {
+    left:0
+  }
+  .toggled #page {
+		left:310px;
+      position: fixed;
+	}
+
+}
+@media (max-width: 360px) {
+    .toggled #page {
+      left:265px;
+	}
+	.accessibilities.mobileMenu{
+		max-width: 265px;
+      }
+
+}

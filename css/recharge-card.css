@@ -1,0 +1,234 @@
+.main-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+
+    > div {
+        width: 100%;
+    }
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.img-inline-1em {
+    display: inline;
+    height: 1.15em;
+    vertical-align: baseline;
+}
+
+.img-inline-2em {
+    display: inline;
+    height: 1.8em;
+    vertical-align: baseline;
+}
+
+.promo-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    margin-bottom: 16px;
+
+    &.promo-grid-one {
+        grid-template-columns:1fr;
+        max-width: 460px;
+        .promo-card-content{
+            min-height: 200px;
+        }
+    }
+
+    &.promo-grid-three {
+        max-width: 850px;
+    }
+}
+
+.promo-card {
+    width: 100%;
+    /*outline: 2px solid var(--ooredoo-red);*/
+    overflow: hidden;
+    border-radius: 16px;
+
+    .promo-card-content {
+        color: black;
+        height: 100%;
+        background-color: white;
+
+
+        padding: 12px 8px;
+        min-height: 326px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        .promo-card-title {
+            margin: -14px -10px;
+            margin-bottom: 8px;
+            padding: 12px 8px;
+            background-color: var(--ooredoo-red);
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .offer-list {
+            display: flex;
+            flex-direction: column;
+            padding-inline-start: 8px;
+            flex: 1;
+
+            > li {
+                position: relative;
+                padding-inline-end: 0px;
+                min-height: 34px;
+                display: flex;
+                gap: 6px;
+                align-items: flex-start;
+                justify-content: flex-start;
+                /*font-family: outfit, ooredoobold, Arial, sans-serif !important;*/
+
+                &:not(.hide-before):before {
+                    content: '';
+                    background-image: url("../images/icons/plus-2.png");
+                    background-size: 100% 100%;
+                    position: relative;
+                    top: 6px;
+                    display: inline;
+                    vertical-align: baseline;
+                    height: 14px;
+                    width: 14px;
+                    aspect-ratio: 1;
+                    border-radius: 20px;
+                    background-color: var(--ooredoo-red);
+                }
+                &.big-before:before{
+                    height: 28px;
+                    width: 28px;
+                }
+                > span {
+                    font-size: 1.2em;
+                    flex: 1;
+                }
+
+                > img {
+                    max-height: 1.25em;
+                    object-fit: contain;
+                }
+
+
+            }
+            &.offer-list-horizontal{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 1em;
+                > li:first-child, >li:last-child {
+                    flex: 1;
+                }
+            }
+
+
+        }
+
+        .promo-footer {
+            > div {
+                &:last-child {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        .price-duration {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            border-top: 1px dashed lightgrey;
+            padding-top: 12px;
+
+            > span {
+                &:first-child {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+}
+
+.ar {
+    .promo-card {
+        direction: rtl;
+
+        .offer-list {
+            > li {
+                &:before {
+                    top: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    min-height: 1.2em;
+    min-width: 1.2em;
+    margin-top: 0.25em;
+    vertical-align: top;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, .25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    border-radius: 4px;
+
+    &:checked {
+        background-color: var(--ooredoo-red);
+        border-color: var(--ooredoo-red);
+    }
+
+    &:checked[type=checkbox] {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+    }
+}
+
+input[type=file] {
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=checkbox] {
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=radio] {
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .promo-card {
+        width: 100%;
+        padding: 0 2px;
+    }
+
+    .carousel-item {
+        height: 100%;
+        width: calc(100vw - 100px);
+    }
+}

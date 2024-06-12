@@ -1,0 +1,961 @@
+//my-accounte
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.md-forfait-internet{
+	.section-title{
+		sectionTitle(#dbddde , $black , 29px , 24px)
+	}
+	.section-content{
+		background #f6f7f8
+		padding 30px 0 0
+		.cardInfo{
+			width 100%
+			padding 35px 15px 15px 15px
+			background $white
+			border-radius $radius
+			margin-bottom 30px
+			box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+			border unquote('1px solid #eee\9')
+			position: relative;
+			.etiq-promo{
+				background: url(../images/bg-promo.png) no-repeat;
+				width: 112px;
+				text-align: center;
+				color: #010101;
+				font-size: 17px;
+				font-family: $ob;
+				padding: 4px 0 0px 8px;
+				text-transform: uppercase;
+				display: inline-block;
+				height: 29px;
+				position: absolute;
+				right: 10px;
+				top: -6px;
+				margin-bottom: 10px;
+			}
+			.cardTop{
+				width: 100%;
+				overflow: hidden;
+				.duration{
+					priceTag(80px, 80px, $black , 40px , 40px , $black , 10px ,$ob , $lightgrey , 12px)
+					height: 85px;
+					display: table;
+					float: right;
+					width: auto;
+					.price{
+						vertical-align middle
+						display table-cell
+					}
+
+					.capaciteSpec {
+						.price-unit {
+							font-size 40px !important;
+							line-height: 40px !important;
+						}
+						.to {
+							font-size: 23px !important;
+						}
+						.currency {
+							font-size: 24px !important;
+						}
+					}
+					&.small{
+						.price{
+							.price-hero{
+								.price-unit{
+									font-size 45px
+									line-height 40px
+								}
+								.to{
+									font-size: 25px
+									line-height: 21px
+								}
+								.hours{
+									font-size: 27px
+									line-height: 24px
+									font-family $ob
+								}
+
+							}
+
+						}
+					}
+				}
+				.capacity{
+					priceTag(48px, 48px, #000 , 28px , 32px , #000 , 10px ,$ob , #808080 , 28px)
+					height: 85px;
+					float: left;
+					display: table;
+					width: auto;
+					.price{
+						vertical-align middle
+						display table-cell
+					}
+					.promo {
+						float: left;
+						position: relative;
+						padding: 0 7px;
+						.price-unit{
+							font-size: 25px !important
+							color: #777777 !important;
+							font-family: $or !important;
+						}
+						.currency {
+							font-size: 15px !important
+							color: #777777 !important;
+							font-family: $or !important;
+						}
+							&:after{
+								content: '';
+								width: 69px;
+								height: 2px;
+								background: #ed1c24;
+								display: block;
+								transform: rotate(-18deg);
+								position: absolute;
+								top: 21px;
+								left: 5px;
+							}
+					}
+					.capaciteSpec{
+						font-size: 26px !important;
+						line-height: 24px !important;
+						max-width: 151px;
+						display: inline-block;
+						.blue{
+							font-family: 'ooredoobold';
+							color:#3b589d;
+							font-size 31px !important;
+							padding-bottom 6px;
+							display inline-block;
+							margin-bottom 3px;
+						}
+					}
+					.appIll{
+						line-height: 24px !important;
+						text-align: left;
+						letter-spacing: 1.5px;
+					}
+
+				}
+
+			}
+			.cardBottom{
+				width: 100%;
+				overflow: hidden;
+				.cost{
+					priceTag(41px, 40px, $red , 28px , 28px , $red , 10px ,$ob , $red , 28px)
+					height: 85px;
+					display: table;
+					width: 50%;
+					float: left;
+					.price{
+						vertical-align bottom
+						display table-cell
+					}
+				}
+				.buy{
+					display: table;
+					height: 85px;
+					width: 50%;
+					.action{
+						display table-cell
+						vertical-align bottom
+						.btn{
+							font-family $or
+							font-size 18px
+							width 100%
+							height 50px
+							line-height 35px
+							i{
+								margin-right 10px
+							}
+						}
+						.icon-cart {
+							font-size: 150% !important;
+							position: relative;
+							top:4px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+		.cardInfo.fb{
+			background: #3b5998;
+
+			.capaciteSpec {
+				.blue {
+					color: #fff !important;
+					letter-spacing: -1px;
+					margin-bottom: 5px !important;
+				}
+			}
+			.cardTop{
+				.duration{
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #fff !important;
+							}
+							.currency{
+								color: #fff !important;
+							}
+						}
+					}
+				}
+				.capacity{
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #00d8ff;
+							}
+						}
+						.promo {
+							.price-unit{
+								color: #fff !important;
+							}
+							.currency {
+								color: #fff !important;
+							}
+
+						}
+					}
+				}
+			}
+			.cardBottom{
+				.cost {
+					height: 40px;
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #fff;
+							}
+							.currency {
+								color: #fff;
+							}
+						}
+					}
+				}
+				.buy{
+					height: 40px;
+					.price-unit {
+						color: #fff;
+					}
+					.currency {
+						color: #fff;
+					}
+				}
+
+			}
+		}
+		.cardInfo.night{
+			background :url("../images/bg-night.jpg") repeat top center;
+			.cardTop{
+				.duration{
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #fff !important;
+							}
+							.currency{
+								color: #fff !important;
+							}
+
+
+						}
+
+					}
+					.capaciteSpec {
+						.to {
+							color: #fff !important;
+						}
+					}
+				}
+				.capacity{
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #00d8ff !important;
+							}
+							.validity {
+								color: #fff !important;
+							}
+							.currency {
+								color: #00d8ff !important;
+							}
+						}
+						.promo {
+							.price-unit{
+								color: #fff !important;
+							}
+							.currency {
+								color: #fff !important;
+							}
+
+						}
+					}
+				}
+
+			}
+			.cardBottom{
+				.buy{
+					.price-unit {
+						color: #fff;
+					}
+					.currency {
+						color: #fff;
+					}
+				}
+				.cost{
+					.price{
+						.price-hero{
+							.price-unit {
+								color: #fff;
+							}
+							.currency {
+								color: #fff;
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}			
+
+
+
+@media (max-width: $large){
+	.md-forfait-internet{
+		.section-title{
+			sectionTitle(#dbddde , $black , 25px)
+		}
+		.section-content{
+			background #f6f7f8
+			padding 30px 0 0
+			.cardInfo{
+				width 100%
+				background $white
+				border-radius $radius
+				margin-bottom 30px
+				box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+				border unquote('1px solid #eee\9')
+				.cardTop{
+					width: 100%;
+					overflow: hidden;
+					.duration{
+						priceTag(43px, 43px, $black , 25px , 25px , $black , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						&.small{
+							.price{
+								.price-hero{
+									.price-unit{
+										font-size 45px
+										line-height 40px
+									}
+									.to{
+										font-size: 25px
+										line-height: 21px
+									}
+									.hours{
+										font-size: 27px
+										line-height: 24px
+										font-family $ob
+									}
+								}
+							}
+						}
+					}
+					.capacity{
+						priceTag(38px, 38px, #000 , 25px , 30px , #000 , 10px ,$ob , #808080 , 25px)
+						height: 85px;
+						display: table;
+						width: auto
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 100%;
+					overflow: hidden;
+					.cost{
+						priceTag(30px, 30px, $red , 22px , 22px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 50%;
+						float: left;
+						.price{
+							vertical-align bottom
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.action{
+							display table-cell
+							vertical-align bottom
+
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+
+@media (max-width: $medium){
+	.md-forfait-internet{
+		.section-title{
+			sectionTitle(#dbddde , $black , 20px)
+		}
+		.section-content{
+			background #f6f7f8
+			padding 20px 0 0
+			.cardInfo{
+				width 100%
+				background $white
+				border-radius $radius
+				margin-bottom 20px
+				box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+				border unquote('1px solid #eee\9')
+				.cardTop{
+					width: 100%;
+					overflow: hidden;
+					.duration{
+						priceTag(43px, 43px, $black , 23px , 23px , $black , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						&.small{
+							.price{
+								.price-hero{
+									.price-unit{
+										font-size 40px
+										line-height 35px
+									}
+									.to{
+										font-size: 23px
+										line-height: 19px
+									}
+									.hours{
+										font-size: 25px
+										line-height: 22px
+										font-family $ob
+									}
+								}
+							}
+						}
+
+					}
+					.capacity{
+						priceTag(38px, 38px, #000 , 25px , 30px , #000 , 10px ,$ob , #808080 , 25px)
+						height: 85px;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 100%;
+					overflow: hidden;
+					.cost{
+						priceTag(30px, 30px, $red , 22px , 22px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 50%;
+						float: left;
+						.price{
+							vertical-align bottom
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.action{
+							display table-cell
+							vertical-align bottom
+
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+@media (max-width: $small){
+	.md-forfait-internet{
+		.section-title{
+			sectionTitle(#dbddde , $black , 20px)
+		}
+		.section-content{
+			background #f6f7f8
+			padding 15px 0 0
+			.cardInfo{
+				width 100%
+				padding 0
+				background $white
+				margin-bottom 15px
+				display: inline-block;
+			    border-radius: 5px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: rgb( 219, 219, 219 );
+				box-shadow: 0px 1px 2px 0px rgb( 194, 194, 194 );
+				.etiq-promo {
+					background: url(../images/bg-promo-mobile.png) no-repeat;
+					left: 10px;
+					right:inherit;
+					font-size 13px;
+					padding: 3px 0 0px 7px;
+					width: 92px;
+					top: -5px;
+				}
+				.cardTop{
+					width: 33%;
+					overflow: hidden;
+					float left
+					padding-left 10px					
+					
+					.duration{
+						priceTag(35px, 35px, $white , 20px , 20px , $white , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+							padding-top: 23px;
+						}
+						.capacityMobile{
+							color: $white
+							font-size 14px
+						}
+						&.small{
+							.price{
+								
+								.from{
+									color: $white	
+								}
+								.price-hero{
+									.table-row{
+										display inline-block
+									}
+									.price-unit{
+										font-size 15px
+										line-height 23px
+									}
+									.to{
+										font-size: 10px
+										line-height: 13px
+										color: $white
+									}
+									.hours{
+										font-size: 11px
+										line-height: 17px
+										font-family $ob
+										color: $white
+									}
+								}
+							}
+						}
+						.capaciteSpec{
+							font-size: 27px !important;
+							line-height: 24px !important;
+							margin-bottom: 5px;
+							.blue{
+								color:#3b589d;
+								font-size 24px !important;
+								margin-bottom 5px;
+								display inline-block
+							}
+						}
+						.appIll{
+							line-height: 25px !important;
+						}
+						.promo {
+							float: left;
+							clear: both
+							position: relative;
+							padding: 0 4px;
+							.price-unit{
+								font-size: 18px !important
+								color: #000 !important;
+								font-family: $or !important;
+								line-height: 30px !important;
+							}
+							.currency {
+								font-size: 11px !important
+								color: #000 !important;
+								font-family: $or !important;
+							}
+							&:after{
+								content: '';
+								width: 54px;
+								height: 1px;
+								background: #ed1c24;
+								display: block;
+								transform: rotate(-18deg);
+								position: absolute;
+								top: 14px;
+								left:0;
+							}
+						}
+					}
+					.capaciteMobile{
+						font-family: ooredoobold;
+						font-size: 30px;
+						line-height: 17px;
+						color: #000000;
+						max-width: 151px;
+						display: inline-block;
+						float: left;
+						clear left;
+					}
+					.fb{
+						color: #00d8ff;
+					}
+					.mobileOoredoo{
+						font-family: ooredoobold;
+						font-size: 12px;
+						color: #000;
+						font-style: italic;
+					}
+
+					
+					.capacity{
+						priceTag(38px, 38px, #808080 , 25px , 30px , #808080 , 10px ,$ob , #808080 , 25px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+
+				.cardBottom{
+					width: 65%;
+				    overflow: hidden;
+				    float: left;
+				    margin-bottom: 8px;
+					.price-valable{
+					    text-align: center;
+					    margin-top: 6px;
+						.price-valable-hrs{
+							font-family: ooredoobold;
+							font-size: 22px;
+							line-height: 21px;
+							color: #6e6e6e;
+						}
+						.price-valable-text{
+							font-family: ooredoobold;
+							font-size: 12px;
+							color: #6e6e6e;
+							line-height: 17px;
+							font-style: italic;
+						}
+
+					}
+					.cost{
+						priceTag(28px, 28px, $red , 17px , 17px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 40%;
+						margin-right:10%;
+						float: left;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						.price-hero{
+							.capacityMobile {
+							    font-family: ooredoobold;
+							    font-size: 35px;
+							    line-height: 35px;
+							    color: #000;
+							}
+							
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.action{
+							display table-cell
+							vertical-align middle
+							.btn{
+								width 100%
+								height 40px
+								line-height 25px
+								padding 0 5px;
+								max-width: 125px;
+								width: 100%;
+								clear: both;
+								i{
+									margin-right 10px
+								}
+							}
+							.price-hero{
+								margin-top:5px;
+							}
+						}
+						.price-unit {
+						    font-family: 'ooredoobold';
+						    font-size: 28px;
+						    line-height: 28px;
+						    color: #e61e25;
+						}
+						.currency {
+						    font-family: 'ooredoobold';
+						    font-size: 17px;
+						    line-height: 17px;
+						    color: #e61e25;
+						    vertical-align: top;
+						}
+					}
+				}
+			}
+
+			.cardInfo.illimite .cardBottom .buy .action .price-hero {
+				margin-top: 20px;
+			}
+			.cardInfo.fb{
+				.cardBottom{
+					.price-valable{
+						margin-top: 53px;
+						.price-valable-text {
+							color: #b6cbf8;
+						}
+						.price-valable-hrs {
+							color: #b6cbf8;
+						}
+					}
+				.buy{
+					.action{
+						.price-hero {
+							margin-top: 35px;
+						}
+					}
+				}
+			}
+
+			}
+			.cardInfo.night  {
+				.cardBottom{
+					.price-valable{
+						.price-valable-text {
+							color: #fff;
+						}
+						.price-valable-hrs {
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.cardInfo.night{
+				.cardTop{
+					.capaciteMobile {
+						color: #00d8ff;
+					}
+					.mobileOoredoo {
+						color: #fff;
+
+					}
+					.capacity{
+						.price{
+							.price-hero{
+								.price-unit {
+									color: #fff !important;
+								}
+								.validity {
+									color: #fff !important;
+								}
+								.currency {
+									color: #fff !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}	
+}
+
+
+@media (max-width: $xsmall){
+	.md-forfait-internet{
+		.section-title{
+			sectionTitle(#dbddde , $black , 18px)
+		}
+		.section-content{
+			background #f6f7f8
+			padding 15px 0 0
+			.cardInfo{
+				width 100%
+				padding 0
+				background $white
+				margin-bottom 15px
+
+				.cardTop{
+					width: 37%;
+					overflow: hidden;
+					float left
+					padding-left 10px
+
+					.capaciteMobile {
+						font-size: 26px;
+						letter-spacing: -2px;
+					}
+					.duration{
+						priceTag(35px, 35px, $white , 20px , 20px , $white , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						.capacityMobile{
+							color: $white
+							font-size 14px
+						}
+						.capaciteSpec {
+							font-size: 24px !important;
+							letter-spacing: 0;
+							.blue {
+								font-size:21px !important;
+								margin-bottom 0;
+							}
+						}
+						.fb{
+							font-size: 20px !important;
+						}
+						&.small{
+							.price{
+								.from{
+									color: $white	
+								}
+								.price-hero{
+									.price-unit{
+										font-size 17px
+										line-height 23px
+									}
+									.to{
+										font-size: 13px
+										line-height: 13px
+										color: $white
+									}
+									.hours{
+										font-size: 11px
+										line-height: 15px
+									}
+								}
+							}
+						}
+					}
+					.capacity{
+						priceTag(28px, 28px, #808080 , 18px , 20px , #808080 , 10px ,$ob , #808080 , 25px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 62%;
+					overflow: hidden;
+					float left
+					padding-right 5px;
+					margin-bottom: 6px;
+					.price-valable {
+						.price-valable-minuit {
+					    	font-size: 15px;
+							line-height: 14px;
+					    }
+					}
+					.cost{
+						priceTag(22px, 22px, $red ,10px ,14px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 42%;
+						float: left;
+						margin-right: 2%;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 56%;
+						.action{
+							display table-cell
+							vertical-align middle
+							.btn{
+								font-size: 15px;
+								height: 35px;
+								line-height: 25px;
+								width: 100%;
+								padding: 2px 5px;
+								i{
+									margin-right 5px
+								}
+							}
+							.icon-cart {
+								font-size: 138% !important;
+							}
+						}
+						.currency {
+							font-size: 14px;
+						}
+						.price-unit {
+							font-size: 26px;
+							letter-spacing: -2px;
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+

@@ -1,0 +1,172 @@
+//my-accounte
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.md-recharge{
+	.section-title{
+		sectionTitle(#dbddde , $black , 29px )
+	}
+	.section-content{
+		background #f2f3f4
+		padding 30px 0
+		.fullWidthCard{
+			background $white
+			border-radius $radius
+			overflow: hidden
+			box-shadow 0 3px 5px rgba(0,0,0,0.35)
+			.cardThumb{
+				width 48%
+				position relative
+				overflow: hidden
+				border-radius: 10px 0 0 10px;
+				img{
+					width: auto
+					max-width initial
+					transition .2s transform ease
+					border-radius: 10px 0 0 10px;
+				}
+				&:hover{
+					img{
+						transform scale(1.1) rotate(2deg)
+						transition .2s transform ease
+					}
+					/* Safari only override */
+					::i-block-chrome,img {
+						transform scale(1) rotate(0deg)
+					}
+				}
+				.logo-cib{
+					position absolute
+					bottom 20px
+					right 20px
+				}
+			}
+			.cardInfo{
+				width 52%
+				padding 23px 25px
+				
+				h3{
+					font-family $ob
+					font-size 30px
+					color: $black
+					margin-bottom 30px
+					margin-top 0
+				}
+				
+				p{
+					font-family $or
+					font-size 20px
+					color: $black
+					
+				}
+				
+				.btn{
+					font-size: 16px
+					height: 50px
+					line-height: 40px
+					padding 4px 15px
+					margin-top 25px
+				}
+			}
+		}
+	}
+}			
+
+
+
+@media (max-width: $large){
+	.md-recharge{
+		.section-title{
+			sectionTitle(#dbddde , $black , 25px )
+		}
+		.section-content{
+			.fullWidthCard{
+				.cardThumb{
+					overflow: hidden;
+					img{
+						height: 100%;
+						width: auto;
+						max-width: initial;
+					}
+				}
+				.cardInfo{
+					h3{
+						font-size 25px
+					}
+					p{
+						font-size 18px
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $medium){
+	.md-recharge{
+		.section-title{
+			sectionTitle(#dbddde , $black , 22px )
+		}
+		.section-content{
+			background #f2f3f4
+			padding 20px 0
+		}
+	}
+}
+
+
+@media (max-width: $small){
+	.md-recharge{
+		.section-title{
+			sectionTitle(#dbddde , $black , 20px )
+		}
+		.section-content{
+			padding 15px 0
+			.fullWidthCard{
+				.cardThumb{
+					overflow: hidden;
+					img{
+						height: 100%;
+						width: auto;
+						max-width: initial;
+					}
+				}
+				.cardInfo{
+					width 100%
+					text-align: center
+					h3{
+						
+						font-size 20px
+						margin-bottom 15px
+					}
+					p{
+						font-size 15px
+					}
+					.btn{
+						width 100%
+						font-size: 14px
+						height: 40px
+						line-height: 30px
+						padding: 4px 15px
+						margin-top: 10px
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: $xsmall){
+	.md-recharge{
+		.section-title{
+			sectionTitle(#dbddde , $black , 18px )
+		}
+		.section-content{
+			background #f2f3f4
+			padding 15px 0
+		}
+	}
+}

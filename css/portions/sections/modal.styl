@@ -1,0 +1,215 @@
+//Footer
+@import nib;
+
+@import 'sections/colors.styl';
+
+.modal {
+  .modal-dialog {
+    width 795px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .modal-content {
+      background none;
+      border none;
+      box-shadow none
+      .modal-header {
+        border none
+        padding 0px;
+        background none;
+        text-align center;
+        padding-bottom 30px;
+        .btn-close {
+          display: block;
+          text-align center;
+          margin auto;
+          background url("../images/popup/icon-close.png") no-repeat;
+          color white;
+          width 50px;
+          height 50px;
+          border none;
+          font-size 0;
+          &:focus {
+            outline: inherit
+          }
+          &:active {
+            border none
+          }
+        }
+      }
+      .modal-body {
+        background-image: url(../images/popup/bg-popup.jpg);
+        background-position:top right;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        .title-popup {
+          margin 5px 0 15px;
+          h1 {
+            font-size 52px;
+            font-family ooredooregular;
+            color white;
+            margin 0;
+          }
+        }
+        .logo-popup{
+          margin-bottom 30px;
+        }
+        .content-popup {
+          .text-popup {
+            margin-bottom: 20px;
+            p {
+              font-size 24px;
+              color white;
+              font-family ooredoobold;
+              span {
+                font-family ooredooregular
+              }
+            }
+          }
+          .btns-popup {
+            .btn-download {
+              margin 0 17px 15px 52px;
+              a {
+                display: inline-block;
+                padding: 11px 10px 7px 10px;
+                font-family: ooredoobold;
+                font-size: 24px;
+                border-radius: 5px;
+                text-align: center;
+                max-width: 290px;
+                width: 100%;
+                line-height: 22px;
+                text-decoration none;
+                //&:hover {
+                //  background white;
+                //  color #ed1c24;
+                //  -webkit-transition: all 0.3s ease-out; /*compatibilité chrome*/
+                //  -moz-transition: all 0.3s ease-out; /*compatibilité firefox*/
+                //  -o-transition: all 0.3s ease-out; /*compatibilité opéra*/
+                //  transition: all 0.3s ease-out; /* Autre navigateur */
+                //  text-decoration none;
+                //}
+
+                .small{
+                  font-family ooredooregular;
+                  font-weight bold;
+                  font-size 14px;
+                }
+              }
+
+            }
+            .btn-playstore {
+              margin-left 125px;
+              display: inline-block;
+              p {
+                color white
+                font-size 14px;
+                font-family ooredoobold
+                margin 5px 0
+              }
+            }
+            .btn-playstore-ar {
+              margin-left 0px;
+              margin-right 25px;
+            }
+          }
+          img {
+            float right;
+          }
+          .img-ar {
+            float left
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+@media (max-width: 767px) {
+  .modal {
+    .modal-dialog {
+      width inherit
+      .modal-content {
+        .modal-header {
+          padding-bottom 15px;
+        }
+        .modal-body {
+          background-image: url(../images/popup/bg-popup-mobile.jpg);
+          .title-popup {
+            text-align: center;
+            h1 {
+              font-size 45px;
+              margin-bottom 10px;
+            }
+          }
+          .logo-popup {
+            text-align center
+          }
+          .content-popup {
+            .text-popup {
+              text-align: center;
+              p {
+                font-size 20px;
+              }
+
+            }
+            .btns-popup {
+              text-align: center;
+              .btn-download {
+                width 100%
+                text-align center
+                margin: 0 auto 15px auto;
+              }
+              .btn-playstore {
+                text-align center
+                margin: 0 auto 0 auto;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+@media (max-width: 382px) {
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+        }
+        .modal-body {
+          .logo-popup {
+            margin-bottom: 20px;
+          }
+          .title-popup {
+            text-align: center;
+            h1 {
+              font-size 32px;
+            }
+          }
+          .content-popup {
+            .btns-popup {
+              .btn-playstore {
+                a {
+                  margin 0;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

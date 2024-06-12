@@ -1,0 +1,45 @@
+//Footer
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+footer{
+	background #454646
+	.directives{
+		padding-left: 45px
+		margin 20px 0
+		color $white
+		position relative
+		font-size 14px
+		span{
+			font-family $ob
+		}
+		.directiveIcon{
+			width 30px
+			height 30px
+			border-radius 50%
+			background $red
+			text-align center
+			line-height 30px
+			position absolute
+			left 0
+			top -5px
+		}
+	}
+	.copyrights{
+		background #3d3d3d
+		color: $white
+		padding 15px 0
+		font-size 14px
+	}
+}			
+
+			
+@media (max-width: $small){
+	footer{
+		.directives{
+			font-size 12px
+		}
+	}
+}

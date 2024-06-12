@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Obot</title>
+    <link rel="stylesheet" href="css/components/ltm-modal.css">
+    <link rel="stylesheet" href="css/obot.css">
+    <script type='text/javascript' src="js/components/obot.js" defer></script>
+    <script type='text/javascript' src="js/components/LtmModal.js" defer></script>
+    <script>
+        // const modal=undefined;
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     this.modal= new LtmModal(false); // Now it's safe to call the function
+        // });
+    </script>
+</head>
+<body>
+
+<modal-component default-open="true" id="obot-modal">
+    <div class="ltm-modal-container" onclick="document.getElementById('obot-modal').close()">
+        <div class="ltm-modal  obot-modal">
+<!--            <div class="ltm-modal-header">-->
+<!--                <div class="ltm-modal-title">-->
+<!--                    hello title-->
+<!--                </div>-->
+<!--                <button class="ltm-close-btn" onclick="document.getElementById('obot-modal').close()"><img src="./images/components/close.png" alt="close"></button>-->
+<!--            </div>-->
+            <div class="ltm-modal-body">
+                <img class="ltm-obot-popup" src="./images/obot/popup.png" alt="">
+            </div>
+            <img class="ltm-obot-arrow" src="./images/obot/arrow.png" alt="">
+<!--            <div class="ltm-modal-footer">-->
+<!--                <a href="#">action btn</a>-->
+<!--            </div>-->
+        </div>
+    </div>
+</modal-component>
+
+<obot-component id="obot">
+    <div class="ltm-obot-container" id="obot-container-div">
+        <div class="ltm-obot-chat-container">
+            <div class="ltm-obot-header">
+                <img src="./images/obot/chat-title.png" alt="">
+                <img src="./images/obot/close.png" alt="" onclick="document.getElementById('obot').toggle();document.getElementById('obot-modal').close()">
+            </div>
+            <div id="obot-scroll-div">
+                <div id="obot-discussion-div">
+
+                </div>
+                <div id="obot-choices-container-div">
+                    <p>Quel est votre requete:</p>
+                    <div id="obot-choices-div">
+                    </div>
+                </div>
+                <div id="obot-thinking" class="d-none"><span>...</span></div>
+            </div>
+            <div class="ltm-obot-footer">
+                <input id="obot-text-input" type="text" placeholder="Exemple : quel sont les offres disponibles">
+                <button  id="obot-send-btn"><img src="./images/obot/send.png" alt=""></button>
+            </div>
+        </div>
+        <button class="ltm-obot-toggle" onclick="document.getElementById('obot').toggle();document.getElementById('obot-modal').close()">
+            <img src="images/obot/obot.png" alt="close"></button>
+
+    </div>
+</obot-component>
+</body>
+</html>

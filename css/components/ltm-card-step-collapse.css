@@ -1,0 +1,71 @@
+.ltm-card-step-collapse {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    color: black;
+
+    .red-btn-outline, .red-btn {
+        font-weight: bold;
+    }
+
+    > .ltm-card-step-collapse-container {
+        background-color: white;
+        border-radius: 16px;
+        border: 2px solid lightgrey;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        text-align: center;
+        /*gap: 16px;*/
+        max-width: min(100vw, 850px);
+        overflow: hidden;
+
+        > h2 {
+            padding: 12px;
+        }
+
+        > .ltm-card-step-main, > .ltm-card-step-secondary {
+            display: flex;
+            padding: 12px 16px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            > p {
+                font-family: outfit, ooredoobold, Arial, sans-serif;
+                font-size: 1.2em;
+                max-width: min(100vw, 600px);
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+
+        > .ltm-card-step-secondary {
+            background-color: #f8f8f8;
+        }
+    }
+}
+
+.dark .ltm-card-step-collapse {
+    .red-btn-outline {
+        background-color: white !important;
+    }
+}
+
+.ar .ltm-card-step-collapse {
+    .red-btn-outline , .red-btn{
+        font-weight: normal;
+    }
+}

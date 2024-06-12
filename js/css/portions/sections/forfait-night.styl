@@ -1,0 +1,688 @@
+//my-accounte
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.md-forfait-night{
+	.section-title{
+		sectionTitle(#015883 , $white , 29px , 24px)
+	}
+	.section-content{
+		background #0e74a6
+		padding 30px 0
+		.fullWidthCard{
+			background $white
+			border-radius $radius
+			overflow: hidden
+			box-shadow 0 3px 5px rgba(0,0,0,0.35)
+			.cardThumb{
+				width 48%
+				overflow: hidden
+				img{
+					height 100%
+					width: auto
+					max-width initial
+					transition .2s transform ease
+				}
+				&:hover{
+					img{
+						transform scale(1.1) rotate(2deg)
+						transition .2s transform ease
+					}
+				}
+			}
+			.cardInfo{
+				width 52%
+				padding 28px 25px
+				.cardTop{
+					width: 100%;
+					overflow: hidden;
+					.duration{
+						priceTag(45px, 45px, $black , 40px , 40px , $black , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+							.price-hero{
+								.price-unit{
+									font-size 45px
+									line-height 40px
+								}
+								.to{
+									font-size: 25px
+									line-height: 21px
+									color:#fff;
+								}
+								.hours{
+									font-size: 27px
+									line-height: 24px
+									font-family $ob
+								}
+							}
+						}
+					}
+					.capacity{
+						priceTag(48px, 48px, #808080 , 28px , 32px , #808080 , 10px ,$ob , #808080 , 28px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				
+				.cardBottom{
+					width: 100%;
+					overflow: hidden;
+					.cost{
+						width 50%
+						float left
+						priceTag(52px, 52px, $red , 30px , 35px , $red , 10px ,$ob , $red , 28px)
+						height 85px
+						display: table
+						.price{
+							vertical-align bottom
+							display table-cell
+						}
+					}
+					.buy{
+						display table
+						width 50%
+						float left
+						height 85px
+						.action{
+							width 100%
+							display table-cell
+							vertical-align bottom
+							.btn{
+								font-family $or
+								font-size 18px
+								width 100%
+								height 50px
+								line-height 35px
+								i{
+									margin-right 10px
+								}
+							}
+						}
+
+						.icon-cart {
+							font-size: 150% !important;
+							position: relative;
+							top:4px;
+							display: inline-block;
+						}
+
+					}
+				}
+			}
+			.cardInfo.night{
+				background :url("../images/bg-night.jpg") repeat center;
+				.cardTop{
+					.duration{
+						.price{
+							.price-hero{
+								.price-unit {
+									color: #fff !important;
+								}
+								.currency{
+									color: #fff !important;
+								}
+								.hours {
+									color: #fff !important;
+								}
+
+							}
+
+						}
+						.capaciteSpec {
+							.to {
+								color: #fff !important;
+							}
+						}
+					}
+					.capacity{
+						.price{
+							.price-hero{
+								.price-unit {
+									color: #fff !important;
+								}
+								.validity {
+									color: #fff !important;
+								}
+								.currency {
+									color: #fff !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}			
+
+
+@media (max-width: $large){
+	.md-forfait-night{
+		.section-title{
+			sectionTitle(#015883 , $white , 25px )
+		}
+		.section-content{
+			background #0e74a6
+			padding 30px 0
+			.fullWidthCard{
+				background $white
+				border-radius $radius
+				overflow: hiddenbox-shadow 0 3px 5px rgba(0,0,0,0.35)
+
+				.cardThumb{
+					width 50%
+					overflow: hidden
+					img{
+						height 100%
+						width: auto
+						max-width initial
+					}
+				}
+				.cardInfo{
+					width 50%
+					.cardTop{
+						width: 100%;
+						overflow: hidden;
+						.duration{
+							priceTag(40px, 40px, $black , 35px , 35px , $black , 10px ,$ob , $lightgrey , 12px)
+							height: 85px;
+							display: table;
+							float: left;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+								.price-hero{
+									.price-unit{
+										font-size 40px
+										line-height 35px
+									}
+									.to{
+										font-size: 23px
+										line-height: 19px
+									}
+									.hours{
+										font-size: 24px
+										line-height: 20px
+										font-family $ob
+									}
+								}
+
+							}
+						}
+						.capacity{
+							priceTag(45px, 45px, #808080 , 25px , 28px , #808080 , 10px ,$ob , #808080 , 28px)
+							height: 85px;
+							float: right;
+							display: table;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+					}
+					
+					.cardBottom{
+						width: 100%;
+						overflow: hidden;
+						.cost{
+							width 50%
+							float left
+							priceTag(45px, 45px, $red , 27px , 32px , $red , 10px ,$ob , $red , 28px)
+							height 85px
+							display: table
+							.price{
+								vertical-align bottom
+								display table-cell
+							}
+						}
+						.buy{
+							display table
+							width 50%
+							float left
+							height 85px
+							.action{
+								width 100%
+								display table-cell
+								vertical-align bottom
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+}
+
+
+
+@media (max-width: $medium){
+	.md-forfait-night{
+		.section-title{
+			sectionTitle(#015883 , $white , 22px )
+		}
+		.section-content{
+			background #0e74a6
+			padding 20px 0
+			.fullWidthCard{
+				background $white
+				border-radius $radius
+				overflow: hidden
+				box-shadow 0 3px 5px rgba(0,0,0,0.35)
+				.cardThumb{
+					width 50%
+					overflow: hidden
+					img{
+						height 100%
+						width: auto
+						max-width initial
+					}
+				}
+				.cardInfo{
+					width 50%
+					padding 28px 15px
+					.cardTop{
+						width: 100%;
+						overflow: hidden;
+						float left
+						.duration{
+							priceTag(35px, 35px, $black , 30px , 30px , $black , 10px ,$ob , $lightgrey , 12px)
+							height: 85px;
+							display: table;
+							float: left;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+								.price-hero{
+									.price-unit{
+										font-size 35px
+										line-height 30px
+									}
+									.to{
+										font-size: 20px
+										line-height: 17px
+									}
+									.hours{
+										font-size: 22px
+										line-height: 18px
+										font-family $ob
+									}
+								}
+
+							}
+						}
+						.capacity{
+							priceTag(40px, 40px, #808080 , 25px , 28px , #808080 , 10px ,$ob , #808080 , 28px)
+							height: 85px;
+							float: right;
+							display: table;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+					}
+					
+					.cardBottom{
+						width: 100%;
+						overflow: hidden;
+						float left
+						.cost{
+							width 50%
+							float left
+							priceTag(40px, 40px, $red , 25px , 19px , $red , 10px ,$ob , $red , 28px)
+							height 85px
+							display: table
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+						.buy{
+							display table
+							width 50%
+							float left
+							height 85px
+							.action{
+								width 100%
+								display table-cell
+								vertical-align middle
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+}
+
+
+
+
+@media (max-width: $small){
+	.md-forfait-night{
+		.section-title{
+			sectionTitle(#015883 , $white , 20px )
+		}
+		.section-content{
+			background none
+			padding 15px 0
+			.fullWidthCard{
+				background $white
+				border-radius 5px
+				overflow: hidden
+				border-style: solid;
+				border-width: 1px;
+				border-color: rgb( 219, 219, 219 );
+				box-shadow: 0px 1px 2px 0px rgb( 194, 194, 194 );
+				.cardThumb{
+					width 50%
+					overflow: hidden
+					img{
+						height 100%
+						width: auto
+						max-width initial
+					}
+				}
+				.cardInfo{
+					width 100%
+					padding 5px 0
+					border-radius: 5px;
+					box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.25);
+					.cardTop{
+						width: 33%;
+						overflow: hidden;
+						float left
+						padding-left: 10px
+						.duration{
+							priceTag(35px, 35px, $white , 30px , 30px , $black , 10px ,$ob , $lightgrey , 12px)
+							height: 85px;
+							display: table;
+							float: left;
+							width: auto;
+							.price{
+								.from{
+									color: $white
+								}
+								.price-hero{
+									.table-row{
+										display inline-block
+									}
+									.price-unit{
+										font-size 19px
+										line-height 19px
+									}
+									.to{
+										font-size: 13px
+										line-height: 13px
+										color: $white
+									}
+									.hours{
+										font-size: 10px
+										line-height: 19px
+										font-family $ob
+										color: $white
+									}
+									.capacityMobile{
+										font-size: 18px
+										line-height: 18px
+										color: $white
+									}
+									.capaciteMobile{
+										font-family: ooredoobold;
+										font-size: 30px;
+										line-height: 35px;
+										color: #fff;
+									}
+									.mobileOoredoo{
+										font-family: ooredoobold;
+										font-size: 12px;
+										color: #fff;
+										font-style: italic;
+									}
+								}
+							}
+						}
+						.capacity{
+							priceTag(40px, 40px, #808080 , 25px , 28px , #808080 , 10px ,$ob , #808080 , 28px)
+							height: 85px;
+							float: right;
+							display: table;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+					}
+					
+					.cardBottom{
+						width: 65%;
+						overflow: hidden;
+						float left
+						.price-valable{
+							text-align: center;
+							margin-top: 6px;
+							.price-valable-hrs{
+								font-family: ooredoobold;
+								font-size: 22px;
+								line-height: 21px;
+								color: #abaeb0;
+							}
+							.price-valable-text{
+								font-family: ooredoobold;
+								font-size: 12px;
+								color: #abaeb0;
+								line-height: 17px;
+								font-style: italic;
+							}
+						}
+						.cost{
+							width: 40%;
+							margin-right: 10%;
+							float left
+							priceTag(28px, 28px, $red , 17px , 17px , $red , 10px ,$ob , $red , 28px)
+							height 85px
+							display: table
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+						.buy{
+							display table
+							width 50%
+							float left
+							height 85px
+							.action{
+								width 100%
+								display table-cell
+								vertical-align middle
+								.btn{
+									width 100%
+									height 50px
+									line-height 40px
+									max-width: 125px;
+									width: 100%;
+									clear: both;
+									i{
+										margin-right 10px
+									}
+								}
+							}
+							.price-unit {
+								font-family: 'ooredoobold';
+								font-size: 28px;
+								line-height: 28px;
+								color: #e61e25;
+							}
+							.currency {
+								font-family: 'ooredoobold';
+								font-size: 17px;
+								line-height: 17px;
+								color: #e61e25;
+								vertical-align: top;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+}
+
+
+@media (max-width: $xsmall){
+	.md-forfait-night{
+		.section-title{
+			sectionTitle(#015883 , $white , 18px )
+		}
+		.section-content{
+			padding 15px 0
+			.fullWidthCard{
+                .cardInfo{
+					width 100%
+					padding 0 
+					.cardTop{
+						width: 37%;
+						overflow: hidden;
+						float left
+						padding-left: 10px
+						.capaciteMobile {
+							font-size: 26px !important;
+							letter-spacing: -2px;
+						}
+						.duration{
+							priceTag(30px, 30px, $white , 25px , 25px , $black , 10px ,$ob , $lightgrey , 12px)
+							height: 85px;
+							display: table;
+							float: left;
+							width: auto;
+							.price{
+								.from{
+									color: $white	
+								}
+								.price-hero{
+									.table-row{
+										display inline-block
+									}
+									.price-unit{
+										font-size 16px
+										line-height 22px
+									}
+									.to{
+										font-size: 11px
+										line-height: 11px
+										color: $white
+									}
+									.hours{
+										font-size: 10px
+										line-height: 19px
+										font-family $ob
+										color: $white
+									}
+									.capacityMobile{
+										font-size: 16px
+										line-height: 16px
+										color: $white
+									}
+								}
+							}
+						}
+						.capacity{
+							priceTag(40px, 40px, #808080 , 25px , 28px , #808080 , 10px ,$ob , #808080 , 28px)
+							height: 85px;
+							float: right;
+							display: table;
+							width: auto;
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+					}
+					
+					.cardBottom{
+						width: 62%;
+						overflow: hidden;
+						float left
+						padding-right 5px
+						margin-bottom: 6px;
+						.price-valable {
+							.price-valable-hrs {
+								font-size: 15px;
+								line-height: 14px;
+							}
+						}
+						.cost{
+							width: 42%;
+							float: left;
+							margin-right: 2%;
+							priceTag(22px, 22px, $red , 10px , 14px , $red , 10px ,$ob , $red , 28px)
+							height 85px
+							display: table
+							.price{
+								vertical-align middle
+								display table-cell
+							}
+						}
+						.buy{
+							display table
+							width 56%
+							float left
+							height 85px
+							.action{
+								width 100%
+								display table-cell
+								vertical-align middle
+								.btn{
+									font-size 15px
+									height:40px;
+									line-height: 25px;
+									width 100%
+									i{
+										margin-right 5px
+									}
+								}
+							}
+							.icon-cart {
+								font-size: 138% !important;
+							}
+							.currency {
+								font-size: 14px;
+							}
+							.price-unit {
+								font-size: 26px;
+								letter-spacing: -2px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
