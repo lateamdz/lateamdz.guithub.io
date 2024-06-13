@@ -791,25 +791,30 @@
                      alt="">
             </div>
             <div class="default-promo">
-<!--                <br> <br> <br>-->
+                <!--                <br> <br> <br>-->
                 <!--                <img src="images/bg-shape.png" class="bg-shape">-->
                 <div class="container main-section-container">
 
 
-<!--                    <br>-->
-                    <ltm-card-step-collapse-component id="mode-recharge-component" storage-key="recharge-mode" default-mode="auto" class="ltm-card-step-collapse" >
+                    <!--                    <br>-->
+                    <ltm-card-step-collapse-component id="mode-recharge-component" storage-key="recharge-mode" default-mode="auto" class="ltm-card-step-collapse">
                         <div class="ltm-card-step-collapse-container d-none">
                             <h2 class="text-outfit text-uppercase">Mode de rechargement</h2>
                             <div class="ltm-card-step-main">
-                                <p data-show="auto_0;auto_1">Vous êtes actuellement sur le mode <b>"Automatique"</b> qui vous permet de recevoir à chaque
-                                    rechargement de <b>1000 DA</b> et plus un forfait Gold Activé. Voulez-vous le modifier ?</p>
-                                <p data-show="manual_0;manual_1">Vous êtes actuellement sur le mode <b>"Manuel"</b> qui vous permet de recevoir à chaque
-                                    rechargement de <b>1000 DA</b> et plus un forfait Gold Activé. Voulez-vous le modifier ?</p>
+                                <p data-show="auto_0;auto_1">Vous êtes actuellement sur le mode <b>"Automatique"</b> qui vous permet de recevoir un
+                                    forfait Gold Activé à chaque rechargement de <b>1000 DA</b> et plus. Voulez-vous le modifier ?</p>
+                                <p data-show="manual_0;manual_1">Vous êtes actuellement sur le mode <b>"Manuel"</b> qui vous permet de recevoir un
+                                    crédit non activé à chaque rechargement de <b>1000 DA</b> et plus. Voulez-vous le modifier ?
+                                </p>
                                 <p data-show="auto_2"><b>Félicitations !</b> Vous êtes sur le mode Automatique.</p>
                                 <p data-show="manual_2"><b>Félicitations !</b> Vous êtes sur le mode Manuel.</p>
                                 <div>
-                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-recharge-component').edit()">Modifier</button>
-                                    <button class=" red-btn border-round text-uppercase" data-show="manual_2;auto_2" onclick="document.getElementById('mode-recharge-component').finally()">ok</button>
+                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-recharge-component').edit()">
+                                        Modifier
+                                    </button>
+                                    <button class=" red-btn border-round text-uppercase" data-show="manual_2;auto_2" onclick="document.getElementById('mode-recharge-component').finally()">
+                                        ok
+                                    </button>
                                 </div>
                             </div>
                             <div class="ltm-card-step-secondary" data-show="manual_1;auto_1">
@@ -820,8 +825,12 @@
                                     qui vous permettra de recevoir un forfait Gold Activé
                                     à chaque rechargement de <b>1000 DA</b> et plus.</p>
                                 <div>
-                                    <button class="red-btn border-round text-uppercase" data-show="manual_1;auto_1"  onclick="document.getElementById('mode-recharge-component').confirm((mode)=>({auto:'manual',manual:'auto'}[mode]))">Confirmer</button>
-                                    <button class=" red-btn-outline border-round text-uppercase" data-show="manual_1;auto_1"  onclick="document.getElementById('mode-recharge-component').cancel()">Annuler</button>
+                                    <button class="red-btn border-round text-uppercase" data-show="manual_1;auto_1" onclick="document.getElementById('mode-recharge-component').confirm((mode)=>({auto:'manual',manual:'auto'}[mode]))">
+                                        Confirmer
+                                    </button>
+                                    <button class=" red-btn-outline border-round text-uppercase" data-show="manual_1;auto_1" onclick="document.getElementById('mode-recharge-component').cancel()">
+                                        Annuler
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -836,7 +845,7 @@
                          id="promo-grid">
                         <script>
                             (() => {
-                                const data=[
+                                const data = [
                                     {
                                         title: "Gold 2500",
                                         giga: 100,
@@ -844,9 +853,9 @@
                                         price: 2500,
                                         duration: "30 Jours",
                                         options: [
-                                            "Appels illimités vers tous les réseaux nationaux",
+                                            "<b>Appels illimités</b> vers tous les réseaux",
                                             "SMS illimités vers Ooredoo",
-                                            "100 SMS vers les autres réseaux nationaux",
+                                            "100 SMS vers les autres réseaux",
                                         ],
                                     },
                                     {
@@ -856,8 +865,8 @@
                                         price: 2000,
                                         duration: "30 Jours",
                                         options: [
-                                            "6000 DA de crédit vers tous les réseaux nationaux",
                                             "Appels illimités vers Ooredoo",
+                                            "6000 DA de crédit",
                                         ],
                                     },
                                     {
@@ -867,8 +876,8 @@
                                         price: 1500,
                                         duration: "30 Jours",
                                         options: [
-                                            "3000 DA de crédit vers tous les réseaux nationaux",
                                             "Appels illimités vers Ooredoo.",
+                                            "3000 DA de crédit",
                                         ],
                                     },
                                     {
@@ -878,8 +887,8 @@
                                         price: 1000,
                                         duration: "30 Jours",
                                         options: [
-                                            "2000 DA de crédit vers tous les réseaux nationaux",
                                             "Appels illimités vers Ooredoo.",
+                                            "2000 DA de crédit",
                                         ],
                                     },
                                 ];
@@ -893,8 +902,8 @@
                                 <div class="promo-card-content">
                                 <h4 class="promo-card-title"><span class="text-outfit text-uppercase">${item.title}</span></h4>
                                 <ul class="offer-list">
-                                <li class="text-outfit hide-before fs-40 d-inline text-center">${item.internet24?`<span class="text-red text-uppercase fs-34">Internet 24h</span>`:`<span class="text-red">${item.giga} <small class="fs-30">${item.unit||"Go"}</small></span> <span class="text-outfit-light fs-24">internet</span>`}</li>
-                                ${item.options.map((li=>`<li class="text-outfit"><span>${li}</span></li>`)).join(' ')}
+                                <li class="text-outfit hide-before fs-40 d-inline text-center">${item.internet24 ? `<span class="text-red text-uppercase fs-34">Internet 24h</span>` : `<span class="text-red">${item.giga}<small class="fs-30">${item.unit || "Go"}</small></span> <span class="text-outfit-light fs-24">internet</span>`}</li>
+                                ${item.options.map((li => `<li class="text-outfit-light"><span>${li}</span></li>`)).join(' ')}
                                 </ul>
                                 <div class="promo-footer">
                                     <div class="price-duration fs-28">
@@ -924,14 +933,14 @@
                          id="promo-grid-forfait">
                         <script>
                             (() => {
-                                const data=[
+                                const data = [
                                     {
                                         title: "forfait 1500",
                                         giga: 40,
                                         internet24: false,
                                         price: 1500,
                                         duration: "30 Jours",
-                                        options: [" YouTube illimité."],
+                                        options: ["YouTube illimité"],
                                     },
                                     {
                                         title: "forfait 1000",
@@ -939,7 +948,7 @@
                                         internet24: false,
                                         price: 1000,
                                         duration: "30 Jours",
-                                        options: ["5Go YouTube."],
+                                        options: ["5Go YouTube"],
                                     },
                                     {
                                         title: "forfait 500",
@@ -947,7 +956,7 @@
                                         internet24: false,
                                         price: 500,
                                         duration: "30 Jours",
-                                        options: ["Coupons Fayda."],
+                                        options: ["Coupons Fayda"],
                                     },
                                     {
                                         title: "forfait 200",
@@ -955,16 +964,16 @@
                                         internet24: true,
                                         price: 100,
                                         duration: "24 heurs",
-                                        options: ["Appels illimités vers Ooredoo","600 DA"],
+                                        options: ["Appels illimités vers Ooredoo", "600 DA de crédit"],
                                     },
                                     {
                                         title: "forfait 100",
                                         giga: 500,
-                                        unit:"Mo",
+                                        unit: "Mo",
                                         internet24: false,
                                         price: 100,
                                         duration: "24 heurs",
-                                        options: ["Appels illimités vers Ooredoo", "Facebook gratuit", "100 DA"],
+                                        options: ["Appels illimités vers Ooredoo", "Facebook gratuit", "100 DA de crédit"],
                                     },
                                     {
                                         title: "forfait 300",
@@ -972,7 +981,7 @@
                                         internet24: false,
                                         price: 300,
                                         duration: "72 heurs",
-                                        options: ["YouTube illimité."],
+                                        options: ["YouTube illimité"],
                                     },
                                 ];
 
@@ -985,8 +994,8 @@
                                 <div class="promo-card-content">
                                 <h4 class="promo-card-title"><span class="text-outfit text-uppercase">${item.title}</span></h4>
                                 <ul class="offer-list">
-                                <li class="text-outfit hide-before fs-40 d-inline text-center">${item.internet24?`<span class="text-red text-uppercase fs-34">Internet 24h</span>`:`<span class="text-red">${item.giga} <small class="fs-30">${item.unit||"Go"}</small></span> <span class="text-outfit-light fs-24">internet</span>`}</li>
-                                ${item.options.map((li=>`<li class="text-outfit"><span>${li}</span></li>`)).join(' ')}
+                                <li class="text-outfit hide-before fs-40 d-inline text-center">${item.internet24 ? `<span class="text-red text-uppercase fs-34">Internet 24h</span>` : `<span class="text-red">${item.giga}<small class="fs-30">${item.unit || "Go"}</small></span> <span class="text-outfit-light fs-24">internet</span>`}</li>
+                                ${item.options.map((li => `<li class="text-outfit-light"><span>${li}</span></li>`)).join(' ')}
                                 </ul>
                                 <div class="promo-footer">
                                     <div class="price-duration fs-28">
@@ -1013,28 +1022,32 @@
                     <br>
                     <br>
                     <br>
+                    <div class="default-promo-header text-uppercase">
+                        <h2 class="text-center">boosts la gold</h2>
+                        <br>
+                    </div>
                     <div class="promo-grid promo-grid-one"
                          id="promo-boosts">
                         <script>
                             (() => {
-                                const data=[
+                                const data = [
                                     {
                                         giga: 25,
                                         unlimitedCalls: false,
                                         price: 500,
-                                        options: ["1000 DA D'APPELS"],
+                                        options: ["1000 DA de crédit"],
                                     },
                                     {
                                         giga: 30,
                                         unlimitedCalls: false,
                                         price: 500,
-                                        options:  ["3000 DA D'APPELS"],
+                                        options: ["3000 DA de crédit"],
                                     },
                                     {
                                         giga: 30,
                                         unlimitedCalls: true,
                                         price: 500,
-                                        options: ["SMS ILLIMITÉS VERS OOREDOO","+ 100 SMS VERS TOUS"],
+                                        options: ["SMS illimités vers Ooredoo", "+ 100 SMS vers les autres réseaux "],
                                     }
                                 ];
 
@@ -1045,19 +1058,19 @@
                                     card.className = "promo-card outline-grey";
                                     card.innerHTML = `
                                 <div class="promo-card-content">
-                                <h4 class="text-center fs-30"><span class="text-outfit text-uppercase">Boosts la gold</span></h4>
+                                <h4 class="text-center fs-30"><span class="text-outfit text-uppercase">Boost ${item.price}</span></h4>
                                 <ul class="offer-list offer-list-horizontal">
 
                                  <li class="text-outfit hide-before">
                                     <ul class="offer-list">
-                                          <li class="text-outfit hide-before fs-40 d-inline text-start"><span class="text-red">${item.giga} <small class="fs-30">${item.unit||"Go"}</small></span></li>
-                                          ${item.unlimitedCalls?`<li class="text-outfit hide-before fs-18"><small class="text-red">APPELS ILLIMITÉS VERS TOUS</small></li>`:''}
+                                          <li class="text-outfit hide-before fs-40 d-inline text-start" style="padding-inline-start: 1em"><span class="text-red text-center">${item.giga}<small class="fs-30">${item.unit || "Go"}</small></span></li>
+                                          ${item.unlimitedCalls ? `<li class="text-outfit hide-before fs-18"> <span class="text-red fs-30" style="position: relative; top:-0.8em">&</span><small class="fs-12 text-red text-uppercase">Appels illimités vers tous les réseaux</small></li>` : ''}
                                     </ul>
                                  </li>
                                 <li class="text-outfit big-before"></li>
                                 <li class="text-outfit hide-before">
                                     <ul class="offer-list">
-                                            ${item.options.map((li=>`<li class="text-outfit hide-before"><span>${li}</span></li>`)).join(' ')}
+                                            ${item.options.map((li => `<li class="text-outfit hide-before text-uppercase"><span>${li}</span></li>`)).join(' ')}
                                     </ul>
                                  </li>
                                 </ul>
@@ -1083,7 +1096,7 @@
                     <br>
                     <br>
                     <br>
-                    <ltm-card-step-collapse-component id="mode-migration" storage-key="migration-mode" default-mode="auto" class="ltm-card-step-collapse" >
+                    <ltm-card-step-collapse-component id="mode-migration" storage-key="migration-mode" default-mode="auto" class="ltm-card-step-collapse">
                         <div class="ltm-card-step-collapse-container d-none" style="max-width: min(100vw, 600px);">
                             <h2 class="text-outfit text-uppercase">MIGRATION</h2>
                             <div class="ltm-card-step-main">
@@ -1091,16 +1104,23 @@
                                 <p data-show="dima_0">Vous êtes désormais sur l'offre Dima Ooredoo.
                                     <br> Pour plus d'infos, composez *500#</p>
                                 <div>
-                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-migration').edit()">Continuer</button>
+                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-migration').edit()">
+                                        Continuer
+                                    </button>
                                 </div>
-                                <p data-show="auto_0;auto_1;dima_0" class="text-red">Plus d'info à propos de "Dima" sur <a class="text-red text-underline" href="www.ooredoo.dz">www.ooredoo.dz</a></p>
+                                <p data-show="auto_0;auto_1;dima_0" class="text-red">Plus d'info à propos de "Dima" sur
+                                    <a class="text-red text-underline" href="www.ooredoo.dz">www.ooredoo.dz</a></p>
                             </div>
                             <div class="ltm-card-step-secondary" data-show="auto_1">
                                 <p data-show="auto_1">Vous allez être migré vers l'offre Dima gratuitement,
                                     ceci peut entrainer la perte de votre forfait en cours.</p>
                                 <div>
-                                    <button class="red-btn border-round text-uppercase" data-show="auto_1"  onclick="document.getElementById('mode-migration').confirm((mode)=>({auto:'dima',dima:'auto'}[mode]), true)">Confirmer</button>
-                                    <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1"  onclick="document.getElementById('mode-migration').cancel()">Annuler</button>
+                                    <button class="red-btn border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration').confirm((mode)=>({auto:'dima',dima:'auto'}[mode]), true)">
+                                        Confirmer
+                                    </button>
+                                    <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration').cancel()">
+                                        Annuler
+                                    </button>
                                 </div>
                             </div>
                         </div>

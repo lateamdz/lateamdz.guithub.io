@@ -21,6 +21,17 @@
     font-weight: 800;
 }
 
+@font-face {
+    font-family: noto-arabic;
+    src: url(../fonts/noto-arabic.ttf);
+}
+
+@font-face {
+    font-family: noto-arabic-bold;
+    src: url(../fonts/noto-arabic-bold.ttf);
+    font-weight: 800;
+}
+
 :root {
     --ooredoo-red: #ed1c24;
     --ooredoo-dark: #121212;
@@ -29,7 +40,7 @@
 }
 
 #page, body, html {
-    font-family: rubik, ooredooregular, Arial;
+    font-family: rubik, noto-arabic, Arial;
 }
 
 .fs-42 {
@@ -168,11 +179,17 @@
 }
 
 .text-outfit-light {
-    font-family: outfit, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit, noto-arabic, Arial, sans-serif !important;
+    font-weight: 400;
 }
 
 .text-outfit {
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, noto-arabic-bold, Arial, sans-serif !important;
+
+}
+
+.text-outfit-bold{
+    font-family: outfit-bold, noto-arabic-bold, Arial, sans-serif !important;
 }
 
 .border-round {
@@ -216,11 +233,11 @@
 }
 
 .text-fr-bold {
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold,  noto-arabic-bold, Arial, sans-serif !important;
 }
 
 .text-fr {
-    font-family: rubik, ooredoobold, Arial;, sans-serif !important;
+    font-family: rubik, noto-arabic, Arial, sans-serif !important;
 }
 sub{
     bottom: -1em!important;
@@ -244,7 +261,7 @@ sub{
 .boost-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
-    font-family: rubik, ooredoobold, Arial;;
+    font-family: rubik, noto-arabic, Arial;;
 }
 
 .boost-card .ooredoo-calls .call-count {
@@ -350,7 +367,7 @@ sub{
 .recharge-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
-    font-family: rubik, ooredoobold, Arial;;
+    font-family: rubik, noto-arabic, Arial;;
 }
 
 .recharge-card .ooredoo-calls .call-count {
@@ -760,7 +777,7 @@ position: relative;
 }
 
 input, select {
-    font-family: rubik, ooredoobold, Arial;
+    font-family: rubik, noto-arabic, Arial;
 }
 
 .default-form {
@@ -841,7 +858,8 @@ input, select {
     border-radius: 0.8em;
     border: unset;
     outline: unset;
-    font-family: rubik, ooredoobold, Arial;
+    font-family: rubik, noto-arabic, Arial;
+    font-weight: 800;
     &:disabled{
         background-color: orange!important;
         filter: saturate(0);
@@ -857,7 +875,7 @@ input, select {
     border-radius: 0.8em;
     border: unset;
     outline: 1px solid var(--ooredoo-red);
-    font-family: rubik, ooredoobold, Arial;
+    font-family: rubik, noto-arabic, Arial;
     &:disabled{
         outline: orange!important;
         color: orange!important;
@@ -890,7 +908,7 @@ input, select {
 }
 .custom-modal-popup {
     overflow: hidden;
-    font-family: rubik, ooredoobold, Arial;
+    font-family: rubik, noto-arabic, Arial;
     display: flex;
     align-items: center;
     justify-content: center;
