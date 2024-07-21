@@ -1108,8 +1108,8 @@
                                         Continuer
                                     </button>
                                 </div>
-                                <p data-show="auto_0;auto_1;dima_0" class="text-red">Plus d'info à propos de "dima" sur
-                                    <a class="text-red text-underline" href="http://ooredoo.dz/">www.ooredoo.dz</a></p>
+                                <p data-show="auto_0;auto_1;dima_0" class="text-red">Plus d'info à propos de "Dima" sur
+                                    <a class="text-red text-underline" href="https://www.ooredoo.dz">www.ooredoo.dz</a></p>
                             </div>
                             <div class="ltm-card-step-secondary" data-show="auto_1">
                                 <p data-show="auto_1">Vous allez être migré vers l'offre Dima gratuitement,
@@ -1119,6 +1119,36 @@
                                         Confirmer
                                     </button>
                                     <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration').cancel()">
+                                        Annuler
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ltm-card-step-collapse-component>
+                    <br>
+                    <br>
+                    <br>
+                    <ltm-card-step-collapse-component id="mode-migration-la-gold" storage-key="migration-mode-la-gold" default-mode="auto" class="ltm-card-step-collapse">
+                        <div class="ltm-card-step-collapse-container d-none" style="max-width: min(100vw, 600px);">
+                            <h2 class="text-outfit text-uppercase">MIGRATION</h2>
+                            <div class="ltm-card-step-main">
+                                <p data-show="auto_0;auto_1">Voulez-vous migrer vers l'offre "Gold Jdida" ?</p>
+                                <p data-show="gold_0">Vous êtes désormais sur l'offre Gold Jdida Ooredoo.
+                                    <br> Pour plus d'infos, composez *500#</p>
+                                <div>
+                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-migration-la-gold').edit()">
+                                        Continuer
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="ltm-card-step-secondary" data-show="auto_1">
+                                <p data-show="auto_1">Vous allez être migré vers l'offre Gold Jdida gratuitement,
+                                    ceci peut entrainer la perte de votre forfait en cours.</p>
+                                <div>
+                                    <button class="red-btn border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration-la-gold').confirm((mode)=>({auto:'gold',gold:'auto'}[mode]), true)">
+                                        Confirmer
+                                    </button>
+                                    <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration-la-gold').cancel()">
                                         Annuler
                                     </button>
                                 </div>

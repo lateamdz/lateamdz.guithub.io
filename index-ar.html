@@ -1200,7 +1200,7 @@
                                  <li class="text-outfit hide-before">
                                     <ul class="offer-list">
                                           <li class="text-outfit hide-before fs-40 d-inline text-start" style="padding-inline-start: 1em"><span class="text-red"><span>${item.giga}<small class="fs-30">${item.unit || "Go"}</small></span> </span></li>
-                                          ${item.unlimitedCalls ? `<li class="text-outfit hide-before fs-18" ><small class="text-red" style="padding-inline-start: 2em">مكالمات غير محدودة نحو الكل</small></li>` : ''}
+                                          ${item.unlimitedCalls ? `<li class="text-outfit hide-before fs-18" ><span class="text-red fs-30" style="position: relative; top:-0.8em">&</span><small class="text-red" style="padding-inline-start: 2em">مكالمات غير محدودة نحو كل الشبكات</small></li>` : ''}
                                     </ul>
                                  </li>
                                 <li class="text-outfit big-before"></li>
@@ -1212,7 +1212,7 @@
                                 </ul>
 
                                 <div class="promo-footer" >
-                                <p class="text-center">الكل صالح حسب اشتراكك الحالي</p>
+                                <p class="text-center">الكل صالح حسب صلاحية اشتراكك الحالي</p>
                                     <div class="price-duration  border-0">
                                                     <span class="text-bold text-center fs-32">
                                                        <span class="text-outfit">${item.price} <sup>دج</sup></span>
@@ -1243,8 +1243,8 @@
                                         أواصل
                                     </button>
                                 </div>
-                                <p data-show="auto_0;auto_1;dima_0" class="text-red">المزيد من المعلومات حول عرض dima على
-                                    <a class="text-red text-underline" href="http://ooredoo.dz/">www.ooredoo.dz</a></p>
+                                <p data-show="auto_0;auto_1;dima_0" class="text-red">المزيد من المعلومات حول عرض Dima على
+                                    <a class="text-red text-underline" href="https://www.ooredoo.dz">www.ooredoo.dz</a></p>
                             </div>
                             <div class="ltm-card-step-secondary" data-show="auto_1">
                                 <p data-show="auto_1">ستقوم بالتغيير مجانًا نحو العرض <b>Dima</b> وقد يؤدي ذلك إلى خسارة اشتراكك الحالي.</p>
@@ -1253,6 +1253,34 @@
                                         تأكيد
                                     </button>
                                     <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration').cancel()">
+                                        إلغاء
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ltm-card-step-collapse-component>
+                    <br>
+                    <br>
+                    <br>
+                    <ltm-card-step-collapse-component id="mode-migration-la-gold" storage-key="migration-mode-la-gold" default-mode="auto" class="ltm-card-step-collapse">
+                        <div class="ltm-card-step-collapse-container d-none" style="max-width: min(100vw, 600px);">
+                            <h2 class="text-outfit text-uppercase text-bold">التغيير</h2>
+                            <div class="ltm-card-step-main">
+                                <p data-show="auto_0;auto_1">هل تريد التغيير نحو العرض <b>Gold Jdida</b> ؟ </p>
+                                <p data-show="gold_0">أنت الآن مستفيد من عرض Gold Jdida Ooredoo. للمزيد من المعلومات، شكّل #500*</p>
+                                <div>
+                                    <button class="red-btn border-round text-uppercase" data-show="manual_0;auto_0" onclick="document.getElementById('mode-migration-la-gold').edit()">
+                                        أواصل
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="ltm-card-step-secondary" data-show="auto_1">
+                                <p data-show="auto_1">ستقوم بالتغيير مجانًا نحو العرض <b>Gold Jdida</b> وقد يؤدي ذلك إلى خسارة اشتراكك الحالي.</p>
+                                <div>
+                                    <button class="red-btn border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration-la-gold').confirm((mode)=>({auto:'gold',gold:'auto'}[mode]), true)">
+                                        تأكيد
+                                    </button>
+                                    <button class=" red-btn-outline border-round text-uppercase" data-show="auto_1" onclick="document.getElementById('mode-migration-la-gold').cancel()">
                                         إلغاء
                                     </button>
                                 </div>
