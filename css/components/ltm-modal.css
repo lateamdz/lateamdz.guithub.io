@@ -17,7 +17,7 @@
     transition: opacity 150ms ease;
     .ltm-modal {
         border-radius: 1em;
-        width: min(600px, 90vw);
+        width: min(400px, 90vw);
         background-color: white;
         position: absolute;
         bottom: max(20%, 400px);
@@ -33,6 +33,7 @@
             padding: 0.5em;
             > .ltm-modal-title {
                 padding-inline-start: 0.5em;
+                flex: 1;
             }
 
             > .ltm-close-btn {
@@ -67,6 +68,10 @@
             align-items: center;
             justify-content: center;
             padding: 0.5em;
+            gap: 0.8em;
+            .red-btn-outline {
+                background-color: white !important;
+            }
         }
 
     }

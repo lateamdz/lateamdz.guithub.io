@@ -4,7 +4,7 @@ class Modal extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'}); // Create a shadow DOM
-        const defaultOpen = this.getAttribute('default-open');
+        const defaultOpen = this.getAttribute('default-open')==="true";
         shadowRoot.innerHTML = `<slot></slot>`;
         this.container=this.firstElementChild;
         if(defaultOpen){
