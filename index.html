@@ -115,10 +115,10 @@
         window.isShahidActive=window.localStorage.getItem('shahid-active')==="true";
 
         if(!window.isShahidActive){
-           setTimeout(()=>{
-               const modal=document.getElementById('shahid-modal');
-               modal.open();
-           },1000)
+            setTimeout(()=>{
+                const modal=document.getElementById('shahid-modal');
+                modal.open();
+            },1000)
         }
     </script>
 </head>
@@ -975,15 +975,16 @@
                                     {
                                         title: "Dima 2500",
                                         price: 2500,
-                                        gigas: 60,
+                                        gigas: 100,
                                         minutes: 0,
-                                        sms: 250,
+                                        sms: 100,
+                                        smsOoredoo: true,
                                         calls: "all",
                                         duration: "30 Jours",
                                         bonus: ["fb", "anazik", "shahid", "anaflix"],
                                         msgs: {
-                                            confirm: "Appels illimités vers tous les réseaux nationaux + 60Go + FB + 250 SMS vers tous les réseaux + ANAZIK,  et ANAFLIX et SHAHID pendant 30 jours",
-                                            congrats: "Félicitations ! Vous venez de recevoir des appels illimités vers tous les réseaux nationaux + 60Go + FB + 250 SMS vers tous les réseaux + ANAZIK,  ANAFLIX et SHAHID pendant 30 jours",
+                                            confirm: "100Go + appels illimités vers tous les réseaux nationaux + Facebook + SMS illimités vers Ooredoo + 100 SMS vers les autres réseaux nationaux + SHAHID, ANAZIK et ANAFLIX, le tout valable 30 jours",
+                                            congrats: "Félicitations ! Vous venez de recevoir 100Go + appels illimités vers tous les réseaux nationaux + Facebook + SMS illimités vers Ooredoo + 100 SMS vers les autres réseaux nationaux + SHAHID, ANAZIK et ANAFLIX, le tout valable 30 jours",
                                             noCredit: "Votre crédit est insuffisant pour acheter le forfait Dima 2500. Veuillez recharger votre compte.",
                                         }
                                     },
@@ -1075,6 +1076,11 @@
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span>
                                                     </li>`}
+                                                     ${item.smsOoredoo  ? `<li><span class="text-bold fs-16">SMS illimités vers <img
+                                                            src="images/dimax/ooredoo_logo.svg"
+                                                            alt="" class="img-inline-1em"
+                                                            style="font-size: 0.8em"></span>
+                                                    </li>` : ``}
                                                     <li>
                                                         ${item.bonus.includes("anazik") ? `<img src="images/dimax/Icon-Anazik.svg" alt="">` : ''}
                                                         ${item.bonus.includes("anaflix") ? `<img src="images/dimax/Icon-Anaflix.svg" alt="">` : ''}
