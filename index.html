@@ -104,21 +104,21 @@
     <script type="text/javascript"
             defer>
 
-        if(new URLSearchParams(window.location.search).get('resetShahid')==='true'){
-            window.localStorage.setItem('shahid-active',"");
+        if (new URLSearchParams(window.location.search).get('resetShahid') === 'true') {
+            window.localStorage.setItem('shahid-active', "");
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
             params.delete("resetShahid");
             window.history.replaceState({}, '', `${url.pathname}?${params}`);
             location.reload();
         }
-        window.isShahidActive=window.localStorage.getItem('shahid-active')==="true";
+        window.isShahidActive = window.localStorage.getItem('shahid-active') === "true";
 
-        if(!window.isShahidActive){
-            setTimeout(()=>{
-                const modal=document.getElementById('shahid-modal');
+        if (!window.isShahidActive) {
+            setTimeout(() => {
+                const modal = document.getElementById('shahid-modal');
                 modal.open();
-            },1000)
+            }, 1000)
         }
     </script>
 </head>
@@ -1063,6 +1063,8 @@
                                                         class="text-outfit">${item.gigas} Go</span>
                                                     <b>Internet</b></h4>
                                                 <ul class="offer-list">
+
+                                                    ${index === 0 ? `` : `
                                                     <li>${item.sms ? `<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
                                                                                      alt=""
                                                                                      class="img-inline-1em"></span>` : ''}
@@ -1071,16 +1073,27 @@
                                                             src="images/dimax/Icon-Appel.svg" alt=""
                                                             class="img-inline-1em"></span>` : ''}
                                                     </li>
+                                                    `}
                                                     ${item.calls === "all" ? `<li><span class="text-bold fs-16">Appels illimités vers tous les réseaux</span></li>` : `<li><span class="text-bold">Appels illimités vers <img
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span>
                                                     </li>`}
-                                                     ${item.smsOoredoo  ? `<li><span class="text-bold fs-16">SMS illimités vers <img
+                                                     ${item.smsOoredoo ? `<li><span class="text-bold fs-16">SMS illimités vers <img
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span>
                                                     </li>` : ``}
+                                                     ${index === 0 ? `
+                                                     <li>${item.sms ? `<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
+                                                                                     alt=""
+                                                                                     class="img-inline-1em"></span>` : ''}
+                                                    ${item.minutes && item.sms ? "<span>&</span>" : ''}
+                                                    ${item.minutes ? `<span class="text-bold">${item.minutes} Min <img
+                                                            src="images/dimax/Icon-Appel.svg" alt=""
+                                                            class="img-inline-1em"></span>` : ''}
+                                                    </li>
+                                                     ` : ``}
                                                     <li>
                                                         ${item.bonus.includes("anazik") ? `<img src="images/dimax/Icon-Anazik.svg" alt="">` : ''}
                                                         ${item.bonus.includes("anaflix") ? `<img src="images/dimax/Icon-Anaflix.svg" alt="">` : ''}
@@ -1112,10 +1125,10 @@
                                         document.getElementById('buy-modal-title').innerHTML = item.title;
                                         document.getElementById('buy-modal-msg').innerHTML = item.msgs.confirm;
                                         document.getElementById('congrats-modal-msg').innerHTML = item.msgs.congrats;
-                                        if(index===0 && !window.isShahidActive){
+                                        if (index === 0 && !window.isShahidActive) {
                                             document.getElementById('congrats-modal-footer').classList.add("d-none");
                                             document.getElementById('congrats-modal-footer-shahid').classList.remove("d-none");
-                                        }else{
+                                        } else {
                                             document.getElementById('congrats-modal-footer-shahid').classList.add("d-none");
                                             document.getElementById('congrats-modal-footer').classList.remove("d-none");
                                         }

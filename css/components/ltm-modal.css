@@ -20,7 +20,7 @@
         width: min(400px, 90vw);
         background-color: white;
         position: absolute;
-        bottom: max(20%, 400px);
+        /*bottom: max(20%, 100px);*/
         margin-left: 0;
         margin-right: 0;
         left: auto;

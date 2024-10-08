@@ -1033,14 +1033,15 @@
                                                 <h4 class="text-red text-center fs-26"><span
                                                         class="text-outfit  text-bold">${item.gigas}Go</span><span class="text-bold"> انترنت</span></h4>
                                                 <ul class="offer-list">
-                                                    <li>${item.sms ?`<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
-                                                                                         alt=""
-                                                                                         class="img-inline-1em"></span>`:''}
-                                                        ${item.minutes && item.sms?"<span>&</span>":''}
-                                                        ${item.minutes?`<span class="text-bold fs-16">${item.minutes} دقيقة <img
-                                                                src="images/dimax/Icon-Appel.svg" alt=""
-                                                                class="img-inline-1em"></span>`:''}
-                                                        </li>
+
+                                                    ${index===0?'':`<li>${item.sms ?`<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
+                                                                                     alt=""
+                                                                                     class="img-inline-1em"></span>`:''}
+                                                    ${item.minutes && item.sms?"<span>&</span>":''}
+                                                    ${item.minutes?`<span class="text-bold fs-16">${item.minutes} دقيقة <img
+                                                            src="images/dimax/Icon-Appel.svg" alt=""
+                                                            class="img-inline-1em"></span>`:''}
+                                                    </li>`}
                                                     ${item.calls==="all"?`<li><span class="text-bold fs-16">مكالمات غير محدودة نحو كل الشبكات</span></li>`:`<li><span class="text-bold fs-16">مكالمات غير محدودة نحو <img
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
@@ -1049,6 +1050,14 @@
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span></li>` : ``}
+                                                    ${index===0?`<li>${item.sms ?`<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
+                                                                                     alt=""
+                                                                                     class="img-inline-1em"></span>`:''}
+                                                    ${item.minutes && item.sms?"<span>&</span>":''}
+                                                    ${item.minutes?`<span class="text-bold fs-16">${item.minutes} دقيقة <img
+                                                            src="images/dimax/Icon-Appel.svg" alt=""
+                                                            class="img-inline-1em"></span>`:''}
+                                                    </li>`:``}
                                                     <li>
                                                         ${item.bonus.includes("anazik")?`<img src="images/dimax/Icon-Anazik.svg" alt="">`:''}
                                                         ${item.bonus.includes("anaflix")?`<img src="images/dimax/Icon-Anaflix.svg" alt="">`:''}
