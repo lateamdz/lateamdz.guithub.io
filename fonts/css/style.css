@@ -1,0 +1,4400 @@
+/**
+ * Mdsoft INT
+ *
+ * @category    Front end
+ * @package     Global STYLUS
+ * @copyright   Copyright (c) 2016 MDWEB. (http://www.mdweb-int.com)
+ * @author      BESSROUR Ahmed (ahmed.bessrour@gmail.com)
+ */
+/*==== Reset=================*/
+@charset "UTF-8";
+html,
+body,
+#page {
+  box-sizing: border-box;
+  font-family: 'ooredooregular';
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body {
+  font-family: 'ooredooregular';
+  background: #fff;
+  font-size: 14px;
+}
+::-moz-selection {
+  background: #ed1d24;
+  color: #191d3d;
+  text-shadow: none;
+}
+::selection {
+  background: #ed1d24;
+  color: #191d3d;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #ed1d24;
+  color: #fff;
+  text-shadow: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+a {
+  color: #6e6e6e;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+  color: #ed1d24;
+}
+a:focus {
+  outline: 0;
+}
+ol,
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.table {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+.table-row {
+  display: table-row;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+.md-s {
+  padding: 0;
+  position: relative;
+}
+.w100 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+.h-align {
+  display: table;
+  width: 100%;
+  height: inherit;
+}
+.v-align {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.box {
+  display: inline-block;
+  vertical-align: top;
+}
+.clear {
+  clear: both !important;
+  margin: 0 !important;
+}
+.floatright {
+  float: right !important;
+}
+.floatleft {
+  float: left !important;
+}
+.red {
+  color: #fb3939;
+}
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.btn-facebook .badge {
+  color: #3b5998;
+  background-color: #fff;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open>.dropdown-toggle.btn-facebook {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-facebook:active,
+.btn-facebook.active,
+.open>.dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-google {
+  color: #fff;
+  background-color: #dd4b39;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.btn-google .badge {
+  color: #dd4b39;
+  background-color: #fff;
+}
+.btn-google:hover,
+.btn-google:focus,
+.btn-google:active,
+.btn-google.active,
+.open>.dropdown-toggle.btn-google {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-google:active,
+.btn-google.active,
+.open>.dropdown-toggle.btn-google {
+  background-image: none;
+}
+.btn-google.disabled,
+.btn-google[disabled],
+fieldset[disabled] .btn-google,
+.btn-google.disabled:hover,
+.btn-google[disabled]:hover,
+fieldset[disabled] .btn-google:hover,
+.btn-google.disabled:focus,
+.btn-google[disabled]:focus,
+fieldset[disabled] .btn-google:focus,
+.btn-google.disabled:active,
+.btn-google[disabled]:active,
+fieldset[disabled] .btn-google:active,
+.btn-google.disabled.active,
+.btn-google[disabled].active,
+fieldset[disabled] .btn-google.active {
+  background-color: #dd4b39;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-linkedin {
+  color: #fff;
+  background-color: #007bb6;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.btn-linkedin .badge {
+  color: #007bb6;
+  background-color: #fff;
+}
+.btn-linkedin:hover,
+.btn-linkedin:focus,
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open>.dropdown-toggle.btn-linkedin {
+  color: #fff;
+  background-color: #005983;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open>.dropdown-toggle.btn-linkedin {
+  background-image: none;
+}
+.btn-linkedin.disabled,
+.btn-linkedin[disabled],
+fieldset[disabled] .btn-linkedin,
+.btn-linkedin.disabled:hover,
+.btn-linkedin[disabled]:hover,
+fieldset[disabled] .btn-linkedin:hover,
+.btn-linkedin.disabled:focus,
+.btn-linkedin[disabled]:focus,
+fieldset[disabled] .btn-linkedin:focus,
+.btn-linkedin.disabled:active,
+.btn-linkedin[disabled]:active,
+fieldset[disabled] .btn-linkedin:active,
+.btn-linkedin.disabled.active,
+.btn-linkedin[disabled].active,
+fieldset[disabled] .btn-linkedin.active {
+  background-color: #007bb6;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-twitter {
+  color: #fff;
+  background-color: #55acee;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.btn-twitter .badge {
+  color: #55acee;
+  background-color: #fff;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open>.dropdown-toggle.btn-twitter {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-twitter:active,
+.btn-twitter.active,
+.open>.dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #55acee;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-youtube {
+  color: #fff;
+  background-color: #d01c14;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-youtube .badge {
+  color: #d01c14;
+  background-color: #fff;
+}
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  color: #fff;
+  background-color: #b41811;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  background-image: none;
+}
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active {
+  background-color: #b41811;
+  border-color: rgba(0,0,0,0.2);
+}
+.btn-custom {
+  background: #e61e25;
+  color: #fff;
+  position: relative;
+}
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:focus {
+  color: #e61e25;
+  background: #fff;
+  border: 1px solid #e61e25;
+}
+.btn-custom:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #dd141b;
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  border-radius: 4px;
+  transition: all 0s ease-in-out;
+}
+.btn-custom:hover:before {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease-out;
+}
+.btn-bordered {
+  background: transparent;
+  border: 2px solid #e61e25;
+  color: #e61e25;
+}
+.btn-bordered:hover,
+.btn-bordered:active,
+.btn-bordered:focus {
+  color: #e61e25;
+  text-decoration: underline;
+}
+.back-top {
+  bottom: 125px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 20px;
+  z-index: 999999999;
+}
+.back-top a {
+  background: #e61e25;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  font-family: "FontAwesome";
+  height: 55px;
+  line-height: 50px;
+  text-align: center;
+  transition: background 300ms ease 0s;
+  width: 55px;
+}
+.back-top a:after {
+  content: "\f106";
+  display: inline;
+  font-size: 30px;
+}
+.expandTiggerContainer {
+  position: relative;
+  overflow: hidden;
+}
+.expandTiggerContainer .expandTiggerIcon img {
+  color: #e61e25;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.expandTiggerContainer .expandTiggerText a.expandTigger {
+  display: none;
+  box-shadow: none;
+}
+.expandTiggerContainer .expandTiggerText a.expandTigger.active {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-family: 'ooredoobold';
+  text-decoration: none;
+}
+.expandTiggerContainer .expandTiggerText a.collapseTrigger {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: 'ooredoobold';
+  text-decoration: none;
+  box-shadow: none;
+}
+.expandTiggerContainer .expandTiggerText a.collapseTrigger.active {
+  display: block;
+}
+@media (max-width: 991px) {
+  .expandable {
+    height: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    transition: 0.2s all ease;
+    visibility: hidden;
+    display: none;
+  }
+  .expandable.active {
+    height: auto;
+    opacity: 1;
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    transition: 0.2s all ease;
+    visibility: visible;
+    display: block;
+  }
+}
+.current {
+  font-size: 30px;
+  color: #e61e25 !important;
+  display: none;
+}
+.current i {
+  color: #e61e25;
+}
+@media (max-width: 479px) {
+  .hidden-xxs {
+    display: none !important;
+  }
+  .current {
+    display: block !important;
+  }
+}
+@media (min-width: 479px) {
+  .accessibilities.mobile {
+    display: none !important;
+  }
+}
+.accessibilities.mobile {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 76px;
+  width: 165px;
+  z-index: 999;
+  background: #fff;
+  padding: 10px;
+  box-shadow: -1px 2px 3px rgba(0,0,0,0.35);
+}
+@font-face {
+  font-family: 'ooredoobold';
+  src: url("../fonts/ooredoo/ooredoo-Bold-webfont.eot");
+  src: url("../fonts/ooredoo/ooredoo-Bold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ooredoo/ooredoo-Bold-webfont.woff2") format('woff2'), url("../fonts/ooredoo/ooredoo-Bold-webfont.woff") format('woff'), url("../fonts/ooredoo/ooredoo-Bold-webfont.ttf") format('truetype'), url("../fonts/ooredoo/ooredoo-Bold-webfont.svg#ooredoobold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ooredooregular';
+  src: url("../fonts/ooredoo/ooredoo-Regular-webfont.eot");
+  src: url("../fonts/ooredoo/ooredoo-Regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ooredoo/ooredoo-Regular-webfont.woff2") format('woff2'), url("../fonts/ooredoo/ooredoo-Regular-webfont.woff") format('woff'), url("../fonts/ooredoo/ooredoo-Regular-webfont.ttf") format('truetype'), url("../fonts/ooredoo/ooredoo-Regular-webfont.svg#ooredooregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*===========================*/
+/*==== Header=================*/
+.sticky-wrapper {
+  position: relative;
+  z-index: 10000;
+}
+.header {
+  min-height: 60px;
+  padding: 16px 0;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 10;
+  width: 100% !important;
+}
+.header .logo-section {
+  overflow: hidden;
+  padding: 10px 0;
+}
+.header .logo-section .logo {
+  float: left;
+}
+.header .logo-section .logo-directive {
+  float: left;
+  margin-left: 20px;
+  padding: 7px 20px;
+  border-left: 1px solid #cbcbcb;
+}
+.header .accessibilities {
+  text-align: right;
+}
+.header .accessibilities .help {
+  display: inline-block;
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
+  background: #e61e25;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+}
+.header .accessibilities .help img {
+  display: inline-block;
+}
+.header .accessibilities .help a {
+  line-height: 60px;
+}
+.header .accessibilities .phone {
+  display: inline-block;
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
+  background: #e61e25;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+}
+.header .accessibilities .phone img {
+  display: inline-block;
+}
+.header .accessibilities .phone a {
+  line-height: 60px;
+}
+.header .accessibilities .lang {
+  display: inline-block;
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
+  background: #e61e25;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+}
+.header .accessibilities .lang a {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'ooredoobold';
+  line-height: 60px;
+  font-size: 25px;
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  .header {
+    min-height: auto;
+  }
+  .header .logo-section {
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .header .logo-section .logo {
+    float: left;
+  }
+  .header .logo-section .logo img {
+    max-width: 200px;
+  }
+  .header .logo-section .logo-directive {
+    float: left;
+    margin-left: 10px;
+    padding: 7px 10px;
+    border-left: 1px solid #cbcbcb;
+  }
+  .header .logo-section .logo-directive img {
+    max-width: 100px;
+  }
+  .header .accessibilities {
+    text-align: right;
+  }
+  .header .accessibilities .help {
+    display: inline-block;
+    margin: 0 2px;
+    width: 50px;
+    height: 50px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+  }
+  .header .accessibilities .help img {
+    display: inline-block;
+  }
+  .header .accessibilities .help a {
+    line-height: 50px;
+  }
+  .header .accessibilities .phone {
+    display: inline-block;
+    margin: 0 2px;
+    width: 50px;
+    height: 50px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+  }
+  .header .accessibilities .phone img {
+    display: inline-block;
+  }
+  .header .accessibilities .phone a {
+    line-height: 50px;
+  }
+  .header .accessibilities .lang {
+    display: inline-block;
+    margin: 0 2px;
+    width: 50px;
+    height: 50px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+  }
+  .header .accessibilities .lang a {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'ooredoobold';
+    line-height: 50px;
+    font-size: 22px;
+    text-decoration: none;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    min-height: auto;
+  }
+  .header .logo-section {
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .header .logo-section .logo {
+    float: left;
+  }
+  .header .logo-section .logo img {
+    max-width: 180px;
+  }
+  .header .logo-section .logo-directive {
+    float: left;
+    margin-left: 10px;
+    padding: 7px 10px;
+    border-left: 1px solid #cbcbcb;
+  }
+  .header .logo-section .logo-directive img {
+    max-width: 80px;
+  }
+  .header .accessibilities {
+    text-align: right;
+  }
+  .header .accessibilities .help {
+    display: inline-block;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+  }
+  .header .accessibilities .help img {
+    display: inline-block;
+    max-width: 15px;
+  }
+  .header .accessibilities .help a {
+    line-height: 40px;
+  }
+  .header .accessibilities .phone {
+    display: inline-block;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+  }
+  .header .accessibilities .phone img {
+    display: inline-block;
+    max-width: 15px;
+  }
+  .header .accessibilities .phone a {
+    line-height: 40px;
+  }
+  .header .accessibilities .lang {
+    display: inline-block;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    background: #e61e25;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+  }
+  .header .accessibilities .lang a {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'ooredoobold';
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+@media (max-width: 479px) {
+  .header .logo-section .logo img {
+    max-width: 150px;
+  }
+  .header .logo-section .logo-directive img {
+    max-width: 45px;
+  }
+}
+/*===========================*/
+/*==== my-account=============*/
+.md-my-account {
+  background: #fff;
+}
+.md-my-account .section-title {
+  background: #e61e25;
+  padding: 10px 0;
+}
+.md-my-account .section-title .title h1 {
+  color: #fff;
+  font-family: 'ooredoobold';
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+}
+.md-my-account .section-title .description p {
+  color: #fff;
+  font-family: 'ooredoobold';
+  font-size: 24px;
+  margin: 0;
+  text-align: right;
+}
+.md-my-account .section-content .my-account-container {
+  padding: 40px 0 0px;
+  overflow: hidden;
+}
+.md-my-account .section-content .my-account-container .my-account-holder {
+  border: 3px solid #bfbfbf;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-header {
+  text-align: center;
+  position: relative;
+  margin-top: -35px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-header h2 {
+  font-family: 'ooredoobold';
+  font-size: 31px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  display: inline-block;
+  padding: 3px 5px;
+  background: #fff;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content {
+  overflow: hidden;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner {
+  padding: 11px 0;
+  border-bottom: 1px solid #eee;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+  font-family: 'ooredoobold';
+  color: #000;
+  font-size: 18px;
+  padding: 5px 0 5px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.creditTotal {
+  background-image: url("../images/icons/phone-icon.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.CreditRecharge {
+  background-image: url("../images/icons/credit1.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.CreditBonus {
+  background-image: url("../images/icons/credit2.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.maxyCredit {
+  background-image: url("../images/icons/credit3.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.packMaxyCredit {
+  background-image: url("../images/icons/credit4.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.maxyInternet {
+  background-image: url("../images/icons/internet1.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.packMaxyInternet {
+  background-image: url("../images/icons/internet2.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.internetJournalier {
+  background-image: url("../images/icons/internet3.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.internetMensuel {
+  background-image: url("../images/icons/internet4.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.internetNuit {
+  background-image: url("../images/icons/internet5.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.minutesGratuites {
+  background-image: url("../images/icons/appel1.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.minutesNoudjoum {
+  background-image: url("../images/icons/appel2.png");
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit {
+  direction: ltr;
+  text-align: right;
+  float: right;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price {
+  line-height: 10px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero {
+  direction: ltr;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 17px;
+  line-height: 17px;
+  color: #4654ff;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 12px;
+  line-height: 12px;
+  color: #4654ff;
+  vertical-align: top;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency .small {
+  font-size: 2px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .validity {
+  color: #9e9e9e;
+  font-size: 12px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer {
+  padding: 7px 0;
+  overflow: hidden;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar {
+  background: #f0f0f0;
+  position: relative;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar .progressPercentage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 6px;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar .progressPercentage.greenbar {
+  background: #52cc83;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar .progressPercentage.orangebar {
+  background: #f17e21;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar .progressPercentage.redbar {
+  background: #f22c27;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner:last-child {
+  border-bottom: none;
+}
+@media (min-width: 991px) {
+  .md-my-account .section-content .my-account-holder {
+    min-height: 536px;
+  }
+}
+@media (max-width: 1199px) {
+  .md-my-account .section-title {
+    background: #e61e25;
+    padding: 10px 0;
+  }
+  .md-my-account .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0;
+  }
+  .md-my-account .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-header h2 {
+    font-size: 28px;
+    color: #000;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit {
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .validity {
+    font-size: 12px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+    font-size: 16px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .row {
+    margin: 0;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner div[class*='col-'] {
+    padding: 0;
+  }
+}
+@media (max-width: 991px) {
+  .md-my-account .section-title {
+    background: #e61e25;
+    padding: 10px 0;
+  }
+  .md-my-account .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 0;
+  }
+  .md-my-account .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 18px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-my-account .section-content .my-account-container {
+    overflow: hidden;
+    margin: 0 15px 15px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-header h2 {
+    font-size: 30px;
+    color: #e61e25;
+  }
+}
+@media (max-width: 767px) {
+  .md-my-account {
+    background: #ebebeb;
+  }
+  .md-my-account .section-title {
+    background: #e61e25;
+    padding: 10px 0;
+  }
+  .md-my-account .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-my-account .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 16px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-my-account .section-content .my-account-container {
+    padding: 0 0 0px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder {
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner {
+    border-bottom: 0;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency {
+    font-size: 11px;
+    line-height: 11px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .validity {
+    font-size: 11px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+    font-size: 14px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder.expandeffect {
+    border: 3px solid #bfbfbf;
+    margin-bottom: 20px;
+  }
+  .md-my-account .section-content .my-account-container.expandeffect {
+    padding: 40px 0 0 !important;
+  }
+}
+@media (max-width: 479px) {
+  .md-my-account .section-title {
+    background: #e61e25;
+    padding: 10px 0;
+  }
+  .md-my-account .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+  }
+  .md-my-account .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 14px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency {
+    font-size: 9px;
+    line-height: 9px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .validity {
+    font-size: 9px;
+  }
+  .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+    font-size: 14px;
+  }
+}
+/*===========================*/
+/*==== forfait-night=============*/
+.md-forfait-night .section-title {
+  background: #015883;
+  padding: 10px 0;
+}
+.md-forfait-night .section-title .title h1 {
+  color: #fff;
+  font-family: 'ooredoobold';
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+}
+.md-forfait-night .section-title .description p {
+  color: #fff;
+  font-family: 'ooredoobold';
+  font-size: 24px;
+  margin: 0;
+  text-align: right;
+}
+.md-forfait-night .section-content {
+  background: #0e74a6;
+  padding: 30px 0;
+}
+.md-forfait-night .section-content .fullWidthCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.35);
+}
+.md-forfait-night .section-content .fullWidthCard .cardThumb {
+  width: 48%;
+  overflow: hidden;
+}
+.md-forfait-night .section-content .fullWidthCard .cardThumb img {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+  transition: 0.2s transform ease;
+}
+.md-forfait-night .section-content .fullWidthCard .cardThumb:hover img {
+  -webkit-transform: scale(1.1) rotate(2deg);
+  -ms-transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1) rotate(2deg);
+  transition: 0.2s transform ease;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo {
+  width: 52%;
+  padding: 28px 25px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+  height: 85px;
+  display: table;
+  float: left;
+  width: auto;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+  line-height: 10px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 45px;
+  line-height: 45px;
+  color: #000;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  vertical-align: top;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency .small {
+  font-size: 30px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .validity {
+  color: #9e9e9e;
+  font-size: 12px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-size: 45px;
+  line-height: 40px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .to {
+  font-size: 25px;
+  line-height: 21px;
+  color: #fff;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .hours {
+  font-size: 27px;
+  line-height: 24px;
+  font-family: 'ooredoobold';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity {
+  height: 85px;
+  float: right;
+  display: table;
+  width: auto;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+  line-height: 10px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 48px;
+  line-height: 48px;
+  color: #808080;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 28px;
+  line-height: 32px;
+  color: #808080;
+  vertical-align: top;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+  font-size: 18px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .validity {
+  color: #808080;
+  font-size: 28px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+  width: 50%;
+  float: left;
+  height: 85px;
+  display: table;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+  line-height: 10px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 52px;
+  line-height: 52px;
+  color: #e61e25;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 30px;
+  line-height: 35px;
+  color: #e61e25;
+  vertical-align: top;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+  font-size: 20px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .validity {
+  color: #e61e25;
+  font-size: 28px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+  vertical-align: bottom;
+  display: table-cell;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+  display: table;
+  width: 50%;
+  float: left;
+  height: 85px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action {
+  width: 100%;
+  display: table-cell;
+  vertical-align: bottom;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn {
+  font-family: 'ooredooregular';
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  line-height: 35px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn i {
+  margin-right: 10px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .icon-cart {
+  font-size: 150% !important;
+  position: relative;
+  top: 4px;
+  display: inline-block;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night {
+  background: url("../images/bg-night.jpg") repeat center;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .duration .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .duration .price .price-hero .currency {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .duration .price .price-hero .hours {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .duration .capaciteSpec .to {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .capacity .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .capacity .price .price-hero .validity {
+  color: #fff !important;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo.night .cardTop .capacity .price .price-hero .currency {
+  color: #fff !important;
+}
+@media (max-width: 1199px) {
+  .md-forfait-night .section-title {
+    background: #015883;
+    padding: 10px 0;
+  }
+  .md-forfait-night .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+  }
+  .md-forfait-night .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-night .section-content {
+    background: #0e74a6;
+    padding: 30px 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hiddenbox-shadow 0 3px 5px rgba(0,0,0,0.35);
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb {
+    width: 50%;
+    overflow: hidden;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo {
+    width: 50%;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 40px;
+    line-height: 40px;
+    color: #000;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 25px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 40px;
+    line-height: 35px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .to {
+    font-size: 23px;
+    line-height: 19px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .hours {
+    font-size: 24px;
+    line-height: 20px;
+    font-family: 'ooredoobold';
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 45px;
+    line-height: 45px;
+    color: #808080;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 28px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+    width: 50%;
+    float: left;
+    height: 85px;
+    display: table;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 45px;
+    line-height: 45px;
+    color: #e61e25;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 27px;
+    line-height: 32px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 17px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+    display: table;
+    width: 50%;
+    float: left;
+    height: 85px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action {
+    width: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (max-width: 991px) {
+  .md-forfait-night .section-title {
+    background: #015883;
+    padding: 10px 0;
+  }
+  .md-forfait-night .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 0;
+  }
+  .md-forfait-night .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-night .section-content {
+    background: #0e74a6;
+    padding: 20px 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.35);
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb {
+    width: 50%;
+    overflow: hidden;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo {
+    width: 50%;
+    padding: 28px 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #000;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 20px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 35px;
+    line-height: 30px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .to {
+    font-size: 20px;
+    line-height: 17px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .hours {
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'ooredoobold';
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 40px;
+    line-height: 40px;
+    color: #808080;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 28px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+    width: 50%;
+    float: left;
+    height: 85px;
+    display: table;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 40px;
+    line-height: 40px;
+    color: #e61e25;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 19px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+    display: table;
+    width: 50%;
+    float: left;
+    height: 85px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 767px) {
+  .md-forfait-night .section-title {
+    background: #015883;
+    padding: 10px 0;
+  }
+  .md-forfait-night .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-night .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-night .section-content {
+    background: none;
+    padding: 15px 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dbdbdb;
+    box-shadow: 0px 1px 2px 0px #c2c2c2;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb {
+    width: 50%;
+    overflow: hidden;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardThumb img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo {
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.25);
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+    width: 33%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 20px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .from {
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .table-row {
+    display: inline-block;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 19px;
+    line-height: 19px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .to {
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .hours {
+    font-size: 10px;
+    line-height: 19px;
+    font-family: 'ooredoobold';
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .capacityMobile {
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .capaciteMobile {
+    font-family: ooredoobold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .mobileOoredoo {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #fff;
+    font-style: italic;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 40px;
+    line-height: 40px;
+    color: #808080;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 28px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+    width: 65%;
+    overflow: hidden;
+    float: left;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .price-valable {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .price-valable .price-valable-hrs {
+    font-family: ooredoobold;
+    font-size: 22px;
+    line-height: 21px;
+    color: #abaeb0;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .price-valable .price-valable-text {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #abaeb0;
+    line-height: 17px;
+    font-style: italic;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+    width: 40%;
+    margin-right: 10%;
+    float: left;
+    height: 85px;
+    display: table;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 7px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+    display: table;
+    width: 50%;
+    float: left;
+    height: 85px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn {
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    max-width: 125px;
+    width: 100%;
+    clear: both;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn i {
+    margin-right: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+}
+@media (max-width: 479px) {
+  .md-forfait-night .section-title {
+    background: #015883;
+    padding: 10px 0;
+  }
+  .md-forfait-night .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+  }
+  .md-forfait-night .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-night .section-content {
+    padding: 15px 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo {
+    width: 100%;
+    padding: 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+    width: 37%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capaciteMobile {
+    font-size: 26px !important;
+    letter-spacing: -2px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 25px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .from {
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .table-row {
+    display: inline-block;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .to {
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .hours {
+    font-size: 10px;
+    line-height: 19px;
+    font-family: 'ooredoobold';
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .capacityMobile {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 40px;
+    line-height: 40px;
+    color: #808080;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 28px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+    width: 62%;
+    overflow: hidden;
+    float: left;
+    padding-right: 5px;
+    margin-bottom: 6px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .price-valable .price-valable-hrs {
+    font-size: 15px;
+    line-height: 14px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+    width: 42%;
+    float: left;
+    margin-right: 2%;
+    height: 85px;
+    display: table;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 22px;
+    line-height: 22px;
+    color: #e61e25;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 10px;
+    line-height: 14px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 0px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+    display: table;
+    width: 56%;
+    float: left;
+    height: 85px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn {
+    font-size: 15px;
+    height: 40px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn i {
+    margin-right: 5px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .icon-cart {
+    font-size: 138% !important;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .currency {
+    font-size: 14px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .price-unit {
+    font-size: 26px;
+    letter-spacing: -2px;
+  }
+}
+/*===========================*/
+/*==== forfait-internet=============*/
+.md-forfait-internet .section-title {
+  background: #dbddde;
+  padding: 10px 0;
+}
+.md-forfait-internet .section-title .title h1 {
+  color: #000;
+  font-family: 'ooredoobold';
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+}
+.md-forfait-internet .section-title .description p {
+  color: #000;
+  font-family: 'ooredoobold';
+  font-size: 24px;
+  margin: 0;
+  text-align: right;
+}
+.md-forfait-internet .section-content {
+  background: #f6f7f8;
+  padding: 30px 0 0;
+}
+.md-forfait-internet .section-content .cardInfo {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+  border: 1px solid #eee\9;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration {
+  height: 85px;
+  display: table;
+  float: left;
+  width: auto;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+  line-height: 10px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 80px;
+  line-height: 80px;
+  color: #000;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  vertical-align: top;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+  font-size: 30px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+  color: #9e9e9e;
+  font-size: 12px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .price-unit {
+  font-size: 40px !important;
+  line-height: 40px !important;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .to {
+  font-size: 23px !important;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .currency {
+  font-size: 24px !important;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+  font-size: 45px;
+  line-height: 40px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .to {
+  font-size: 25px;
+  line-height: 21px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .hours {
+  font-size: 27px;
+  line-height: 24px;
+  font-family: 'ooredoobold';
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity {
+  height: 85px;
+  float: right;
+  display: table;
+  width: auto;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+  line-height: 10px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 48px;
+  line-height: 48px;
+  color: #808080;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 28px;
+  line-height: 32px;
+  color: #808080;
+  vertical-align: top;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+  font-size: 18px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+  color: #808080;
+  font-size: 28px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .capaciteSpec {
+  font-size: 37px !important;
+  line-height: 25px !important;
+  max-width: 151px;
+  display: inline-block;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .capaciteSpec .blue {
+  font-family: 'ooredoobold';
+  color: #3b589d;
+  font-size: 31px !important;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .appIll {
+  line-height: 38px !important;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+  height: 85px;
+  display: table;
+  width: 50%;
+  float: left;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+  line-height: 10px;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 41px;
+  line-height: 40px;
+  color: #e61e25;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 28px;
+  line-height: 28px;
+  color: #e61e25;
+  vertical-align: top;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+  font-size: 18px;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+  color: #e61e25;
+  font-size: 28px;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+  vertical-align: bottom;
+  display: table-cell;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+  display: table;
+  height: 85px;
+  width: 50%;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy .action {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn {
+  font-family: 'ooredooregular';
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  line-height: 35px;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn i {
+  margin-right: 10px;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .icon-cart {
+  font-size: 150% !important;
+  position: relative;
+  top: 4px;
+  display: inline-block;
+}
+.md-forfait-internet .section-content .cardInfo.fb {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00040f+0,096ac2+40,096ac2+62,00040f+100 */
+  background: #00040f; /* Old browsers */
+  background: -moz--webkit-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -moz--moz-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -moz--o-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -moz--ms-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%); /* FF3.6-15 */
+  background: -webkit--webkit-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -webkit--moz-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -webkit--o-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%);
+  background: -webkit--ms-linear-gradient(left, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #00040f 0%, #096ac2 40%, #096ac2 52%, #00040f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.md-forfait-internet .section-content .cardInfo.fb .capaciteSpec .blue {
+  color: #3b67b5 !important;
+  padding: 2px !important;
+  background: #fff;
+  letter-spacing: -1px;
+  margin-bottom: 5px !important;
+}
+.md-forfait-internet .section-content .cardInfo.fb .cardTop .duration .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.fb .cardTop .duration .price .price-hero .currency {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.fb .cardTop .capacity .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night {
+  background: url("../images/bg-night.jpg") repeat center;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .duration .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .duration .price .price-hero .currency {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .duration .capaciteSpec .to {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .price-unit {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .validity {
+  color: #fff !important;
+}
+.md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .currency {
+  color: #fff !important;
+}
+@media (max-width: 1199px) {
+  .md-forfait-internet .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-forfait-internet .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+  }
+  .md-forfait-internet .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-internet .section-content {
+    background: #f6f7f8;
+    padding: 30px 0 0;
+  }
+  .md-forfait-internet .section-content .cardInfo {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+    border: 1px solid #eee\9;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 43px;
+    line-height: 43px;
+    color: #000;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 25px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .to {
+    font-size: 25px;
+    line-height: 21px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .hours {
+    font-size: 27px;
+    line-height: 24px;
+    font-family: 'ooredoobold';
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 38px;
+    line-height: 38px;
+    color: #808080;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 30px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 25px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 50%;
+    float: left;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #e61e25;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 22px;
+    line-height: 22px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (max-width: 991px) {
+  .md-forfait-internet .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-forfait-internet .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-internet .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-internet .section-content {
+    background: #f6f7f8;
+    padding: 20px 0 0;
+  }
+  .md-forfait-internet .section-content .cardInfo {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+    border: 1px solid #eee\9;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 43px;
+    line-height: 43px;
+    color: #000;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 23px;
+    line-height: 23px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 13px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 40px;
+    line-height: 35px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .to {
+    font-size: 23px;
+    line-height: 19px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .hours {
+    font-size: 25px;
+    line-height: 22px;
+    font-family: 'ooredoobold';
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 38px;
+    line-height: 38px;
+    color: #808080;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 30px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 25px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 50%;
+    float: left;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #e61e25;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 22px;
+    line-height: 22px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (max-width: 767px) {
+  .md-forfait-internet .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-forfait-internet .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-internet .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-internet .section-content {
+    background: #f6f7f8;
+    padding: 15px 0 0;
+  }
+  .md-forfait-internet .section-content .cardInfo {
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dbdbdb;
+    box-shadow: 0px 1px 2px 0px #c2c2c2;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop {
+    width: 33%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capacityMobile {
+    color: #fff;
+    font-size: 14px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .from {
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .table-row {
+    display: inline-block;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .to {
+    font-size: 10px;
+    line-height: 13px;
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .hours {
+    font-size: 11px;
+    line-height: 17px;
+    font-family: 'ooredoobold';
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec {
+    font-size: 27px !important;
+    line-height: 24px !important;
+    margin-top: 5px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .blue {
+    color: #3b589d;
+    font-size: 24px !important;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .appIll {
+    line-height: 28px !important;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capaciteMobile {
+    font-family: ooredoobold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    max-width: 151px;
+    display: inline-block;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .fb {
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .mobileOoredoo {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #000;
+    font-style: italic;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 38px;
+    line-height: 38px;
+    color: #808080;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 25px;
+    line-height: 30px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 15px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 25px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom {
+    width: 65%;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 8px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .price-valable {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .price-valable .price-valable-hrs {
+    font-family: ooredoobold;
+    font-size: 22px;
+    line-height: 21px;
+    color: #abaeb0;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .price-valable .price-valable-text {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #abaeb0;
+    line-height: 17px;
+    font-style: italic;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 40%;
+    margin-right: 10%;
+    float: left;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 7px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price-hero .capacityMobile {
+    font-family: ooredoobold;
+    font-size: 35px;
+    line-height: 35px;
+    color: #000;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn {
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    max-width: 125px;
+    width: 100%;
+    clear: both;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn i {
+    margin-right: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .price-hero {
+    margin-top: 5px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo.night .cardTop .capaciteMobile {
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo.night .cardTop .mobileOoredoo {
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .price-unit {
+    color: #fff !important;
+  }
+  .md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .validity {
+    color: #fff !important;
+  }
+  .md-forfait-internet .section-content .cardInfo.night .cardTop .capacity .price .price-hero .currency {
+    color: #fff !important;
+  }
+}
+@media (max-width: 479px) {
+  .md-forfait-internet .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-forfait-internet .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+  }
+  .md-forfait-internet .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-internet .section-content {
+    background: #f6f7f8;
+    padding: 15px 0 0;
+  }
+  .md-forfait-internet .section-content .cardInfo {
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop {
+    width: 37%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capaciteMobile {
+    font-size: 26px;
+    letter-spacing: -2px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capacityMobile {
+    color: #fff;
+    font-size: 14px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec {
+    font-size: 24px !important;
+    letter-spacing: 0;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .blue {
+    font-size: 21px !important;
+    margin-bottom: 0;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .fb {
+    font-size: 20px !important;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .from {
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .to {
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .hours {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #808080;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 18px;
+    line-height: 20px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 8px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 25px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom {
+    width: 62%;
+    overflow: hidden;
+    float: left;
+    padding-right: 5px;
+    margin-bottom: 6px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .price-valable .price-valable-minuit {
+    font-size: 15px;
+    line-height: 14px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 42%;
+    float: left;
+    margin-right: 2%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 22px;
+    line-height: 22px;
+    color: #e61e25;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 10px;
+    line-height: 14px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 0px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 56%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn {
+    font-size: 15px;
+    height: 40px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn i {
+    margin-right: 5px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .icon-cart {
+    font-size: 138% !important;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .currency {
+    font-size: 14px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .price-unit {
+    font-size: 26px;
+    letter-spacing: -2px;
+  }
+}
+/*===========================*/
+/*==== forfait-appel=============*/
+.md-forfait-appel .section-title {
+  background: #6abeda;
+  padding: 10px 0;
+}
+.md-forfait-appel .section-title .title h1 {
+  color: #fff;
+  font-family: 'ooredoobold';
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+}
+.md-forfait-appel .section-title .description p {
+  color: #fff;
+  font-family: 'ooredoobold';
+  font-size: 24px;
+  margin: 0;
+  text-align: right;
+}
+.md-forfait-appel .section-content {
+  background: #9cd4e7;
+  padding: 30px 0 0;
+}
+.md-forfait-appel .section-content .cardInfo {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+  border: 1px solid #eee\9;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration {
+  height: 85px;
+  display: table;
+  float: left;
+  width: auto;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+  line-height: 10px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 80px;
+  line-height: 80px;
+  color: #000;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  vertical-align: top;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+  font-size: 30px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+  color: #9e9e9e;
+  font-size: 12px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity {
+  height: 85px;
+  float: right;
+  display: table;
+  width: auto;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+  line-height: 10px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 48px;
+  line-height: 48px;
+  color: #808080;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 28px;
+  line-height: 32px;
+  color: #808080;
+  vertical-align: top;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+  font-size: 18px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+  color: #808080;
+  font-size: 28px;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+  vertical-align: middle;
+  display: table-cell;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom {
+  width: 100%;
+  overflow: hidden;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+  height: 85px;
+  display: table;
+  width: 50%;
+  float: left;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+  line-height: 10px;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+  direction: ltr;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'ooredoobold';
+  font-size: 52px;
+  line-height: 52px;
+  color: #e61e25;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+  font-family: 'ooredoobold';
+  font-size: 30px;
+  line-height: 35px;
+  color: #e61e25;
+  vertical-align: top;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+  font-size: 20px;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+  color: #e61e25;
+  font-size: 28px;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+  vertical-align: bottom;
+  display: table-cell;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+  display: table;
+  height: 85px;
+  width: 50%;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .action {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .btn {
+  font-family: 'ooredooregular';
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  line-height: 35px;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .btn i {
+  margin-right: 10px;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .icon-cart {
+  font-size: 150% !important;
+  position: relative;
+  top: 4px;
+  display: inline-block;
+}
+@media (max-width: 1199px) {
+  .md-forfait-appel .section-title {
+    background: #6abeda;
+    padding: 10px 0;
+  }
+  .md-forfait-appel .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+  }
+  .md-forfait-appel .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-appel .section-content {
+    background: #9cd4e7;
+    padding: 30px 0 0;
+  }
+  .md-forfait-appel .section-content .cardInfo {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+    border: 1px solid #eee\9;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 70px;
+    line-height: 70px;
+    color: #000;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 25px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 44px;
+    line-height: 44px;
+    color: #808080;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 24px;
+    line-height: 28px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 14px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 50%;
+    float: left;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 47px;
+    line-height: 47px;
+    color: #e61e25;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 26px;
+    line-height: 30px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 16px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (max-width: 991px) {
+  .md-forfait-appel .section-title {
+    background: #6abeda;
+    padding: 10px 0;
+  }
+  .md-forfait-appel .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-appel .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-appel .section-content {
+    background: #9cd4e7;
+    padding: 20px 0 0;
+  }
+  .md-forfait-appel .section-content .cardInfo {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.35);
+    border: 1px solid #eee\9;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 30px;
+    line-height: 30px;
+    color: #000;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 20px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #808080;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 22px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 50%;
+    float: left;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #e61e25;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 30px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: bottom;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (max-width: 767px) {
+  .md-forfait-appel .section-title {
+    background: #6abeda;
+    padding: 10px 0;
+  }
+  .md-forfait-appel .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-appel .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-appel .section-content {
+    background: none;
+    padding: 15px 0 0;
+  }
+  .md-forfait-appel .section-content .cardInfo {
+    width: 100%;
+    padding: 5px 0;
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-style: solid;
+    overflow: hidden;
+    border-width: 1px;
+    border-color: #dbdbdb;
+    box-shadow: 0px 1px 2px 0px #c2c2c2;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    width: 33%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .capacityMobile {
+    color: #fff;
+    font-size: 14px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capaciteMobile {
+    font-family: ooredoobold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .mobileOoredoo {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #000;
+    font-style: italic;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #808080;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 22px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom {
+    width: 65%;
+    overflow: hidden;
+    float: left;
+    padding-right: 0px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .price-valable {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .price-valable .price-valable-hrs {
+    font-family: ooredoobold;
+    font-size: 22px;
+    line-height: 21px;
+    color: #6e6e6e;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .price-valable .price-valable-text {
+    font-family: ooredoobold;
+    font-size: 12px;
+    color: #6e6e6e;
+    line-height: 17px;
+    font-style: italic;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 40%;
+    margin-right: 10%;
+    float: left;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 7px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 50%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .btn {
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    max-width: 125px;
+    width: 100%;
+    clear: both;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .btn i {
+    margin-right: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+}
+@media (max-width: 479px) {
+  .md-forfait-appel .section-title {
+    background: #6abeda;
+    padding: 10px 0;
+  }
+  .md-forfait-appel .section-title .title h1 {
+    color: #fff;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-forfait-appel .section-title .description p {
+    color: #fff;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-forfait-appel .section-content {
+    padding: 15px 0 0;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    width: 37%;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capaciteMobile {
+    font-size: 26px;
+    letter-spacing: -2px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration {
+    height: 85px;
+    display: table;
+    float: left;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .currency .small {
+    font-size: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .validity {
+    color: #9e9e9e;
+    font-size: 12px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration .capacityMobile {
+    color: #fff;
+    font-size: 14px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity {
+    height: 85px;
+    float: right;
+    display: table;
+    width: auto;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #808080;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 18px;
+    line-height: 20px;
+    color: #808080;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .currency .small {
+    font-size: 8px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .validity {
+    color: #808080;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .capacity .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom {
+    width: 62%;
+    overflow: hidden;
+    float: left;
+    padding-right: 5px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+    height: 85px;
+    display: table;
+    width: 42%;
+    float: left;
+    margin-right: 2%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    line-height: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+    direction: ltr;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+    font-family: 'ooredoobold';
+    font-size: 28px;
+    line-height: 28px;
+    color: #e61e25;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency {
+    font-family: 'ooredoobold';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e61e25;
+    vertical-align: top;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .currency .small {
+    font-size: 7px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .validity {
+    color: #e61e25;
+    font-size: 28px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost .price {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+    display: table;
+    height: 85px;
+    width: 56%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .btn {
+    font-size: 15px;
+    height: 40px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .btn i {
+    margin-right: 5px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .icon-cart {
+    font-size: 138% !important;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .currency {
+    font-size: 14px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy .price-unit {
+    font-size: 26px;
+    letter-spacing: -2px;
+  }
+}
+/*===========================*/
+/*==== Recharge=============*/
+.md-recharge .section-title {
+  background: #dbddde;
+  padding: 10px 0;
+}
+.md-recharge .section-title .title h1 {
+  color: #000;
+  font-family: 'ooredoobold';
+  text-transform: uppercase;
+  font-size: 29px;
+  margin: 0;
+}
+.md-recharge .section-title .description p {
+  color: #000;
+  font-family: 'ooredoobold';
+  font-size: 19px;
+  margin: 0;
+  text-align: right;
+}
+.md-recharge .section-content {
+  background: #f2f3f4;
+  padding: 30px 0;
+}
+.md-recharge .section-content .fullWidthCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.35);
+}
+.md-recharge .section-content .fullWidthCard .cardThumb {
+  width: 48%;
+  position: relative;
+  overflow: hidden;
+}
+.md-recharge .section-content .fullWidthCard .cardThumb img {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+  transition: 0.2s transform ease;
+}
+.md-recharge .section-content .fullWidthCard .cardThumb:hover >img {
+  -webkit-transform: scale(1.1) rotate(2deg);
+  -ms-transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1) rotate(2deg);
+  transition: 0.2s transform ease;
+}
+.md-recharge .section-content .fullWidthCard .cardThumb .logo-cib {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.md-recharge .section-content .fullWidthCard .cardInfo {
+  width: 52%;
+  padding: 25px;
+}
+.md-recharge .section-content .fullWidthCard .cardInfo h3 {
+  font-family: 'ooredoobold';
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.md-recharge .section-content .fullWidthCard .cardInfo p {
+  font-family: 'ooredooregular';
+  font-size: 20px;
+  color: #000;
+}
+.md-recharge .section-content .fullWidthCard .cardInfo .btn {
+  font-size: 16px;
+  height: 50px;
+  line-height: 40px;
+  padding: 4px 15px;
+  margin-top: 25px;
+}
+@media (max-width: 1199px) {
+  .md-recharge .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-recharge .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+  }
+  .md-recharge .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-recharge .section-content .fullWidthCard .cardThumb {
+    overflow: hidden;
+  }
+  .md-recharge .section-content .fullWidthCard .cardThumb img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo h3 {
+    font-size: 25px;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .md-recharge .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-recharge .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 0;
+  }
+  .md-recharge .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-recharge .section-content {
+    background: #f2f3f4;
+    padding: 20px 0;
+  }
+}
+@media (max-width: 767px) {
+  .md-recharge .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-recharge .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+  }
+  .md-recharge .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-recharge .section-content {
+    padding: 15px 0;
+  }
+  .md-recharge .section-content .fullWidthCard .cardThumb {
+    overflow: hidden;
+  }
+  .md-recharge .section-content .fullWidthCard .cardThumb img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo {
+    width: 100%;
+    text-align: center;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo p {
+    font-size: 15px;
+  }
+  .md-recharge .section-content .fullWidthCard .cardInfo .btn {
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    line-height: 30px;
+    padding: 4px 15px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 479px) {
+  .md-recharge .section-title {
+    background: #dbddde;
+    padding: 10px 0;
+  }
+  .md-recharge .section-title .title h1 {
+    color: #000;
+    font-family: 'ooredoobold';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+  }
+  .md-recharge .section-title .description p {
+    color: #000;
+    font-family: 'ooredoobold';
+    font-size: 19px;
+    margin: 0;
+    text-align: right;
+  }
+  .md-recharge .section-content {
+    background: #f2f3f4;
+    padding: 15px 0;
+  }
+}
+/*===========================*/
+/*==== Footer=============*/
+footer {
+  background: #454646;
+}
+footer .directives {
+  padding-left: 45px;
+  margin: 20px 0;
+  color: #fff;
+  position: relative;
+  font-size: 14px;
+}
+footer .directives span {
+  font-family: 'ooredoobold';
+}
+footer .directives .directiveIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e61e25;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+footer .copyrights {
+  background: #3d3d3d;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  footer .directives {
+    font-size: 12px;
+  }
+}
+/*===========================*/
+/*# sourceMappingURL=css/portions/styles.css.map */
+/*# sourceMappingURL=style.css.map */

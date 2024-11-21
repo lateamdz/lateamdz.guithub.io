@@ -1,0 +1,514 @@
+//my-accounte
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.md-forfait-ramadhan{
+	.section-title{
+		sectionTitle(#a2060b , $white , 29px , 24px)
+	}
+	.section-content{
+		background #ed1c24
+		padding 30px 0 0
+		.cardInfo{
+			width 100%
+			padding 15px
+			background $white
+			border-radius $radius
+			margin-bottom 30px
+			box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+			border unquote('1px solid #eee\9')
+			.cardTop{
+				width: 100%;
+				overflow: hidden;
+				.duration{
+					priceTag(80px, 80px, $black , 40px , 40px , $black , 10px ,$ob , $lightgrey , 12px)
+					height: 85px;
+					display: table;
+					float: left;
+					width: auto;
+					.price{
+						vertical-align middle
+						display table-cell
+					}
+				}
+				.capacity{
+					priceTag(48px, 48px, #808080 , 28px , 32px , #808080 , 10px ,$ob , #808080 , 28px)
+					height: 85px;
+					float: right;
+					display: table;
+					width: auto;
+					.price{
+						vertical-align middle
+						display table-cell
+					}
+				}
+				.vers-ooredoo{
+					font-family: ooredooregular;font-size:15px;float:right;
+				}
+				.forfait-r{
+					margin-left:70px;
+				}
+				.small{
+					font-family: ooredooregular;font-size:15px;
+				}
+
+				.price-unit.capaciteSpec {
+					font-size: 29px !important;
+					line-height: 29px !important;
+					letter-spacing: -1px;
+				}
+			}
+			.premiumOffer{
+				padding-bottom 4px;
+			}
+			.cardBottom{
+				width: 100%;
+				overflow: hidden;
+				.cost{
+					priceTag(52px, 52px, $red , 30px , 35px , $red , 10px ,$ob , $red , 28px)
+					height: 85px;
+					display: table;
+					width: 50%;
+					float: left;
+					.price{
+						vertical-align bottom
+						display table-cell
+					}
+				}
+				.buy{
+					display: table;
+					height: 85px;
+					width: 50%;
+					.action{
+						display table-cell
+						vertical-align bottom
+						.btn{
+							font-family $or
+							font-size 18px
+							width 100%
+							height 50px
+							line-height 35px
+							max-width: 164px;
+							i{
+								margin-right 10px
+							}
+						}
+						.icon-cart {
+							font-size: 150% !important;
+							position: relative;
+							top:4px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+
+	}
+	
+}			
+
+
+
+@media (max-width: $large){
+	.md-forfait-ramadhan{
+		.section-title{
+			sectionTitle(#a2060b , $white , 25px )
+		}
+		.section-content{
+			padding 30px 0 0
+			.cardInfo{
+				width 100%
+				padding 15px
+				background $white
+				border-radius $radius
+				margin-bottom 30px
+				box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+				border unquote('1px solid #eee\9')
+				.cardTop{
+					width: 100%;
+					overflow: hidden;
+					.duration{
+						priceTag(70px, 70px, $black , 35px , 35px , $black , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.capacity{
+						priceTag(44px, 44px, #808080 , 24px , 28px , #808080 , 10px ,$ob , #808080 , 28px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 100%;
+					overflow: hidden;
+					.cost{
+						priceTag(47px, 47px, $red , 26px , 30px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 50%;
+						float: left;
+						.price{
+							vertical-align bottom
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.action{
+							display table-cell
+							vertical-align bottom
+
+						}
+					}
+				}
+			}
+
+		}
+		
+	}			
+
+}
+
+
+
+@media (max-width: $medium){
+	.md-forfait-ramadhan{
+		.section-title{
+			sectionTitle(#a2060b , $white , 20px )
+		}
+		.section-content{
+			padding 20px 0 0
+			.cardInfo{
+				width 100%
+				padding 15px
+				background $white
+				border-radius $radius
+				margin-bottom 20px
+				box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+				border unquote('1px solid #eee\9')
+				.cardTop{
+					width: 100%;
+					overflow: hidden;
+					.duration{
+						priceTag(50px, 50px, $black , 30px , 30px , $black , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.capacity{
+						priceTag(35px, 35px, #808080 , 20px , 22px , #808080 , 10px ,$ob , #808080 , 28px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 100%;
+					overflow: hidden;
+					.cost{
+						priceTag(35px, 35px, $red , 20px , 30px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 50%;
+						float: left;
+						.price{
+							vertical-align bottom
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.action{
+							display table-cell
+							vertical-align bottom
+
+						}
+					}
+				}
+			}
+
+		}
+		
+	}			
+
+}
+
+@media (max-width: $small){
+	.md-forfait-ramadhan{
+		.section-title{
+			sectionTitle(#a2060b , $white , 20px)
+		}
+		.section-content{
+			padding 15px 0 0
+			.cardInfo{
+				width 100%
+				padding 5px 0
+				background $white
+				margin-bottom 15px
+				border-radius: 5px;
+				border-style: solid;
+				overflow hidden;
+				border-width: 1px;
+				border-color: rgb( 219, 219, 219 );
+				box-shadow: 0px 1px 2px 0px rgb( 194, 194, 194 );
+				.cardTop{
+					width: 33%;
+					overflow: hidden;
+					float left
+					padding-left 10px
+
+					.duration{
+						priceTag(35px, 35px, $white , 20px , 20px , $white , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						.capacityMobile{
+							color: $white
+							font-size 14px
+						}
+					}
+					.capaciteMobile{
+						font-family: ooredoobold;
+						font-size: 30px;
+						line-height: 35px;
+						color: #000;
+					}
+					.capaciteMobile.capaciteSpec {
+						font-family: ooredoobold;
+						font-size: 20px;
+						line-height: 25px;
+						color: #000;
+						letter-spacing: -1px;
+					}
+					.mobileOoredoo{
+						font-family: ooredoobold;
+						font-size: 12px;
+						color: #000;
+						font-style: italic;
+					}
+					.capacity{
+						priceTag(35px, 35px, #808080 , 20px , 22px , #808080 , 10px ,$ob , #808080 , 28px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+				}
+				.cardBottom{
+					width: 65%;
+					overflow: hidden;
+					float left
+					padding-right 0px
+					.price-valable{
+						text-align: center;
+						margin-top: 6px;
+						.price-valable-hrs{
+							font-family: ooredoobold;
+							font-size: 22px;
+							line-height: 21px;
+							color: #6e6e6e;
+						}
+						.price-valable-text{
+							font-family: ooredoobold;
+							font-size: 12px;
+							color: #6e6e6e;
+							line-height: 17px;
+							font-style: italic;
+						}
+					}
+					.cost{
+						priceTag(28px, 28px, $red , 17px , 17px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 40%;
+						margin-right:10%;
+						float: left;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 50%;
+						.btn{
+							height 40px !important;
+							line-height 25px !important;
+							padding 0 5px; !important;
+							width 100%
+							max-width: 125px !important;
+							clear: both;
+							i{
+								margin-right 10px
+							}
+						}
+						.action{
+							display table-cell
+							vertical-align middle
+
+						}
+						.price-unit {
+							font-family: 'ooredoobold';
+							font-size: 28px;
+							line-height: 28px;
+							color: #e61e25;
+						}
+						.currency {
+							font-family: 'ooredoobold';
+							font-size: 17px;
+							line-height: 17px;
+							color: #e61e25;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
+		
+	}			
+
+}
+
+@media (max-width: $xsmall){
+	.md-forfait-ramadhan{
+		.section-title{
+			sectionTitle(#a2060b , $white , 20px)
+		}
+		.section-content{
+			padding 15px 0 0
+			.cardInfo{
+
+				.cardTop{
+					width: 37%;
+					overflow: hidden;
+					float left
+					padding-left 10px
+					.capaciteMobile {
+						font-size: 26px;
+						letter-spacing: -2px;
+					}
+					.duration{
+						priceTag(35px, 35px, $white , 20px , 20px , $white , 10px ,$ob , $lightgrey , 12px)
+						height: 85px;
+						display: table;
+						float: left;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+						.capacityMobile{
+							color: $white
+							font-size 14px
+						}
+					}
+					.capacity{
+						priceTag(28px, 28px, #808080 , 18px , 20px , #808080 , 10px ,$ob , #808080 , 28px)
+						height: 85px;
+						float: right;
+						display: table;
+						width: auto;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.capaciteMobile.capaciteSpec {
+						font-size: 15px;
+						line-height: 21px;
+						letter-spacing: -1px;
+					}
+				}
+				.cardBottom{
+					width: 62%;
+					overflow: hidden;
+					float left
+					padding-right 5px
+
+					.cost{
+						priceTag(28px, 28px, $red , 17px , 17px , $red , 10px ,$ob , $red , 28px)
+						height: 85px;
+						display: table;
+						width: 42%;
+						float: left;
+						margin-right: 2%;
+						.price{
+							vertical-align middle
+							display table-cell
+						}
+					}
+					.buy{
+						display: table;
+						height: 85px;
+						width: 56%;
+						.action{
+							display table-cell
+							vertical-align middle
+							.btn{
+								font-size: 15px;
+								height: 35px !important;
+								line-height: 25px !important;
+								width: 100%;
+								padding: 2px 5px;
+								i{
+									margin-right 5px
+								}
+							}
+							.icon-cart {
+								font-size: 138% !important;
+							}
+						}
+						.currency {
+							font-size: 14px;
+						}
+						.price-unit {
+							font-size: 26px;
+							letter-spacing: -2px;
+						}
+					}
+				}
+			}
+		}
+		
+	}			
+
+}

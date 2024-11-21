@@ -1,0 +1,330 @@
+@font-face {
+    font-family: outfit;
+    src: url(../fonts/outfit.ttf);
+}
+
+@font-face {
+    font-family: outfit-bold;
+    src: url(../fonts/outfit.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: rubik;
+    src: url(../fonts/rubik.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: rubik-bold;
+    src: url(../fonts/rubik.ttf);
+    font-weight: 800;
+}
+
+:root {
+    --ooredoo-red: #ed1c24;
+    --ooredoo-dark: #121212;
+    --ooredoo-light: #c4c4c4;
+    --color-qaada: #fee161;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.ltm-obot-container {
+    /*scale: 0.98;*/
+    --ltm-obot-bulle-outline: 1px solid rgba(0, 0, 0, 0.13);
+    /*font-size: 0.8rem;*/
+    font-size: 14px;
+    font-family: rubik, ooredooregular, Arial!important;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    isolation: isolate;
+    pointer-events: none;
+    z-index: 400;
+
+    &.ltm-is-open {
+        /*background-color: rgba(0, 0, 0, 0.21);*/
+
+        > .ltm-obot-chat-container {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+
+    > .ltm-obot-toggle {
+        position: absolute;
+        bottom: 1em;
+        right: 2em;
+        height: 6em;
+        pointer-events: all;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        border: 0;
+        border-radius: 6em;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: scale 200ms ease;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        > img {
+            height: inherit;
+            border-radius: 6em;
+            aspect-ratio: 1;
+            box-shadow: -5px 5px 5px rgb(0, 0, 0, 0.2);
+            object-fit: contain;
+        }
+    }
+
+    > .ltm-obot-chat-container {
+        scale: 0;
+        opacity: 0;
+        transition: scale 400ms ease, opacity 400ms ease;
+        transform-origin: bottom right;
+        pointer-events: all;
+        box-shadow: -5px 5px 5px rgb(0, 0, 0, 0.2);
+        position: absolute;
+        right: 2em;
+        bottom: 8em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /*justify-content: center;*/
+        width: calc(min(400px, 80vw) - 2em);
+        height: calc(min(600px, 80vh) - 8em);
+        border-radius: 1em;
+        overflow: hidden;
+
+        > .ltm-obot-header {
+            background-color: #f5f5f5;
+            color: white;
+            padding: 1em 0.4em;
+            display: flex;align-items: center;justify-content: space-between;
+
+            > img {
+                height: 2.4em;
+                &:last-child{
+                    cursor: pointer;
+                    /*aspect-ratio: 1;*/
+                    height: 1.4em;
+                    /*padding: 1em 1em 1em;*/
+                    padding-inline-end: 1em;
+                    /*width: 2em;*/
+                }
+            }
+        }
+
+        > #obot-scroll-div {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 1em 0.4em;
+            /*background-color: #f5f5f5;*/
+            background-color: white;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+            gap: 1em;
+            font-weight: bold;
+
+            .ltm-chat-bull {
+                outline: var(--ltm-obot-bulle-outline);
+                border-radius: 1.6em;
+                padding:0.4em 0.8em;
+                background-color: white;
+                position: relative;
+                isolation: isolate;
+
+                > .ltm-chat-bull-time {
+                    position: absolute;
+                    left: 1em;
+                    width: 100%;
+                    bottom: -1.6em;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                }
+            }
+
+        }
+
+        > .ltm-obot-footer {
+            background-color: #f5f5f5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            height: 3.4em;
+            padding:  0.4em;
+            > button {
+                height:100%;
+                border: 0;
+                background-color: transparent;
+                display: grid;
+                aspect-ratio: 1;
+                place-items: center;
+                cursor: pointer;
+                > img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                }
+            }
+
+            > input {
+                color: black;
+                flex: 1;
+                height: 100%;
+                outline: unset;
+                background-color: transparent;
+                border: 0;
+                &::placeholder {
+                    color: grey!important;
+                }
+            }
+        }
+    }
+
+    #obot-discussion-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+
+        > .ltm-obot-bot {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+
+            > .ltm-chat-bull {
+                background-color: #e7e7e7;
+            }
+
+            > img {
+                height: 3em;
+                aspect-ratio: 1;
+                object-fit: contain;
+            }
+        }
+
+        > .ltm-obot-user {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            flex-direction: row-reverse;
+
+            .ltm-chat-bull-time {
+                text-align: end;
+                right: 1em;
+                left: auto !important;
+            }
+
+            /*> .ltm-chat-bull {*/
+            /*    background-color: white;*/
+            /*}*/
+        }
+    }
+
+    #obot-choices-container-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6em;
+        margin-top: 1em;
+
+        > p {
+            margin: 0;
+        }
+
+        #obot-choices-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6em;
+
+            .ltm-obot-choice {
+                cursor: pointer;
+
+                &:hover {
+                    /*background-color: #f5f5f5;*/
+                    outline: 1px solid var(--ooredoo-red);
+                }
+            }
+        }
+    }
+
+    #obot-thinking {
+        border-radius: 2em;
+        font-weight: bold;
+        background-color: #e3e3e3;
+        padding: 0.2em 1em;
+        color: #6c6c6c;
+        min-height: 2.1em;
+        position: relative;
+        width: 3.4em;
+
+        > span {
+            position: absolute;
+            left: 0.5em;
+            top: -0.25em;
+            font-size: 2em;
+        }
+    }
+
+
+}
+
+.d-none {
+    display: none !important;
+}
+
+
+.obot-modal-arrow {
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    width: 50%;
+    height: max(20%, 400px);
+}
+
+.obot-modal {
+    bottom: 50vh !important;
+    background-color: transparent !important;
+
+    .ltm-modal-body {
+        > .ltm-obot-popup {
+            width: 100%;
+        }
+    }
+
+    > .ltm-obot-arrow {
+        position: fixed;
+        bottom: 6em;
+        left: 2em;
+        right: 2em;
+        /*width: ;*/
+        height: calc(50vh - 8em);
+        width: calc(100vw - 6em);
+        object-fit: contain;
+        object-position: bottom right;
+    }
+}
+
+@media (max-width: 600px) {
+    .obot-modal {
+        bottom: 45vh !important;
+        /*background-color: transparent !important;*/
+    }
+}

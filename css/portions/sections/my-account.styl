@@ -1,0 +1,347 @@
+//my-accounte
+@import nib;
+
+@import 'sections/colors.styl';
+
+
+.md-my-account{
+	background $white
+	.section-title{
+		sectionTitle($red , $white , 29px , 24px)
+	}
+	.section-content{
+		.my-account-container{
+			padding 40px 0 0px
+			overflow: hidden
+			.my-account-holder{
+				border 3px solid $greyborder
+				border-radius $radius
+				margin-bottom: 20px
+				background $white
+				padding 15px
+				.holder-header{
+					text-align: center
+					position relative
+					margin-top -35px
+					h2{
+						font-family $ob
+						font-size 31px
+						color: $black
+						text-align: center
+						margin 0
+						display: inline-block
+						padding 3px 5px
+						background $white
+					}
+				}
+				.holder-content{
+					overflow: hidden
+					.holder-content-inner{
+						padding: 11px 0
+						border-bottom: 1px solid #eee
+						.credit-info{
+							a{
+								font-family $ob
+								color: $black
+								font-size 18px
+								padding 5px 0 5px 30px
+								background-position left center
+								background-repeat no-repeat
+								// credits
+								&.creditTotal{
+									background-image url('../images/icons/phone-icon.png') 
+								}
+								&.CreditRecharge{
+									background-image  url('../images/icons/credit1.png')
+								}
+								&.CreditBonus{
+									background-image  url('../images/icons/credit2.png')
+								}
+								&.maxyCredit{
+									background-image  url('../images/icons/credit3.png')
+								}
+								&.packMaxyCredit{
+									background-image  url('../images/icons/credit4.png')
+								}
+								
+								// Internet
+								
+
+								&.maxyInternet{
+									background-image  url('../images/icons/internet1.png')
+								}
+								
+								&.packMaxyInternet{
+									background-image  url('../images/icons/internet2.png')
+								}
+								
+								&.internetJournalier{
+									background-image  url('../images/icons/internet3.png')
+								}
+								
+								&.internetMensuel{
+									background-image  url('../images/icons/internet4.png')
+								}
+								
+								&.internetNuit{
+									background-image  url('../images/icons/internet5.png')
+								}
+								
+								// Appels
+									
+								&.minutesGratuites{
+									background-image  url('../images/icons/appel1.png')
+								}
+								
+								&.minutesNoudjoum{
+									background-image  url('../images/icons/appel2.png')
+								}
+								
+
+
+								
+							}
+						}
+						.credit{
+							direction: ltr
+							text-align: right
+							priceTag(17px, 17px, $lightblue , 12px , 12px , $lightblue , 10px ,$ob , $lightgrey , 12px)
+							float right
+						}
+						.progressBarContainer{
+							padding 7px 0
+							overflow: hidden
+							.progressBar{
+								background #f0f0f0
+								position relative
+								height 6px
+								margin-top 8px
+								border-radius: 3px
+								overflow: hidden
+								.progressPercentage{
+									position absolute
+									left 0
+									top 0
+									height 6px
+					
+									&.greenbar{
+										background $greenbar
+									}
+									
+									&.orangebar{
+										background $orangebar
+									}
+									
+									&.redbar{
+										background $redbar
+									}
+								}
+							}
+						}
+					
+						&:last-child{
+							border-bottom none
+						}
+					}
+				}
+			}
+		}
+	}
+}			
+
+
+
+
+@media (min-width: $medium){
+	.md-my-account{
+		.section-content{
+			.my-account-holder{
+				min-height: 536px
+			}
+		}
+	}
+}
+
+
+@media (max-width: $large){
+	.md-my-account{
+		.section-title{
+			sectionTitle($red , $white , 24px , 20px)
+		}
+		.section-content{
+			.my-account-container{
+				.my-account-holder{
+					.holder-header{
+						h2{
+							font-size 28px
+							color: $black
+						}
+					}
+					.holder-content{
+						.holder-content-inner{
+							.credit{
+								.price{
+									.price-hero{
+										.price-unit{
+											font-size: 17px
+											line-height: 17px
+										}
+										.currency{
+											font-size: 12px
+											line-height: 12px
+										}
+										.validity{
+											font-size 12px
+										}
+									}
+								}
+							}
+							.credit-info{
+								a{
+									font-size 16px
+								}
+							}
+							.row{
+								margin 0
+							}						
+							div[class*='col-']{
+								padding 0
+							} 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: $medium){
+	.md-my-account{
+		.section-title{
+			sectionTitle($red , $white , 22px , 18px)
+		}
+		.section-content{
+			.my-account-container{
+					overflow: hidden
+					margin: 0 15px 15px
+					background: #fff
+					overflow: hidden
+					border-radius 0 0 $radius $radius
+					box-shadow 0 3px 5px 0px rgba(0,0,0,0.35)
+					
+				.my-account-holder{
+					.holder-header{
+						h2{
+							font-size 30px
+							color: $red
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: $small){
+	.md-my-account{
+		background #ebebeb
+		.section-title{
+			sectionTitle($red , $white , 20px , 16px)
+		}
+		.section-content{
+			.my-account-container{
+				padding 0 0 0px
+				.my-account-holder{
+					border none //3px solid #bfbfbf
+					margin-bottom 0 //20px
+					padding: 0;
+					.holder-content{
+						.holder-content-inner{
+							border-bottom: 0;
+							.credit{
+								.price{
+									.price-hero{
+										.price-unit{
+											font-size: 16px
+											line-height: 16px
+										}
+										.currency{
+											font-size: 11px
+											line-height: 11px
+										}
+										.validity{
+											font-size 11px
+										}
+									}
+								}
+							}
+							.credit-info{
+								a{
+									font-size 14px
+								}
+							}
+						}
+					}
+					&.expandeffect{
+						border 3px solid #bfbfbf
+						margin-bottom 20px
+					}
+				}
+				&.expandeffect{
+					padding 40px 0 0 !important
+					.my-account-holder {
+						border: 3px solid #bfbfbf;
+						margin-bottom: 20px;
+						padding: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: $xsmall){
+	.md-my-account{
+		.section-title{
+			sectionTitle($red , $white , 18px , 14px)
+		}
+		.section-content{
+			.my-account-container{
+				.my-account-holder{
+					.holder-content{
+						.holder-content-inner{
+							.credit{
+								.price{
+									.price-hero{
+										.price-unit{
+											font-size: 14px
+											line-height: 14px
+										}
+										.currency{
+											font-size: 9px
+											line-height: 9px
+										}
+										.validity{
+											font-size 9px
+										}
+									}
+								}
+							}
+							.credit-info{
+								a{
+									font-size 14px
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//@media (max-width: 1199px)

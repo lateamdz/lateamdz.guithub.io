@@ -1,0 +1,495 @@
+/****************   NEW STYLE   ***********************/
+
+.md-recharge-internet.roaming.kaspersky .section-title {background: #0e7549;}
+.md-recharge-internet.roaming.kaspersky .section-content {background: #20b178;}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardThumb {width: 48%;max-width: 300px;}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo {width: 52%;}
+
+
+.SendNum{overflow:hidden;display: none;padding-bottom: 26px;}
+.SendNum .input{-webkit-transition: all  2s ease; /* Safari */transition:all  2s ease;-webkit-border-radius: 40px;-moz-border-radius: 40px;border-radius: 40px;width:100%;height:60px;outline:0;border:2px solid #4c4c4c;padding:0px 20px;padding-left: 70px;max-width: 500px;font-size: 20px;font-weight: bolder;}
+.SendNum .input::placeholder{font-size:18px;color:#ccc}
+.inputNum{position:relative;padding: 0px;}
+.inputNum:after{content:"05";width: 50px;height: 100%;position: absolute;left: 15px;top: 0;line-height: 58px;padding: 0px 15px;font-size: 20px;font-weight: bolder;}
+.btnvalide {
+    background: #4c4c4c;
+    color: #fff;
+    border: 0px;
+    outline: none;
+    font-size: 20px;
+    padding: 6px 15px;
+    min-width: 150px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border:2px solid #4c4c4c;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    margin: 0px 10px;
+}
+.btnvalide.red{background:#ed1c24;    border:2px solid #ed1c24;}
+.btnAnnule {
+    background: #fff;
+	border:2px solid #4c4c4c;
+    color: #fff;
+   
+    outline: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    min-width: 150px;
+    color:#4c4c4c;
+    font-weight: 600;
+    text-transform: capitalize;
+	-webkit-border-radius: 40px;-moz-border-radius: 40px;border-radius: 40px;
+}
+.offre_section{background: #f7f7f7;padding:20px 0px;min-height: 600px;}
+.titleOffre{margin:0px 0px 20px;font-weight:600;color:#202020;font-size:30px;text-transform:uppercase;text-align:center}
+ .ligne_offre{
+    overflow: hidden;
+    padding: 15px;
+    background: #fbfbfb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+
+	
+}
+ .ligne_offre:nth-child(even){ background: #f7f7f7;}
+ .ligne_offre label{font-weight:600;font-size:20px;margin-left: 15px;position:relative;font-family: ooredoobold;}
+ .device{font-size:20px;padding: 5px 30px;border-left: 1px solid #dcdcdc;border-right: 1px solid #dcdcdc;margin: 0px 30px;}
+ .priceForfait {
+    color: #ed1c24;
+    font-size: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    -webkit-justify-content:center;
+    justify-content:center;
+    font-family: ooredoobold;
+}
+.priceSymbole {
+    font-size: 32px;
+    font-family: ooredoobold;
+}
+.bottom_offre{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 20px 15px 0px;
+}
+.offre_section input[type="radio"] {
+	display: none;
+}
+
+.offre_section input[type="radio"] +label {
+		font-weight: bold;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+.offre_section input[type="radio"] +label::before {
+			transition: all 250ms cubic-bezier(.4,.25,.3,1);
+			content: "";
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: white;
+			border: 1px solid #0cb96e;
+			font-size: 0;
+			position: absolute;
+			bottom: 12px;
+			left: 0;
+			-webkit-transform: translate(-50%, 50%);
+			transform: translate(-50%, 50%);
+		}
+
+.offre_section input[type="radio"] +label::after {
+			transition: all 250ms cubic-bezier(.4,.25,.3,1);
+			content: "";
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			background-color: white;
+			position: absolute;
+			bottom: 12px;
+			left: 0;
+			-webkit-transform: translate(-50%, 50%);
+			transform: translate(-50%, 50%);
+		}
+
+.offre_section input[type="radio"]:checked + label::before {
+			/* border-width: 0px; */
+		}
+
+.offre_section input[type="radio"]:checked + label::after {
+			width: 25px;
+			height: 25px;
+			background: #0cb96e;
+			border: 2px solid #fff;
+		}
+		
+
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.15s ease-out 0s;
+  background: #fff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+  border-radius: 50%;
+  margin: 0px 10px 6px 0px !important;
+  border: 1px solid #0cb96e;
+  outline: none;
+}
+.option-input:hover {
+}
+.option-input:checked {
+  background: #009688;
+}
+.option-input:checked::before {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 14.66667px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+}
+.option-input:checked::after {
+  
+background: #fff;
+  
+content: '';
+  
+display: block;
+  
+position: relative;
+  
+z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+.form-num label.error{
+    color: red;
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+    padding-bottom: 0;
+    position: absolute;
+    bottom: -30px;
+}
+
+.form-num{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+      -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.js-errors {
+    color: red;
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+    padding-bottom: 0;
+	font-weight:bold;
+    
+}
+.numBox {padding:20px 0px;}
+.numBox  span{color:#2c1a1c;font-size:22px;font-weight:bold}
+.topPage{
+    background: url(../images/topback.png);
+    background-size: cover;
+    padding: 30px 0px;
+}
+
+.btns-popup{text-align:center;font-size: 22px;color: #fff;margin-bottom: 20px;}
+.btns-popup img{display:block;margin: 0 auto 10px;}
+.btns-popup span{color:#fff;font-size: .9em;}
+.BoxOffre{border: 2px solid #68caa4;}
+.titleofferPopup	{background:#177f56;font-size:18px;color:#fff;display:block;padding: 10px;text-align: center;font-family: ooredoobold;}
+.flexOffre{padding: 25px 10px;color:#fff;font-family: ooredoobold;display: flex;align-items: center;justify-content: space-around;font-size: 18px;}
+.linkCommande{
+    background: #fff;
+    color: #ed1c24;
+    border: 0px;
+    outline: none;
+    font-size: 16px;
+    padding: 6px 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    margin: 0px auto 15px;
+    display: table;
+    font-family: ooredoobold;
+}
+.rightText{text-align:right;color:#fff;font-size: 15px;padding-top: 15px;}
+.rightText b{font-family: ooredoobold;}
+.flexOffre .border {
+    border-left: 1px solid #fff;
+    padding-left: 15px;
+}
+.conditions{
+	color: #0848ff;
+    text-decoration: underline;
+}
+.ligne_offre label.kid{
+	margin-right:15px;
+	
+}
+.ar .ligne_offre .deviceimg {
+    margin-left: 7px;
+}
+@media (max-width: 1100px)
+{
+.offre_section .container {
+    width: 100%;
+}
+.ImgOffre{width:100%;text-align:center;}
+.InfoOffre{width:100%}
+}
+.ligne_offre.email p {font-size: 1.1em;}
+.ligne_offre.email label {
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 0;
+    position: relative;
+    font-family: ooredoobold;
+}
+.ligne_offre.email input{
+	border-radius: 20px;
+    padding: 22px 15px;
+}
+@media (max-width: 767px)
+{
+	.form-num label.error{position:relative;bottom: 0;}
+	.modal .modal-dialog .modal-content .modal-body .col-xs-12{
+    height: 100%;
+    overflow: scroll;
+}
+	.topPage{padding: 10px 0px 20px;background: #fff;}
+	.numBox{text-align:center;padding-bottom: 0;}
+	.numBox button{margin:10px auto 0px}
+	.titleOffre{
+    font-size: 21px;
+}
+.ImgOffre img{max-height:200px;display:block;margin: 0 auto 20px;}
+.InfoOffre{padding:0px;}
+.ligne_offre{padding: 15px 0px;justify-content: center;}
+.ligne_offre.email{flex-direction: column;text-align: center;}
+.device{display:none;}
+.priceForfait{font-size:25px;}
+.priceSymbole{font-size:18px;}
+.bottom_offre{padding: 0px;display: block;text-align: center;}
+.bottom_offre>div{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-top: 15px;
+}
+.bottom_offre>div .checkbox{
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+}
+.option-input:checked::before{
+    width: 20px;
+    height: 20px;
+    line-height: 19px;
+    font-size: 13px;
+    }
+.bottom_offre button{margin-top:15px;}
+.ligne_offre .col-sm-9{padding:0px;}
+.ligne_offre .col-sm-3{padding-right:0px;}
+.inputNum{margin-bottom: 15px;}
+.SendNum .btnvalide{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+.SendNum .btnAnnule{
+    width: 100%;
+    margin: 0px;
+}
+.SendNum .input::placeholder{font-size:15px;color:#ccc}
+.BoxOffre{margin-bottom:20px;}
+}
+
+@media (max-width: 400px)
+{
+	.offre_section input[type="radio"] +label{padding-right:10px;}
+.ligne_offre .deviceimg{max-width:60px;}	
+}
+
+@media (max-width: 320px)
+{
+.accessibilities.mobileMenu .accessibilities-menu ul li a .lang{display:none;}
+.accessibilities.mobileMenu .accessibilities-menu ul li a .comment{display:none;}
+.accessibilities.mobileMenu .accessibilities-menu ul li a .aide{display:none;}
+}
+@media (max-width: 767px){
+.modal .modal-dialog .modal-content .modal-body {
+    height: 60vh;
+    background-image: url(../images/popup/bg-popup.jpg);
+}
+}
+.modal .modal-dialog .modal-content .modal-body .content-popup img {
+	float:none;
+}
+.kaspersky .btn {
+    border-radius: 34px;
+}
+
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardThumb.visible-xs {
+        width: 100%;
+    max-height: 80px;
+    display: block;
+    height: 80px;
+    background-position: center;
+	max-width: 100%
+}
+@media (max-width: 767px){
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo {
+text-align: left;
+	width: 100%
+}
+}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo h3 {
+	color: #ed1c24;
+    font-size: 3.2em;
+	margin-top: 20px;
+}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo h4 {	
+    font-weight: bolder;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    font-family: NotoSans-Bold, Arial;
+}
+.md-recharge-internet.roaming.kaspersky .section-content.transfert-hp .fullWidthCard .cardInfo p{
+border-left: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 7px !important;
+    padding-right: 3px;
+    line-height: 1.2em;
+}
+.md-recharge-internet.roaming.kaspersky .section-content.transfert-hp .fullWidthCard .cardInfo p span.red{
+    font-weight: bold;
+    color: #ed1c24;
+}
+.md-recharge-internet.roaming.kaspersky .section-content.transfert-hp .fullWidthCard .cardInfo p span.bold{
+    font-weight: bold;
+}
+.md-recharge-internet.roaming.kaspersky .section-content.transfert-hp .fullWidthCard .cardInfo p.last {
+    margin-bottom: 13px;
+}
+
+/**************   AR STYLE  *****************/
+.ar .md-recharge-internet.roaming.kaspersky .price-unit {
+    font-weight:bold;
+}
+.ar .flexOffre .border {
+	border-left: none;
+    padding-left: 0;
+	border-right: 1px solid #fff;
+    padding-right: 15px;
+	
+}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardThumb{
+box-shadow: none;
+}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardThumb img{
+	width: 100%
+}
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo .details-kaspersky{
+	    min-height: 115px;
+}
+.md-recharge-internet.roaming.kaspersky .section-title{
+	background-color: #01a88e !important;
+}
+.md-recharge-internet.roaming.kaspersky .section-content{
+	background-color: #fafafa !important;
+	background: #fafafa !important
+}
+.md-recharge-internet.roaming .section-content .fullWidthCard .cardInfo h3 .from{
+    font-variant: unicase;
+    font-size: 18px;
+    color: #222;
+}
+
+/* DARK MODE */
+.dark .md-recharge-internet.roaming.kaspersky .section-title{
+	background-color: #191919 !important;
+}
+.dark .md-recharge-internet.roaming.kaspersky .section-content{
+	background-color: #141414 !important;
+	background: #141414 !important
+}
+.dark .md-recharge-internet.roaming .section-content .fullWidthCard {
+    background: #101010;
+    border: 1px solid rgba(255, 255, 255, 0.12156862745098039);
+}
+.dark .md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo h4{
+	color: #efefef;
+}
+.dark .md-recharge-internet.roaming .section-content .fullWidthCard .cardInfo h3 .from{
+	color: #cdcdcd;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+.md-recharge-internet.roaming.kaspersky .section-content .fullWidthCard .cardInfo .details-kaspersky{
+	    min-height: inherit;
+}
+}

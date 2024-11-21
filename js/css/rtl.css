@@ -1,0 +1,417 @@
+@font-face {
+  font-family: 'ooredoobold';
+  src: url("../fonts/ooredooarabic/ge-ss-med.eot");
+  src: url("../fonts/ooredooarabic/ge-ss-med.eot?#iefix") format('embedded-opentype'), url("../fonts/ooredooarabic/ge-ss-med.woff") format('woff'), url("../fonts/ooredooarabic/ge-ss-med.ttf") format('truetype'), url("../fonts/ooredooarabic/ge-ss-med.svg#ge-ss-med") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ooredooregular';
+  src: url("../fonts/ooredooarabic/ge-ss-med.eot");
+  src: url("../fonts/ooredooarabic/ge-ss-med.eot?#iefix") format('embedded-opentype'), url("../fonts/ooredooarabic/ge-ss-med.woff") format('woff'), url("../fonts/ooredooarabic/ge-ss-med.ttf") format('truetype'), url("../fonts/ooredooarabic/ge-ss-med.svg#ge-ss-med") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaStd-Book-numbers';
+  src: url("../fonts/ooredooarabic/FuturaStd-Book.eot");
+  src: url("../fonts/ooredooarabic/FuturaStd-Book.eot?#iefix") format('embedded-opentype'), url("../fonts/ooredooarabic/FuturaStd-Book.woff") format('woff'), url("../fonts/ooredooarabic/FuturaStd-Book.ttf") format('truetype'), url("../fonts/ooredooarabic/FuturaStd-Book.svg#svgFontName") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  direction: rtl;
+  font-family: 'FuturaStd-Book-numbers, ooredoobold';
+}
+.pull-left {
+  float: right !important;
+}
+.pull-right {
+  float: left !important;
+}
+/**============= header =========*/
+.header .logo-section .logo {
+  float: right;
+}
+.header .logo-section .logo-directive {
+  float: right;
+  border-right: 1px solid #cbcbcb;
+  border-left: none;
+  margin-right: 20px;
+  margin-left: 0;
+  padding: 7px 20px;
+}
+@media (max-width: 767px) {
+  .header .logo-section .logo-directive {
+    margin-right: 10px;
+    padding: 7px 10px;
+  }
+}
+.accessibilities.mobile {
+  left: 0;
+  right: initial;
+}
+/**============= my-account =========*/
+.md-my-account .section-title .description p {
+  text-align: left;
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-my-account .section-title .description p span {
+  font-family: 'ooredoobold';
+}
+.md-my-account .section-content .my-account-holder .holder-content .holder-content-inner .progressBar .progressPercentage {
+  right: 0 !important;
+  left: inherit;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit {
+  direction: rtl;
+  text-align: left;
+  float: left;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+  padding: 5px 30px 5px 0;
+  background-position: right center;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .validity {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .price .price-hero {
+  direction: rtl !important;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit {
+  direction: ltr;
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .price .price-hero .table-cell {
+  direction: ltr;
+}
+.expandTiggerContainer .expandTiggerText a.collapseTrigger {
+  display: block;
+}
+.md-my-account .section-content .my-account-container .my-account-holder {
+  padding: 0;
+}
+/**=============md-forfait-night =========*/
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .action .btn i {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .capacityMobile {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .capaciteMobile {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers', 'ooredoobold';
+}
+.md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .price-valable .price-valable-hrs {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .appIll {
+  line-height: 28px !important;
+  font-family: 'ooredoobold' !important;
+  font-size: 28px !important;
+}
+@media (max-width: 991px) {
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop {
+    float: right;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom {
+    padding-right: 0;
+    padding-left: 10px;
+    float: left;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration {
+    float: right;
+    max-width: 125px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost {
+    float: right;
+    margin-right: 0;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .buy {
+    float: left;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero {
+    direction: rtl;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardBottom .cost .price .price-hero .table-cell {
+    direction: ltr;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero .price-unit {
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: rtl;
+  }
+
+}
+@media (max-width: 479px) {
+  .md-forfait-night .section-content .fullWidthCard .cardInfo .cardTop .duration .price .price-hero {
+    direction: rtl;
+  }
+}
+/**=============md-forfait-internet =========*/
+.md-forfait-internet .section-content .cardInfo .cardBottom .buy .action .btn i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero {
+  direction: rtl;
+}
+
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .table-cell {
+  direction: ltr;
+}
+.md-forfait-internet .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers', 'ooredoobold';
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+  line-height: 17px;
+}
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .capacityMobile {
+  font-family: 'FuturaStd-Book-numbers';
+}
+
+.md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .price-hero .price-unit {
+  font-size: 21px !important;
+  line-height: 35px !important;
+}
+@media (min-width: 1199px) {
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 27px;
+    line-height: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .md-forfait-internet .section-content div[class*='col-'] {
+    float: right;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    width: auto;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 21px;
+  }
+}
+@media (max-width: 992px) and (min-width: 767px) {
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration.small .price .price-hero .price-unit {
+    font-size: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .md-forfait-internet .section-content .cardInfo .cardTop {
+    float: right;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .md-forfait-internet .section-content .cardInfo .cardBottom {
+    padding-right: 0;
+    padding-left: 10px;
+    float: left;
+  }
+
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    float: right;
+    max-width: 115px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .cost {
+    float: right;
+    margin-right: 0;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy {
+    float: left;
+  }
+}
+@media (max-width: 479px) {
+
+
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec .blue {
+    line-height: 18px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration {
+    width: 75px;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .duration .capaciteSpec {
+    font-size: 19px !important;
+    line-height: 20px !important;
+  }
+}
+/**=============md-forfait-appel =========*/
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .action .btn i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+  width: auto;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero {
+  direction: rtl;
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capacity .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .cost .price .price-hero .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .duration .capacityMobile {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .price-valable .price-valable-hrs {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardBottom .buy .price-unit {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.md-forfait-appel .section-content .cardInfo .cardTop .capaciteMobile {
+  font-family: 'FuturaStd-Book-numbers';
+}
+@media (max-width: 767px) {
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    padding-right: 10px;
+    padding-left: 0;
+    float: right;
+  }
+  .md-forfait-internet .section-content .cardInfo .cardTop .capaciteMobile {
+    font-family: 'FuturaStd-Book-numbers';
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .buy .price-unit {
+    font-family: 'FuturaStd-Book-numbers';
+  }
+  .md-forfait-internet .section-content .cardInfo .cardBottom .price-valable .price-valable-hrs {
+    font-family: 'FuturaStd-Book-numbers';
+  }
+  .md-forfait-appel .section-content .cardInfo .cardTop .duration {
+    float: right;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom {
+    float: left;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .buy {
+    float: left;
+  }
+  .md-forfait-appel .section-content .cardInfo .cardBottom .cost {
+    float: right;
+  }
+}
+@media (max-width: 479px) {
+  .md-forfait-appel .section-content .cardInfo .cardTop {
+    padding-right: 10px;
+    padding-left: 0;
+    float: right;
+  }
+
+}
+/**=============footer=========*/
+footer .directives {
+  padding-left: 0;
+  padding-right: 45px;
+}
+footer .directives .directiveIcon {
+  right: 0;
+  left: initial;
+}
+footer .directives p,
+footer .directives span {
+  font-family: 'FuturaStd-Book-numbers';
+}
+footer .copyrights {
+  font-family: 'FuturaStd-Book-numbers';
+}
+.number {
+  font-family: 'FuturaStd-Book-numbers' !important;
+}
+.btn i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.form-group input {
+  font-family: 'FuturaStd-Book-numbers' !important;
+}
+.md-transfert-internet .section-content .transfert-internet .directiveIcon {
+  right: -35px;
+}
+.md-forfait-50-plus .section-content .achat-forfait h3 {
+  font-family: 'ooredooregular';
+  font-size: 28px;
+}
+@media (max-width: 991px) {
+  .md-forfait-50-plus .section-content .achat-forfait h3 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .md-transfert-internet-validation .section-content .transfert-internet .transfert-internet-content {
+    margin-right: 85px;
+  }
+}
+@media (max-width: 767px) {
+  .md-transfert-internet .section-content .transfert-internet .transfert-internet-content {
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .md-transfert-internet .section-content .transfert-internet .transfert-internet-thumb {
+    float: none !important;
+  }
+  .md-forfait-50-plus .section-content .achat-forfait h3 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 479px) {
+  .md-transfert-internet-validation .section-content .transfert-internet .transfert-internet-thumb {
+    float: none !important;
+  }
+  .md-forfait-50-plus .section-content .achat-forfait h3 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=rtl.css.map */
+/*# sourceMappingURL=rtl.css.map */
