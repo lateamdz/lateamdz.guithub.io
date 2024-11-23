@@ -105,21 +105,21 @@
     <script type="text/javascript"
             defer>
 
-        if(new URLSearchParams(window.location.search).get('resetShahid')==='true'){
-            window.localStorage.setItem('shahid-active',"");
+        if (new URLSearchParams(window.location.search).get('resetShahid') === 'true') {
+            window.localStorage.setItem('shahid-active', "");
             const url = new URL(window.location.href);
             const params = new URLSearchParams(url.search);
             params.delete("resetShahid");
             window.history.replaceState({}, '', `${url.pathname}?${params}`);
             location.reload();
         }
-        window.isShahidActive=window.localStorage.getItem('shahid-active')==="true";
+        window.isShahidActive = window.localStorage.getItem('shahid-active') === "true";
 
-        if(!window.isShahidActive){
-            setTimeout(()=>{
-                const modal=document.getElementById('shahid-modal');
+        if (!window.isShahidActive) {
+            setTimeout(() => {
+                const modal = document.getElementById('shahid-modal');
                 modal.open();
-            },1000)
+            }, 1000)
         }
 
     </script>
@@ -134,8 +134,8 @@
                 <div class="ltm-modal-title text-red text-center fs-34 text-outfit-bold" id="buy-modal-title">
                     DIMA 500
                 </div>
-                <!--                <button class="ltm-close-btn" onclick="document.getElementById('buy-modal').close()">-->
-                <!--                    <img src="./images/components/close.png" alt="close"></button>-->
+                <button class="ltm-close-btn" onclick="document.getElementById('buy-modal').close()">
+                    <img src="./images/components/close.png" alt="close"></button>
             </div>
             <div class="ltm-modal-body">
                 <div style="padding: 1.2em;" class="text-center text-outfit" id="buy-modal-msg">
@@ -165,8 +165,8 @@
                 <div class="ltm-modal-title text-red text-center fs-34 text-outfit-bold">
                     هنيئًا !
                 </div>
-                <!--                <button class="ltm-close-btn" onclick="document.getElementById('congrats-modal').close()">-->
-                <!--                    <img src="./images/components/close.png" alt="close"></button>-->
+                <button class="ltm-close-btn" onclick="document.getElementById('congrats-modal').close()">
+                    <img src="./images/components/close.png" alt="close"></button>
             </div>
             <div class="ltm-modal-body">
                 <div style="padding: 1.2em;" class="text-center text-outfit" id="congrats-modal-msg">
@@ -885,38 +885,41 @@
                             <div class="default-promo-header text-uppercase">
                                 <br>
                                 <br>
-                                <h2 class="text-rubik-bold text-uppercase fs-36 text-center">إشتراك OSN+ & ANGHAMI</h2>
+                                <h2 class="text-rubik-bold text-uppercase fs-36 text-center">إشتراك +OSN+ & ANGHAMI</h2>
                                 <br>
                             </div>
                             <img src="images/osn-anghami.png"/>
-                            <p>سارعوا للحصلول على اشتراك <b class="text-rubik-bold">OSN+ & ANGHAMI</b> و استمتعوا <b>بمحتوياتكم المفضلة</b> بالإضافلة إلى <b>حجم إنترنت بـ 1000 دج</b></p>
+                            <p>سارعوا للحصلول على اشتراك <b class="text-rubik-bold">+OSN+ &amp; ANGHAMI</b> و استمتعوا <b>بمحتوياتكم المفضلة</b>
+                                بالإضافلة
+                                إلى <b>حجم إنترنت بـ 1000 دج</b></p>
                         </div>
                         <div id="promo-osn">
                             <div class="promo-card outline-red variation-1">
                                 <div class="promo-card-content">
                                     <h4 class="text-red text-uppercase text-center fs-26">
-                                        <span class="text-rubik-bold">إشتراك +OSN<br>و<br> ANGHAMI 1000</span></h4>
+                                        <span class="text-rubik-bold">إشتراك +OSN<br>و<br> ANGHAMI+ 1000</span></h4>
                                     </h4>
                                     <h4 class="text-center fs-26"><span class="text-outfit">إنترنت 10Go </span>
                                     </h4>
                                     <ul class="offer-list" style="align-items: center;">
                                         <li class="big-before"></li>
                                         <li class="hide-before text-center" style="margin-top: 2rem">
-                                            <span class="text-bold fs-14">دخول حصري إلى التطبيقين <b class="text-rubik-bold">OSN+</b> & <b class="text-rubik-bold">ANGHAMI</b></span>
+                                            <span class="text-bold fs-14">دخول حصري إلى التطبيقين <b class="text-rubik-bold">+OSN+ &amp; ANGHAMI</b></span>
                                         </li>
                                     </ul>
                                     <div class="dima-footer">
 
-                                        <div class="price-duration fs-28">
+                                        <div class="price-duration fs-28" style="border-top: 1px dashed var(--ooredoo-red);">
                                                     <span class="text-bold text-center">
-                                                       <span class="fs-12">الكل صالح لمدة</span>
-                                                       <span class="text-bold white-space-nowrap fs-18 text-red">30 يوم</span>
+                                                       <span class="fs-14 text-red white-space-nowrap">الكل صالح لمدة 30 يوم</span>
+                                                      <span class="text-outfit">1000 <sup>دج</sup></span>
                                                     </span>
-                                            <span class="text-outfit">1000 <sup>دج</sup></span>
+                                            <div class="center">
+                                                <button id="card-action-osn" class="red-btn text-outfit border-round fs-20">شراء
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="center">
-                                            <button id="card-action-osn" class="red-btn text-outfit border-round fs-20">شراء
-                                            </button></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -924,7 +927,7 @@
                                 (() => {
                                     const data = [
                                         {
-                                            title: "ANGHAMI & +OSN",
+                                            title: "ANGHAMI+ & +OSN",
                                             price: 1000,
                                             gigas: 100,
                                             minutes: 0,
@@ -934,9 +937,9 @@
                                             duration: "30 Jours",
                                             bonus: ["fb", "anazik", "shahid", "anaflix"],
                                             msgs: {
-                                                confirm: "استقد من محتويات ترفيهية رائعة في اشتراك واحد ! و دخول حصري إلى OSN+ و 10Go + Anghami إنترنت ، صالح لمدة شهر.\n الإشتراك قابل للتجديد تلقائيا.",
-                                                congrats: "لقد قمت بتفعيل اشتراكك بنجاح ! \n حمل OSN+ و Anghami و استمتع به الأن !",
-                                                noCredit:"رصيدك غير كافٍ ، يرجى تعبئة حسابك",
+                                                confirm: "استقد من محتويات ترفيهية رائعة في اشتراك واحد ! و دخول حصري إلى OSN+ و 10Go + Anghami+ إنترنت ، صالح لمدة شهر.\n الإشتراك قابل للتجديد تلقائيا.",
+                                                congrats: "لقد قمت بتفعيل اشتراكك بنجاح ! \n حمل OSN+ و Anghami+ و استمتع به الأن !",
+                                                noCredit: "رصيدك غير كافٍ ، يرجى تعبئة حسابك",
                                             }
                                         },
                                     ];
@@ -967,12 +970,12 @@
                                     {
                                         title: "اشتراك <br/> Dima+ 2000",
                                         price: 1000,
-                                        gigas:60,
-                                        minutes:0,
-                                        sms:250,
+                                        gigas: 60,
+                                        minutes: 0,
+                                        sms: 250,
                                         calls: "all",
                                         duration: "30 Jours",
-                                        bonus: ["fb","anazik","anaflix"],
+                                        bonus: ["fb", "anazik", "anaflix"],
                                     },
                                 ];
 
@@ -989,10 +992,10 @@
 
                                                     <li class="text-outfit-light"><span><span class="text-outfit">${item.gigas}Go</span> مهداة صالحة أيضًا في تونس</span></li>
                                                     <li  class="text-outfit-light">
-                                                        ${item.bonus.includes("anazik")?`<img src="images/dimax/Icon-Anazik.svg" alt="">`:''}
-                                                        ${item.bonus.includes("anaflix")?`<img src="images/dimax/Icon-Anaflix.svg" alt=""> <span class="text-red">مهداة</span>`:''}
-                                                        ${item.bonus.includes("shahid")?`<img src="images/dimax/Icon-Chahid.svg" alt="">`:''}
-                                                        ${item.bonus.includes("fb")?`<span >&</span><img src="images/dimax/fb.svg" alt=""> <span class="text-red">مجاناً​</span>`:''}
+                                                        ${item.bonus.includes("anazik") ? `<img src="images/dimax/Icon-Anazik.svg" alt="">` : ''}
+                                                        ${item.bonus.includes("anaflix") ? `<img src="images/dimax/Icon-Anaflix.svg" alt=""> <span class="text-red">مهداة</span>` : ''}
+                                                        ${item.bonus.includes("shahid") ? `<img src="images/dimax/Icon-Chahid.svg" alt="">` : ''}
+                                                        ${item.bonus.includes("fb") ? `<span >&</span><img src="images/dimax/fb.svg" alt=""> <span class="text-red">مجاناً​</span>` : ''}
                                                     </li>
                                                      <li class="text-outfit-light"><span><span class="text-outfit">${item.sms} رسالة قصيرة</span> نحو كل الشبكات</span></li>
                                                 </ul>
@@ -1025,77 +1028,77 @@
                                     {
                                         title: "Dima 2500",
                                         price: 2500,
-                                        gigas:100,
-                                        minutes:0,
-                                        sms:100,
+                                        gigas: 100,
+                                        minutes: 0,
+                                        sms: 100,
                                         smsOoredoo: true,
                                         calls: "all",
                                         duration: "30 يوم",
-                                        bonus: ["fb","anazik","shahid","anaflix"],
-                                        msgs:{
-                                            confirm:` 100Go + مكالمات غير محدودة نحو كل الشبكات الوطنية + فايسبوك + رسائل قصيرة غير محدودة نحو  `+`<span style="opacity: 0">o</span>`+" 100 "+`<span style=""> + Ooredoo </span>`+` رسالة قصيرة نحو الشبكات الأخرى الوطنية + شاهد وANAZIK وANAFLIX، الكل صالح 30 يوم`,
-                                            congrats:`هنيئًا! لقد حصلت على 100Go + مكالمات غير محدودة نحو كل الشبكات الوطنية + فايسبوك + رسائل قصيرة غير محدودة نحو`+`<span style="opacity: 0">o</span>`+" 100 "+`<span style=""> + Ooredoo </span>`+` رسالة قصيرة نحو الشبكات الأخرى الوطنية + شاهد وANAZIK وANAFLIX، الكل صالح 30 يوم`,
-                                            noCredit:"رصيدك غير كافٍ لشراء اشتراك Dima 2500. يرجى تعبئة حسابك",
+                                        bonus: ["fb", "anazik", "shahid", "anaflix"],
+                                        msgs: {
+                                            confirm: ` 100Go + مكالمات غير محدودة نحو كل الشبكات الوطنية + فايسبوك + رسائل قصيرة غير محدودة نحو  ` + `<span style="opacity: 0">o</span>` + " 100 " + `<span style=""> + Ooredoo </span>` + ` رسالة قصيرة نحو الشبكات الأخرى الوطنية + شاهد وANAZIK وANAFLIX، الكل صالح 30 يوم`,
+                                            congrats: `هنيئًا! لقد حصلت على 100Go + مكالمات غير محدودة نحو كل الشبكات الوطنية + فايسبوك + رسائل قصيرة غير محدودة نحو` + `<span style="opacity: 0">o</span>` + " 100 " + `<span style=""> + Ooredoo </span>` + ` رسالة قصيرة نحو الشبكات الأخرى الوطنية + شاهد وANAZIK وANAFLIX، الكل صالح 30 يوم`,
+                                            noCredit: "رصيدك غير كافٍ لشراء اشتراك Dima 2500. يرجى تعبئة حسابك",
                                         }
                                     },
                                     {
                                         title: "Dima 2000",
                                         price: 2000,
-                                        gigas:50,
-                                        minutes:300,
-                                        sms:200,
+                                        gigas: 50,
+                                        minutes: 300,
+                                        sms: 200,
                                         calls: "ooredoo",
                                         duration: "30 يوم",
-                                        bonus: ["fb","anazik","anaflix"],
-                                        msgs:{
-                                            confirm:"50Go + فايسبوك + 300 دقيقة و 200 رسالة قصيرة صالحة نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK و ANAFLIX، الكل صالح لمدة 30 يوم.",
-                                            congrats:"هنيئا ! لقد حصلت على 50Go + فايسبوك + 300 دقيقة و 200 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK و ANAFLIX، الكل صالح لمدة 30 يوم.",
-                                             noCredit:"رصيدك غير كافٍ لشراء اشتراك Dima 2000. يرجى تعبئة حسابك",
+                                        bonus: ["fb", "anazik", "anaflix"],
+                                        msgs: {
+                                            confirm: "50Go + فايسبوك + 300 دقيقة و 200 رسالة قصيرة صالحة نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK و ANAFLIX، الكل صالح لمدة 30 يوم.",
+                                            congrats: "هنيئا ! لقد حصلت على 50Go + فايسبوك + 300 دقيقة و 200 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK و ANAFLIX، الكل صالح لمدة 30 يوم.",
+                                            noCredit: "رصيدك غير كافٍ لشراء اشتراك Dima 2000. يرجى تعبئة حسابك",
                                         }
                                     },
                                     {
                                         title: "Dima 1500",
                                         price: 1500,
-                                        gigas:30,
-                                        minutes:150,
-                                        sms:150,
+                                        gigas: 30,
+                                        minutes: 150,
+                                        sms: 150,
                                         calls: "ooredoo",
                                         duration: "30 يوم",
-                                        bonus: ["fb","anaflix"],
-                                        msgs:{
-                                            confirm:"30Go  + فايسبوك + 150 دقيقة و 150 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAFLIX، الكل صالح لمدة 30 يوم",
-                                            congrats:"هنيئا ! لقد حصلت على 30Go + فايسبوك + 150 دقيقة و 150 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و  ANAFLIX، الكل صالح لمدة 30 يوم",
-                                             noCredit:"رصيدك غير كافٍ لشراء اشتراك Dima 1500. يرجى تعبئة حسابك",
+                                        bonus: ["fb", "anaflix"],
+                                        msgs: {
+                                            confirm: "30Go  + فايسبوك + 150 دقيقة و 150 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAFLIX، الكل صالح لمدة 30 يوم",
+                                            congrats: "هنيئا ! لقد حصلت على 30Go + فايسبوك + 150 دقيقة و 150 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و  ANAFLIX، الكل صالح لمدة 30 يوم",
+                                            noCredit: "رصيدك غير كافٍ لشراء اشتراك Dima 1500. يرجى تعبئة حسابك",
                                         }
                                     },
-									{
+                                    {
                                         title: "Dima 1200",
                                         price: 1200,
-                                        gigas:8,
-                                        minutes:100,
-                                        sms:120,
+                                        gigas: 8,
+                                        minutes: 100,
+                                        sms: 120,
                                         calls: "ooredoo",
                                         duration: "30 يوم",
-                                        bonus: ["fb","anazik"],
-                                        msgs:{
-                                            confirm:"8Go  + فايسبوك + 100 دقيقة و 120 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK، الكل صالح لمدة 30 يوم. ",
-                                            congrats:"هنيئا ! لقد حصلت على 8Go  إنترنت + مكالمات غير محدودة نحو Ooredoo و 100 دقيقة صالحة للمكالمات نحو كل الشبكات مدة 30 يوم",
-                                             noCredit:"رصيدك غير كافٍ لشراء اشتراك Dima 1200. يرجى تعبئة حسابك",
+                                        bonus: ["fb", "anazik"],
+                                        msgs: {
+                                            confirm: "8Go  + فايسبوك + 100 دقيقة و 120 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo و ANAZIK، الكل صالح لمدة 30 يوم. ",
+                                            congrats: "هنيئا ! لقد حصلت على 8Go  إنترنت + مكالمات غير محدودة نحو Ooredoo و 100 دقيقة صالحة للمكالمات نحو كل الشبكات مدة 30 يوم",
+                                            noCredit: "رصيدك غير كافٍ لشراء اشتراك Dima 1200. يرجى تعبئة حسابك",
                                         }
                                     },
-									{
+                                    {
                                         title: "Dima 500",
                                         price: 500,
-                                        gigas:3,
-                                        minutes:100,
-                                        sms:50,
+                                        gigas: 3,
+                                        minutes: 100,
+                                        sms: 50,
                                         calls: "ooredoo",
                                         duration: "15 يوم",
                                         bonus: ["fb1"],
-                                        msgs:{
-                                            confirm:"3Go  + فايسبوك + 100 دقيقة و 50 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo، الكل صالح لمدة 15 يوم",
-                                            congrats:"هنيئا ! لقد حصلت على 3Go + فايسبوك + 100 دقيقة و 50 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo، الكل صالح لمدة 15 يوم.",
-                                             noCredit:"رصيدك غير كافٍ لشراء اشتراك Dima 500. يرجى تعبئة حسابك",
+                                        msgs: {
+                                            confirm: "3Go  + فايسبوك + 100 دقيقة و 50 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo، الكل صالح لمدة 15 يوم",
+                                            congrats: "هنيئا ! لقد حصلت على 3Go + فايسبوك + 100 دقيقة و 50 رسالة قصيرة صالحين نحو كل الشبكات الوطنية + مكالمات غير محدودة نحو Ooredoo، الكل صالح لمدة 15 يوم.",
+                                            noCredit: "رصيدك غير كافٍ لشراء اشتراك Dima 500. يرجى تعبئة حسابك",
                                         }
                                     },
 
@@ -1113,36 +1116,36 @@
                                                         class="text-outfit  text-bold">${item.gigas}Go</span><span class="text-bold"> انترنت</span></h4>
                                                 <ul class="offer-list">
 
-                                                    ${index===0?'':`<li>${item.sms ?`<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
+                                                    ${index === 0 ? '' : `<li>${item.sms ? `<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
                                                                                      alt=""
-                                                                                     class="img-inline-1em"></span>`:''}
-                                                    ${item.minutes && item.sms?"<span>&</span>":''}
-                                                    ${item.minutes?`<span class="text-bold fs-16">${item.minutes} دقيقة <img
+                                                                                     class="img-inline-1em"></span>` : ''}
+                                                    ${item.minutes && item.sms ? "<span>&</span>" : ''}
+                                                    ${item.minutes ? `<span class="text-bold fs-16">${item.minutes} دقيقة <img
                                                             src="images/dimax/Icon-Appel.svg" alt=""
-                                                            class="img-inline-1em"></span>`:''}
+                                                            class="img-inline-1em"></span>` : ''}
                                                     </li>`}
-                                                    ${item.calls==="all"?`<li><span class="text-bold fs-16">مكالمات غير محدودة نحو كل الشبكات</span></li>`:`<li><span class="text-bold fs-16">مكالمات غير محدودة نحو <img
+                                                    ${item.calls === "all" ? `<li><span class="text-bold fs-16">مكالمات غير محدودة نحو كل الشبكات</span></li>` : `<li><span class="text-bold fs-16">مكالمات غير محدودة نحو <img
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span></li>`}
-                                                    ${item.smsOoredoo  ? `<li><span class="text-bold fs-16">رسائل قصيرة غير محدودة نحو <img
+                                                    ${item.smsOoredoo ? `<li><span class="text-bold fs-16">رسائل قصيرة غير محدودة نحو <img
                                                             src="images/dimax/ooredoo_logo.svg"
                                                             alt="" class="img-inline-1em"
                                                             style="font-size: 0.8em"></span></li>` : ``}
-                                                    ${index===0?`<li>${item.sms ?`<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
+                                                    ${index === 0 ? `<li>${item.sms ? `<span class="text-bold">${item.sms} <img src="images/dimax/Icon-SMS.svg"
                                                                                      alt=""
-                                                                                     class="img-inline-1em"></span>`:''}
-                                                    ${item.minutes && item.sms?"<span>&</span>":''}
-                                                    ${item.minutes?`<span class="text-bold fs-16">${item.minutes} دقيقة <img
+                                                                                     class="img-inline-1em"></span>` : ''}
+                                                    ${item.minutes && item.sms ? "<span>&</span>" : ''}
+                                                    ${item.minutes ? `<span class="text-bold fs-16">${item.minutes} دقيقة <img
                                                             src="images/dimax/Icon-Appel.svg" alt=""
-                                                            class="img-inline-1em"></span>`:''}
-                                                    </li>`:``}
+                                                            class="img-inline-1em"></span>` : ''}
+                                                    </li>` : ``}
                                                     <li>
-                                                        ${item.bonus.includes("anazik")?`<img src="images/dimax/Icon-Anazik.svg" alt="">`:''}
-                                                        ${item.bonus.includes("anaflix")?`<img src="images/dimax/Icon-Anaflix.svg" alt="">`:''}
-                                                        ${item.bonus.includes("shahid")?`<img src="images/dimax/Icon-Chahid.svg" alt="">`:''}
-                                                        ${item.bonus.includes("fb")?`&<img src="images/dimax/FB-Madjani.svg" alt="">`:''}
-														${item.bonus.includes("fb1")?`<img src="images/dimax/FB-Madjani-1.svg" alt="">`:''}
+                                                        ${item.bonus.includes("anazik") ? `<img src="images/dimax/Icon-Anazik.svg" alt="">` : ''}
+                                                        ${item.bonus.includes("anaflix") ? `<img src="images/dimax/Icon-Anaflix.svg" alt="">` : ''}
+                                                        ${item.bonus.includes("shahid") ? `<img src="images/dimax/Icon-Chahid.svg" alt="">` : ''}
+                                                        ${item.bonus.includes("fb") ? `&<img src="images/dimax/FB-Madjani.svg" alt="">` : ''}
+														${item.bonus.includes("fb1") ? `<img src="images/dimax/FB-Madjani-1.svg" alt="">` : ''}
                                                     </li>
                                                 </ul>
                                                 <div class="dima-footer">
@@ -1169,10 +1172,10 @@
                                         document.getElementById('buy-modal-title').innerHTML = item.title;
                                         document.getElementById('buy-modal-msg').innerHTML = item.msgs.confirm;
                                         document.getElementById('congrats-modal-msg').innerHTML = item.msgs.congrats;
-                                        if(index===0 && !window.isShahidActive){
+                                        if (index === 0 && !window.isShahidActive) {
                                             document.getElementById('congrats-modal-footer').classList.add("d-none");
                                             document.getElementById('congrats-modal-footer-shahid').classList.remove("d-none");
-                                        }else{
+                                        } else {
                                             document.getElementById('congrats-modal-footer-shahid').classList.add("d-none");
                                             document.getElementById('congrats-modal-footer').classList.remove("d-none");
                                         }

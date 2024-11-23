@@ -131,8 +131,8 @@
                 <div class="ltm-modal-title text-red text-center fs-34 text-outfit-bold" id="buy-modal-title">
                     DIMA 500
                 </div>
-                <!--                <button class="ltm-close-btn" onclick="document.getElementById('buy-modal').close()">-->
-                <!--                    <img src="./images/components/close.png" alt="close"></button>-->
+                <button class="ltm-close-btn" onclick="document.getElementById('buy-modal').close()">
+                    <img src="./images/components/close.png" alt="close"></button>
             </div>
             <div class="ltm-modal-body">
                 <div style="padding: 1.2em;" class="text-center text-bold" id="buy-modal-msg">
@@ -162,8 +162,8 @@
                 <div class="ltm-modal-title text-red text-center fs-34 text-outfit-bold">
                     Félicitation !
                 </div>
-                <!--                <button class="ltm-close-btn" onclick="document.getElementById('congrats-modal').close()">-->
-                <!--                    <img src="./images/components/close.png" alt="close"></button>-->
+                <button class="ltm-close-btn" onclick="document.getElementById('congrats-modal').close()">
+                    <img src="./images/components/close.png" alt="close"></button>
             </div>
             <div class="ltm-modal-body">
                 <div style="padding: 1.2em;" class="text-center text-bold" id="congrats-modal-msg">
@@ -913,40 +913,40 @@
                             <div class="default-promo-header text-uppercase">
                                 <br>
                                 <br>
-                                <h2 class="text-rubik-bold text-uppercase fs-36 text-center">FORFAITS OSN+ & ANGHAMI</h2>
+                                <h2 class="text-rubik-bold text-uppercase fs-36 text-center">FORFAITS OSN+ & ANGHAMI+</h2>
                                 <br>
                             </div>
                             <img src="images/osn-anghami.png"/>
-                            <p>Obtenzez dés maintenant un forfait <b>OSN+</b> & <b>ANGHAMI</b> pour plonger dans <b>une expériance de streaming
-                                exceptionnelle</b> et profiter <b>d'un volume internet</b> pour <b>100 DA !</b>
+                            <p>Obtenez dès maintenant un forfait <b>OSN+</b> & <b>ANGHAMI+</b> pour plonger dans <b>une expérience de streaming
+                                exceptionnelle</b> et profiter <b>d'un volume internet</b> pour <b>1000 DA !</b>
                             </p>
                         </div>
                         <div id="promo-osn">
                             <div class="promo-card outline-red variation-1">
                                 <div class="promo-card-content">
                                     <h4 class="text-red text-uppercase text-center fs-26">
-                                        <span class="text-rubik-bold">forfaits OSN+ &amp; ANGHAMI</span>
+                                        <span class="text-rubik-bold">forfaits OSN+ &amp; ANGHAMI+ 1000</span>
                                     </h4>
                                     <h4 class="text-center fs-26"><span class="text-outfit">10 Go Internet</span>
                                     </h4>
                                     <ul class="offer-list" style="align-items: center;">
                                         <li class="big-before"></li>
                                         <li class="hide-before text-center" style="margin-top: 2rem">
-                                            <span class="text-bold fs-16">Accès premium à <b class="text-rubik-bold">OSN+</b> & <b class="text-rubik-bold">ANGHAMI</b></span>
+                                            <span class="text-bold fs-16">Accès premium à <b class="text-rubik-bold">OSN+</b> & <b class="text-rubik-bold">ANGHAMI+</b></span>
                                         </li>
                                     </ul>
                                     <div class="dima-footer">
 
-                                        <div class="price-duration fs-28">
+                                        <div class="price-duration fs-28" style="border-top: 1px dashed var(--ooredoo-red);">
                                                     <span class="text-bold text-center">
-                                                       <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18  text-red">30 Jours</span>
+                                                        <span class="fs-14 text-red white-space-nowrap">Valables 30 Jours</span>
+                                                         <span class="text-outfit">1000 <sup>DA</sup></span>
                                                     </span>
-                                            <span class="text-outfit">1000 <sup>DA</sup></span>
+                                            <div class="center">
+                                                <button id="card-action-osn" class="red-btn text-outfit border-round fs-20">ACHETER</button>
+                                            </div>
                                         </div>
-                                        <div class="center">
-                                            <button id="card-action-osn" class="red-btn text-outfit border-round fs-20">ACHETER</button>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -954,7 +954,7 @@
                                 (() => {
                                     const data = [
                                         {
-                                            title: "ANGHAMI & OSN+",
+                                            title: "ANGHAMI+ & OSN+",
                                             price: 1000,
                                             gigas: 100,
                                             minutes: 0,
@@ -964,7 +964,7 @@
                                             duration: "30 Jours",
                                             bonus: ["fb", "anazik", "shahid", "anaflix"],
                                             msgs: {
-                                                confirm: "Profitez du meilleur du divertissement en un seul forfait ! Un accès premium à OSN+ et Anghami + 10Go d'internet dédié pendant 1 mois.\n Le Forfait est auto-renouvlable",
+                                                confirm: "Profitez du meilleur du divertissement en un seul forfait ! Un accès premium à OSN+ et Anghami+ + 10Go d'internet dédié pendant 1 mois.\n Le Forfait est auto-renouvlable",
                                                 congrats: "Vous avez activé votre forfait avec succès.\nTelechargez Anghgami et OSN+ pour profiter de votre abonement.",
                                                 noCredit: "Votre crédit est insuffisant. Veuillez recharger votre compte.",
                                             }

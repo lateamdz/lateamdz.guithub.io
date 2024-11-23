@@ -987,11 +987,11 @@ input, select {
     overflow: hidden;
     margin-top: 0;
     padding: 20px 0;
-    /*background-color: white;*/
+    background-color: white;
 }
 
 .dark .default-promo {
-    /*background-color: var(--ooredoo-dark);*/
+    background-color: var(--ooredoo-dark);
 }
 #main-content , #page {
     background-color: white!important;

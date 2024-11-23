@@ -181,7 +181,8 @@
 
             .promo-card-title {
                 color: var(--ooredoo-red);
-                background-color: var(--ooredoo-bg-light);
+                /*background-color: var(--ooredoo-bg-light);*/
+                background-color: white;
             }
         }
 
