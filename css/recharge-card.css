@@ -112,6 +112,7 @@
                 &.big-before:before {
                     height: 28px;
                     width: 28px;
+                    scale: 0.8;
                 }
 
                 > span {
@@ -181,8 +182,8 @@
 
             .promo-card-title {
                 color: var(--ooredoo-red);
-                /*background-color: var(--ooredoo-bg-light);*/
-                background-color: white;
+                background-color: var(--ooredoo-bg-light);
+                /*background-color: white;*/
             }
         }
 
@@ -358,12 +359,19 @@ input[type=radio] {
     align-items: center;
     justify-content: center;
     margin-bottom: 5vw;
+    background-color: white;
+    box-shadow: 5px 5px 20px 2px #e7e8ee;
+    border-radius: 10px;
+    padding: 2.5rem;
+    gap:2rem;
     > div:first-child {
-        width: 70%;
+        /*width: 70%;*/
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
 
         > img {
             max-width: 30%;
@@ -378,8 +386,13 @@ input[type=radio] {
     }
 
     > div:nth-child(2) {
-        width: 30%
+        width: 30%;
+
     }
+}
+.dark .promo-anghami{
+    background-color: var(--ooredoo-dark);
+    box-shadow: 5px 5px 20px 2px #1a1919;
 }
 @media (max-width: 700px) {
     .promo-anghami {

@@ -987,7 +987,7 @@ input, select {
     overflow: hidden;
     margin-top: 0;
     padding: 20px 0;
-    background-color: white;
+    background-color: var(--ooredoo-bg-light);
 }
 
 .dark .default-promo {
